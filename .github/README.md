@@ -208,9 +208,8 @@ Visual changes should include desktop, tablet, and mobile evidence. Public behav
 
 Design Lagann is independent open-source work. Sponsorship helps fund reference research, cross-host compatibility, accessibility verification, motion engineering, and the unglamorous maintenance that keeps releases trustworthy.
 
-The repository is already prepared for GitHub Sponsors without publishing a fake handle. See [SPONSORS.md](../SPONSORS.md) for the support philosophy and the one-line activation step when the official sponsor profile is live.
-
-Official social channels will be added after launch. Until then, this repository is the source of truth—no placeholder accounts, no broken links.
+- Sponsor on GitHub: [github.com/sponsors/Oldiiik](https://github.com/sponsors/Oldiiik)
+- Follow on Instagram: [@oldikkk](https://www.instagram.com/oldikkk/)
 
 ---
 

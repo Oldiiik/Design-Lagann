@@ -59,13 +59,14 @@ Add links only after the account is live and controlled by the project.
 | Channel | Final URL | Status |
 | --- | --- | --- |
 | Website | — | waiting for official domain |
+| Instagram | [instagram.com/oldikkk](https://www.instagram.com/oldikkk/) | live |
 | X / Twitter | — | waiting for official account |
 | YouTube | — | waiting for official account |
 | LinkedIn | — | waiting for official page |
 | Discord / community | — | waiting for moderated community |
-| GitHub Sponsors | — | waiting for approved profile |
+| GitHub Sponsors | [github.com/sponsors/Oldiiik](https://github.com/sponsors/Oldiiik) | live |
 
-After activation, add the verified links to the centered navigation near the top of [`.github/README.md`](../.github/README.md). Keep the repository as the source of truth.
+Keep the repository as the source of truth for any channel not yet marked live.
 
 ## Launch copy
 
