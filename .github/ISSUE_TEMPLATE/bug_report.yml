@@ -5,12 +5,12 @@ labels: [bug]
 body:
   - type: markdown
     attributes:
-      value: Thank you for helping improve Design God. Remove private project data before posting logs or state files.
+      value: Thank you for helping improve Design Lagann. Remove private project data before posting logs or state files.
   - type: input
     id: version
     attributes:
-      label: Design God version
-      placeholder: 1.0.0
+      label: Design Lagann version
+      placeholder: 1.0.1
     validations:
       required: true
   - type: textarea
@@ -41,4 +41,3 @@ body:
       options:
         - label: I removed secrets, private references, licensed assets, and user project data.
           required: true
-

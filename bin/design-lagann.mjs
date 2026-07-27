@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { parseArgs } from "../packages/shared/src/index.mjs";
 import { installDesignLagann } from "../packages/installer/src/index.mjs";
 
@@ -16,11 +16,11 @@ Usage:
 Options:
   --force      Back up an existing installation, then replace it
   --dry-run    Show exact destinations without writing
+  --home PATH  Override the personal home directory
   --json       Emit machine-readable output
 `;
 
-async function run() {
-  const argv = process.argv.slice(2);
+export async function run(argv = process.argv.slice(2)) {
   if (argv[0] !== "install") {
     const { main } = await import("../apps/cli/src/cli.mjs");
     await main(argv);
@@ -34,6 +34,7 @@ async function run() {
   const result = await installDesignLagann({
     packageRoot,
     target: options.target || "all",
+    home: options.home,
     force: options.force === true || options.force === "true",
     dryRun: options["dry-run"] === true || options["dry-run"] === "true"
   });
@@ -41,6 +42,8 @@ async function run() {
     process.stdout.write(`${JSON.stringify(result, null, 2)}\n`);
     return;
   }
+  const runtimeSuffix = result.runtime.backup ? ` (backup: ${result.runtime.backup})` : result.runtime.reason ? ` (${result.runtime.reason})` : "";
+  process.stdout.write(`runtime: ${result.runtime.status} -> ${result.runtime.directory}${runtimeSuffix}\n`);
   for (const operation of result.operations) {
     const suffix = operation.backup ? ` (backup: ${operation.backup})` : operation.reason ? ` (${operation.reason})` : "";
     process.stdout.write(`${operation.name}: ${operation.status} -> ${operation.directory}${suffix}\n`);
@@ -48,8 +51,9 @@ async function run() {
   process.stdout.write(`${result.next}\n`);
 }
 
-run().catch((error) => {
-  process.stderr.write(`design-lagann: ${error.message}\n`);
-  process.exitCode = 1;
-});
-
+if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+  run().catch((error) => {
+    process.stderr.write(`design-lagann: ${error.message}\n`);
+    process.exitCode = 1;
+  });
+}

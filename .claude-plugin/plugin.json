@@ -1,6 +1,6 @@
 {
   "name": "design-lagann",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A host-aware design workflow for creating and evolving production interfaces without requiring image generation.",
   "author": { "name": "Design Lagann" },
   "license": "Apache-2.0",

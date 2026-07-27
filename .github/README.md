@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <code>v1.0.0</code> · <code>Codex</code> · <code>Claude Code</code> · <code>Cursor</code> · <code>Apache-2.0</code>
+  <code>v1.0.1</code> · <code>Codex</code> · <code>Claude Code</code> · <code>Cursor</code> · <code>Apache-2.0</code>
 </p>
 
 <p align="center">
@@ -36,7 +36,7 @@ One command. Three hosts.
 | Cursor | `npx design-lagann install --target cursor` |
 | Everywhere | `npx design-lagann install --target all` |
 
-The installer writes the portable `design-lagann` Agent Skill to the selected host. Existing installations are never replaced silently: use `--dry-run` to preview destinations and `--force` to create a timestamped backup before updating.
+The installer writes an auto-discovered personal skill to the selected host and persists the clean runtime at `~/.design-lagann/runtime`. Existing installations are never replaced silently: use `--dry-run` to preview destinations and `--force` to create a timestamped backup before updating.
 
 Then ask naturally:
 

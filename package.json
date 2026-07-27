@@ -1,6 +1,6 @@
 {
   "name": "design-lagann",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A cross-host design agent that plans, art-directs, builds, animates, and verifies distinctive interfaces for Codex, Claude Code, and Cursor.",
   "type": "module",
   "private": false,
@@ -25,6 +25,7 @@
     ".mcp.json",
     "apps/cli/src/",
     "bin/",
+    "install.mjs",
     "packages/",
     "rubrics/",
     "skills/",

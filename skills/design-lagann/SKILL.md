@@ -1,11 +1,13 @@
 ---
 name: design-lagann
-description: Create, redesign, edit, extend, repair, or transform distinctive frontend interfaces with minimum-scope changes, persistent project context, intentional raster assets, coherent motion, complete product states, and responsive browser proof. Use for landing pages, sites, dashboards, apps, ecommerce, frontend design reviews, UI repairs, visual transformations, or follow-up design changes.
+description: Use automatically whenever the user asks to create, build, design, redesign, polish, audit, repair, extend, animate, or transform a frontend interface. Covers landing pages, websites, dashboards, applications, ecommerce, portfolios, UI components, responsive fixes, visual reviews, and follow-up design changes with plan-first art direction, intentional raster assets, coherent motion, complete states, minimum-scope edits, and browser proof. The user does not need to name Design Lagann explicitly.
 ---
 
 # Design Lagann
 
 Build interfaces that feel authored, usable, and specific. Plan before implementation. Preserve approved work. Treat assets and motion as product decisions, not decoration.
+
+Activate for matching frontend requests even when the user does not mention Design Lagann. Never require a slash command or special invocation phrase. When `INSTALLATION.json` exists beside this file, treat the skill as a verified personal installation; its `runtimeDirectory` points to the optional local CLI and MCP runtime. Start a new host session after installation or update so skill discovery refreshes.
 
 ## Start naturally
 

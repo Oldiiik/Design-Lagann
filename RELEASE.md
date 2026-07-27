@@ -12,6 +12,6 @@
 7. Run `npm pack --dry-run` and confirm no assets, examples, benchmarks, tests, output, or third-party mirrors are included.
 8. Smoke-test the tarball with `npm exec --package=<tarball> -- design-lagann install --target all --dry-run`.
 9. Run `pnpm release:package` and verify the emitted SHA-256 manifest.
-10. Tag `v1.0.0` and attach the zip, `.json` checksum manifest, and npm `.tgz` to the GitHub release.
+10. Tag the release version and attach the zip, `.json` checksum manifest, and npm `.tgz` to the GitHub release.
 
-Recommended release title: `Design Lagann 1.0.0 — Codex, Claude Code, and Cursor`.
+Recommended release title: `Design Lagann <version> — Codex, Claude Code, and Cursor`.

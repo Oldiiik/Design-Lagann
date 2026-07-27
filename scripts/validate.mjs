@@ -12,6 +12,8 @@ const required = [
   "skills/design-lagann/SKILL.md",
   "skills/design-lagann/references/claude-host.md",
   "packages/workflow-engine/src/index.mjs",
+  "packages/installer/src/index.mjs",
+  "install.mjs",
   "assets/brand/design-lagann-logo.png",
   "assets/brand/design-lagann-github-banner.png",
   "assets/brand/design-lagann-social-preview.png",
@@ -49,7 +51,18 @@ const mcp = JSON.parse(await readFile(path.join(root, ".mcp.json"), "utf8"));
 assert.ok(mcp.mcpServers?.["design-lagann"]);
 const skill = await readFile(path.join(root, "skills", "design-lagann", "SKILL.md"), "utf8");
 assert.match(skill, /^---\r?\nname: design-lagann\r?\ndescription: .+\r?\n---/);
+assert.match(skill, /Use automatically/i);
+assert.equal(await exists(path.join(root, "examples")), false, "Personal demo projects must not ship in the repository");
 const files = await walk(root);
+const canonicalBrandAssets = new Set([
+  "design-lagann-logo.png",
+  "design-lagann-github-banner.png",
+  "design-lagann-social-preview.png"
+]);
+const brandFiles = files
+  .filter((file) => path.dirname(file) === path.join(root, "assets", "brand"))
+  .map((file) => path.basename(file));
+assert.deepEqual(new Set(brandFiles), canonicalBrandAssets, "Only canonical Design Lagann brand assets may remain");
 assert.deepEqual(
   files.filter((file) => path.extname(file).toLowerCase() === ".svg"),
   [],

@@ -18,16 +18,30 @@ npx design-lagann install --target cursor
 npx design-lagann install --target all
 ```
 
-The installer writes only the portable `design-lagann` skill into the selected host's user skill directory. Existing installs are never overwritten silently: run with `--force` to create a timestamped backup and update. Use `--dry-run` to inspect destinations first.
+This is a personal installation, not a dependency left inside the current project. The installer writes the auto-discovered skill to `~/.codex/skills`, `~/.claude/skills`, and/or `~/.cursor/skills`, then persists the clean CLI and MCP runtime at `~/.design-lagann/runtime`. Existing installs are never overwritten silently: run with `--force` to create timestamped backups and update. Use `--dry-run` to inspect destinations first.
+
+Start a new host session after installation. Matching frontend design requests invoke Design Lagann automatically from its skill description; users do not need to type the plugin name or a slash command.
+
+## Install from a downloaded release
+
+Download `design-lagann-plugin-1.0.1-final-clean.zip`, extract it, open a terminal in the extracted `design-lagann` folder, and run:
+
+```bash
+node install.mjs --target all
+```
+
+Use `--target codex`, `--target claude`, or `--target cursor` to install only one host. This manual path creates the same personal installation as `npx`.
 
 The npm payload excludes demo projects, generated images, personal brand artwork, benchmarks, third-party source mirrors, test output, and development caches.
 
-## What changed in 1.1
+## What changed in 1.0.1
 
 - Autonomous reference acquisition that searches the web or generates a raster direction frame according to host capabilities.
 - Portable installer targets for Codex, Claude Code, Cursor, or all three.
 - A full motion choreography engine with coverage auditing, interaction timing, stagger, fine-pointer gating, and meaningful reduced motion.
 - A clean npm/GitHub release payload without personal or demo assets.
+- Stable personal runtime installation for both npm and downloaded releases.
+- Automatic skill discovery and invocation metadata for all supported hosts.
 
 ## Core workflow
 
@@ -41,20 +55,6 @@ The npm payload excludes demo projects, generated images, personal brand artwork
 - Fast, Balanced, and Quality profiles with one invariant acceptance bar.
 - Deterministic no-change detection and bounded stopping.
 - Native Codex and Claude Code manifests in one clean release.
-
-## Install from a release
-
-Download `design-lagann-plugin-1.0.0-final-clean.zip` and extract it without changing the outer `design-lagann` folder.
-
-For Codex, install or load the extracted plugin folder through the Codex plugin workflow.
-
-For Claude Code, test the folder directly:
-
-```bash
-claude --plugin-dir /absolute/path/to/design-lagann
-```
-
-Claude Code namespaces the skill as `/design-lagann:design-lagann` when installed as a plugin.
 
 ## Use
 
@@ -79,7 +79,7 @@ The plan and context are written beneath `.design-lagann/` in the target project
 
 ## Development
 
-Requirements: Node.js 20+ and pnpm 11.
+Requirements: Node.js 22.13+ and pnpm 11.
 
 ```bash
 pnpm install

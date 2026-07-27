@@ -2,6 +2,20 @@
 
 All notable changes to Design Lagann are documented here. This project follows Semantic Versioning.
 
+## 1.0.1 - 2026-07-27
+
+### Changed
+
+- Removed all personal demo sites, generated showcase imagery, and obsolete brand iterations from the repository.
+- Personal installation now persists a clean runtime at `~/.design-lagann/runtime` instead of leaving the engine in a temporary npm or download directory.
+- Codex, Claude Code, and Cursor installs now write verified automatic-invocation metadata beside their user-level skill.
+- Added `node install.mjs --target codex|claude|cursor|all` for downloaded release archives.
+
+### Fixed
+
+- Preserved the CLI and MCP engine after an `npx` installation finishes.
+- Made the skill trigger explicitly on natural frontend design requests without requiring the user to name Design Lagann.
+
 ## 1.0.0 - 2026-07-27
 
 The first public, release-ready version of Design Lagann.
