@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Luma Loop is a midnight roller rink with four late-night sessions, live vinyl, and one luminous circuit."
+    />
+    <meta name="theme-color" content="#170817" />
+    <title>Luma Loop — Midnight Roller Rink</title>
+    <link rel="preload" href="../assets/fonts/syne/Syne-Variable-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../assets/fonts/space-mono/SpaceMono-Regular-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../assets/fonts/space-mono/SpaceMono-Bold-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../assets/images/retro-skate.webp" as="image" type="image/webp" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#sessions">Skip to session picker</a>
+
+    <div class="page-frame">
+      <header class="masthead">
+        <a class="brand" href="#" aria-label="Luma Loop home">
+          <span class="brand-mark" aria-hidden="true">LL</span>
+          <span>Rink 04</span>
+        </a>
+
+        <div class="open-signal" aria-label="Open Thursday through Sunday">
+          <span class="signal-dot" aria-hidden="true"></span>
+          Thu—Sun / After dark
+        </div>
+
+        <nav aria-label="Primary">
+          <a href="#sessions">Sessions</a>
+          <a href="#visit">Find us</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="stage" aria-labelledby="page-title">
+          <div class="title-lockup">
+            <p class="edition">Midnight roller club / Est. 2026</p>
+            <h1 id="page-title">
+              <span>Luma</span>
+              <span>Loop</span>
+            </h1>
+          </div>
+
+          <p class="intro">
+            Four late sessions. Live vinyl. A polished maple circuit that keeps
+            turning until the city wakes.
+          </p>
+
+          <div class="orbit-shell" id="sessions">
+            <div class="orbit-track" aria-hidden="true">
+              <span class="route-arrow route-arrow--one"></span>
+              <span class="route-arrow route-arrow--two"></span>
+            </div>
+
+            <img
+              class="hero-skate"
+              src="../assets/images/retro-skate.webp"
+              alt="A cream, plum, coral, and turquoise quad roller skate crossing the loop."
+              width="1536"
+              height="1024"
+              fetchpriority="high"
+            />
+
+            <fieldset class="session-picker" aria-describedby="session-help">
+              <legend>Choose a skate session</legend>
+
+              <button
+                class="session-node session-node--one is-selected"
+                type="button"
+                data-session="thu-1030"
+                data-day="Thu 24"
+                data-time="10:30"
+                data-meridiem="PM"
+                data-datetime="22:30"
+                data-name="Slow Burn"
+                data-detail="Vinyl funk · 90 minutes"
+                data-seats="14 skates left"
+                data-price="$18"
+                aria-pressed="true"
+              >
+                <span class="node-day">Thu 24</span>
+                <span class="node-time">10:30</span>
+                <span class="node-dot" aria-hidden="true"></span>
+              </button>
+
+              <button
+                class="session-node session-node--two"
+                type="button"
+                data-session="fri-1145"
+                data-day="Fri 25"
+                data-time="11:45"
+                data-meridiem="PM"
+                data-datetime="23:45"
+                data-name="Chrome Hour"
+                data-detail="Electro soul · 90 minutes"
+                data-seats="8 skates left"
+                data-price="$20"
+                aria-pressed="false"
+              >
+                <span class="node-day">Fri 25</span>
+                <span class="node-time">11:45</span>
+                <span class="node-dot" aria-hidden="true"></span>
+              </button>
+
+              <button
+                class="session-node session-node--three"
+                type="button"
+                data-session="sat-1230"
+                data-day="Sat 26"
+                data-time="12:30"
+                data-meridiem="AM"
+                data-datetime="00:30"
+                data-name="Afterglow"
+                data-detail="Cosmic disco · 105 minutes"
+                data-seats="6 skates left"
+                data-price="$22"
+                aria-pressed="false"
+              >
+                <span class="node-day">Sat 26</span>
+                <span class="node-time">12:30</span>
+                <span class="node-dot" aria-hidden="true"></span>
+              </button>
+
+              <button
+                class="session-node session-node--four"
+                type="button"
+                data-session="sat-0200"
+                data-day="Sat 26"
+                data-time="02:00"
+                data-meridiem="AM"
+                data-datetime="02:00"
+                data-name="Last Lap"
+                data-detail="Requests only · 60 minutes"
+                data-seats="18 skates left"
+                data-price="$16"
+                aria-pressed="false"
+              >
+                <span class="node-day">Sat 26</span>
+                <span class="node-time">02:00</span>
+                <span class="node-dot" aria-hidden="true"></span>
+              </button>
+            </fieldset>
+
+            <div class="session-readout" aria-live="polite" aria-atomic="true">
+              <p class="readout-label">Now boarding</p>
+              <p class="readout-name" id="session-name">Thu / Slow Burn</p>
+              <p class="readout-time">
+                <time id="session-time" datetime="22:30">10:30</time>
+                <span id="session-meridiem">PM</span>
+              </p>
+              <p class="readout-detail" id="session-detail">
+                Vinyl funk · 90 minutes
+              </p>
+              <p class="readout-seats" id="session-seats">14 skates left</p>
+            </div>
+
+            <div class="booking-dock">
+              <span class="admit-label">Admit two</span>
+              <button
+                class="reserve-button"
+                id="reserve-button"
+                type="button"
+                aria-pressed="false"
+              >
+                <span id="reserve-label">Hold this loop</span>
+                <span class="reserve-price" id="reserve-price">$18</span>
+              </button>
+            </div>
+          </div>
+
+          <p class="session-help" id="session-help">
+            Pick a time on the circuit, then hold two places at the track exit.
+          </p>
+
+          <div class="field-note" aria-label="Entry information">
+            <span>01</span>
+            <p>
+              Skates included.<br />
+              Socks strongly encouraged.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="venue-strip" id="visit">
+        <p><strong>Mercury Hall</strong> · 44 Orbit Street</p>
+        <p>Doors 9:45 PM · 18+ after midnight</p>
+        <a href="mailto:hello@lumaloop.example">hello@lumaloop.example</a>
+      </footer>
+    </div>
+
+    <div class="status-toast" id="status-toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

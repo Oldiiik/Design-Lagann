@@ -1,0 +1,140 @@
+{
+  "$schema": "./rubric.schema.json",
+  "schemaVersion": "1.0",
+  "id": "conversion",
+  "critic": "product-and-conversion",
+  "purpose": "Ensure art direction clarifies the real offer, information path, and primary action instead of competing with them.",
+  "mode": "hybrid",
+  "weight": 10,
+  "hardGate": false,
+  "requiredEvidence": [
+    "rendered screenshots",
+    "brief and content inventory",
+    "primary-interaction results",
+    "DOM and accessibility evidence"
+  ],
+  "scale": {
+    "min": 0,
+    "max": 4,
+    "anchors": {
+      "0": "The offer or primary action is absent, misleading, or unusable.",
+      "1": "The page is visually busy or vague and the user path is difficult to identify.",
+      "2": "The offer and action are usable but generic, repetitive, or poorly sequenced.",
+      "3": "The journey is clear, credible, and integrated with the art direction.",
+      "4": "The narrative makes the action feel inevitable, specific, and effortless without coercion."
+    }
+  },
+  "checks": [
+    {
+      "id": "offer-clarity",
+      "question": "Can the intended user identify the offer, distinction, and relevant timing quickly?",
+      "passCondition": "Concrete language and visual evidence communicate what is offered, why it matters, and any important constraints.",
+      "failureSignals": [
+        "generic brand slogan",
+        "visual concept hides the product",
+        "important timing or availability omitted"
+      ],
+      "evidence": [
+        "hero screenshot",
+        "brief",
+        "page copy"
+      ],
+      "weight": 5,
+      "gate": false
+    },
+    {
+      "id": "primary-action-hierarchy",
+      "question": "Is one primary action easy to identify without turning every element into a CTA?",
+      "passCondition": "The action earns emphasis through narrative, placement, state, and material role.",
+      "failureSignals": [
+        "competing CTAs",
+        "every card has equal action weight",
+        "decorative element resembles a control"
+      ],
+      "evidence": [
+        "screenshots",
+        "DOM controls",
+        "material roles"
+      ],
+      "weight": 5,
+      "gate": false
+    },
+    {
+      "id": "information-order",
+      "question": "Does information arrive in the order needed for a confident decision?",
+      "passCondition": "Premise, selection or detail, process, constraints, trust, and action appear when needed.",
+      "failureSignals": [
+        "action before essential context",
+        "repeated information",
+        "important conditions buried"
+      ],
+      "evidence": [
+        "page blueprint",
+        "whole-page screenshots",
+        "content inventory"
+      ],
+      "weight": 4,
+      "gate": false
+    },
+    {
+      "id": "trust-and-specificity",
+      "question": "Does the page use concrete, truthful signals rather than generic credibility decoration?",
+      "passCondition": "Product details, process, availability, policies, or real proof answer likely concerns.",
+      "failureSignals": [
+        "fabricated logos or metrics",
+        "generic testimonial cards",
+        "unverifiable superlatives"
+      ],
+      "evidence": [
+        "page copy",
+        "brief",
+        "screenshots"
+      ],
+      "weight": 3,
+      "gate": false
+    },
+    {
+      "id": "interaction-friction",
+      "question": "Can the user complete the primary action with clear state and recovery?",
+      "passCondition": "Controls work, selections persist appropriately, errors are understandable, and confirmation is visible.",
+      "failureSignals": [
+        "dead CTA",
+        "hidden bag or reservation state",
+        "ambiguous destructive action",
+        "no confirmation"
+      ],
+      "evidence": [
+        "interaction results",
+        "state screenshots",
+        "DOM controls"
+      ],
+      "weight": 5,
+      "gate": false
+    },
+    {
+      "id": "art-direction-supports-action",
+      "question": "Does the creative concept make the desired behavior clearer or more meaningful?",
+      "passCondition": "The signature relationship and page narrative guide attention toward the primary action without manipulation.",
+      "failureSignals": [
+        "art direction distracts from action",
+        "signature object blocks controls",
+        "generic CTA banner breaks the concept"
+      ],
+      "evidence": [
+        "whole-page screenshots",
+        "creative thesis",
+        "interaction observation"
+      ],
+      "weight": 4,
+      "gate": false
+    }
+  ],
+  "acceptance": {
+    "minimumNormalizedScore": 3,
+    "blockOnGateFailure": false,
+    "blockingRules": [
+      "Critical interaction failures are escalated to the responsive and accessibility hard gate.",
+      "Do not reward conversion decoration that weakens trust or art direction."
+    ]
+  }
+}

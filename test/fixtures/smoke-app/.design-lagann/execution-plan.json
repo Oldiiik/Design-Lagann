@@ -1,0 +1,251 @@
+{
+  "kind": "design-lagann-execution-plan",
+  "version": 1,
+  "host": "claude",
+  "classification": {
+    "kind": "design-lagann-request",
+    "operation": "redesign",
+    "profile": "balanced",
+    "inspectFirst": true,
+    "minimumScope": false,
+    "preserveApproved": true,
+    "confidence": "explicit",
+    "blockers": []
+  },
+  "capabilities": {
+    "host": "claude",
+    "imageGeneration": false,
+    "imageUnderstanding": true,
+    "browserComposition": true,
+    "rasterEditing": false,
+    "motionVideo": false
+  },
+  "scope": {
+    "score": 6,
+    "level": "medium",
+    "likelyPasses": 2,
+    "rationale": "redesign across 1 route(s), without product-state coverage."
+  },
+  "preservation": {
+    "operation": "redesign",
+    "protectedPaths": [],
+    "approvedSections": [],
+    "preserveDirection": true,
+    "allowedScope": [
+      "project-approved-scope"
+    ],
+    "rule": "Change only what the request requires; do not erase approved direction or unrelated user work."
+  },
+  "informationArchitecture": {
+    "preset": "application",
+    "sections": [
+      "global-navigation",
+      "workspace",
+      "primary-task",
+      "secondary-context",
+      "system-feedback",
+      "account-and-settings"
+    ],
+    "primaryAction": "complete the primary product action",
+    "responsiveRule": "Recompose priority and reading order; do not merely stack desktop containers.",
+    "productStates": [
+      "default",
+      "hover",
+      "active",
+      "focus-visible",
+      "disabled",
+      "loading",
+      "empty",
+      "success",
+      "warning",
+      "error",
+      "offline",
+      "permission-denied",
+      "no-results",
+      "onboarding",
+      "populated",
+      "long-content",
+      "responsive"
+    ]
+  },
+  "assets": {
+    "kind": "design-lagann-asset-plan",
+    "host": "claude",
+    "capabilities": {
+      "host": "claude",
+      "imageGeneration": false,
+      "imageUnderstanding": true,
+      "browserComposition": true,
+      "rasterEditing": false,
+      "motionVideo": false
+    },
+    "routes": [],
+    "rejectedDecorationCount": 0,
+    "ready": true,
+    "rule": "Assets serve content, product, brand, or composition. Nothing is generated merely to fill space."
+  },
+  "motion": {
+    "kind": "design-lagann-motion-system",
+    "thesis": "Motion explains state, hierarchy, spatial continuity, and direct manipulation.",
+    "tokens": {
+      "duration": {
+        "instant": 80,
+        "fast": 160,
+        "standard": 260,
+        "deliberate": 420
+      },
+      "easing": {
+        "enter": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "exit": "cubic-bezier(0.7, 0, 0.84, 0)",
+        "move": "cubic-bezier(0.65, 0, 0.35, 1)"
+      },
+      "distance": {
+        "micro": 4,
+        "standard": 12,
+        "major": 24
+      }
+    },
+    "families": [
+      "state-transition",
+      "content-reveal",
+      "layout-continuity",
+      "direct-manipulation"
+    ],
+    "forbidden": [
+      "random floating",
+      "ambient particle drift",
+      "unrelated parallax",
+      "attention loops without product meaning"
+    ],
+    "reducedMotion": {
+      "media": "(prefers-reduced-motion: reduce)",
+      "rule": "Remove travel and looping; preserve immediate state communication with opacity or no animation."
+    },
+    "videoStage": {
+      "enabled": false,
+      "status": "not-requested"
+    }
+  },
+  "profilePolicy": {
+    "directionCandidates": 2,
+    "repairPasses": 2,
+    "viewports": [
+      "desktop",
+      "tablet",
+      "mobile"
+    ]
+  },
+  "stages": [
+    {
+      "index": 1,
+      "id": "classify-request",
+      "status": "ready"
+    },
+    {
+      "index": 2,
+      "id": "inspect-project",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "id": "load-project-context",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "id": "set-preservation-boundary",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "id": "estimate-scope",
+      "status": "pending"
+    },
+    {
+      "index": 6,
+      "id": "select-structure-preset",
+      "status": "pending"
+    },
+    {
+      "index": 7,
+      "id": "define-information-architecture",
+      "status": "pending"
+    },
+    {
+      "index": 8,
+      "id": "set-art-direction",
+      "status": "pending"
+    },
+    {
+      "index": 9,
+      "id": "plan-intentional-assets",
+      "status": "pending"
+    },
+    {
+      "index": 10,
+      "id": "plan-product-states",
+      "status": "pending"
+    },
+    {
+      "index": 11,
+      "id": "plan-motion-system",
+      "status": "pending"
+    },
+    {
+      "index": 12,
+      "id": "write-implementation-contract",
+      "status": "pending"
+    },
+    {
+      "index": 13,
+      "id": "implement-signature-relationship",
+      "status": "pending"
+    },
+    {
+      "index": 14,
+      "id": "implement-responsive-system",
+      "status": "pending"
+    },
+    {
+      "index": 15,
+      "id": "implement-functional-states",
+      "status": "pending"
+    },
+    {
+      "index": 16,
+      "id": "capture-rendered-evidence",
+      "status": "pending"
+    },
+    {
+      "index": 17,
+      "id": "critique-high-impact-gaps",
+      "status": "pending"
+    },
+    {
+      "index": 18,
+      "id": "repair-bounded-scope",
+      "status": "pending"
+    },
+    {
+      "index": 19,
+      "id": "verify-change-and-accessibility",
+      "status": "pending"
+    },
+    {
+      "index": 20,
+      "id": "stop-or-report",
+      "status": "pending"
+    }
+  ],
+  "acceptance": {
+    "invariantAcrossProfiles": true,
+    "required": [
+      "functional",
+      "responsive",
+      "accessible",
+      "scope-preserved",
+      "rendered-evidence",
+      "no-unintentional-decoration"
+    ]
+  }
+}

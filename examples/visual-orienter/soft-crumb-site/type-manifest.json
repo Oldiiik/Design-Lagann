@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "0.4.0",
+  "mode": "quality",
+  "status": "implementation-ready; rendered typography pending browser evidence",
+  "roles": {
+    "display": {
+      "family": "Instrument Serif",
+      "weight": 400,
+      "style": "normal",
+      "purpose": "Wordmark, hero promise, section titles, large numerals, and the paper-slip voice.",
+      "localPath": "assets/fonts/instrument-serif-regular.woff2",
+      "bytes": 21032,
+      "sha256": "5EB09B5AC0E28B67C2F041C8BA6D244604CA0C0980D65912AB2D47FED84DDC31",
+      "license": "OFL-1.1",
+      "licensePath": "assets/fonts/OFL-instrument-serif.txt",
+      "subset": "latin"
+    },
+    "body": {
+      "family": "Libre Franklin",
+      "weight": "300 800",
+      "style": "normal",
+      "purpose": "Readable product, process, and pickup copy.",
+      "localPath": "assets/fonts/libre-franklin-variable.woff2",
+      "bytes": 29292,
+      "sha256": "52E605852C72CC2DF1473DF1FB7F26A3A0BE58E31835BC8F33F29B1918C82CBD",
+      "license": "OFL-1.1",
+      "licensePath": "assets/fonts/OFL-libre-franklin.txt",
+      "subset": "latin"
+    },
+    "utility": {
+      "family": "Libre Franklin",
+      "weight": "650–700 within real variable range",
+      "style": "normal",
+      "purpose": "Navigation, labels, buttons, availability, and form controls."
+    },
+    "data": {
+      "family": "Libre Franklin",
+      "weight": "500 within real variable range",
+      "style": "normal",
+      "features": ["tabular-nums", "lining-nums"],
+      "purpose": "Bag counts, prices, times, and confirmation code."
+    }
+  },
+  "loading": {
+    "fontDisplay": "swap",
+    "preload": [
+      "assets/fonts/instrument-serif-regular.woff2",
+      "assets/fonts/libre-franklin-variable.woff2"
+    ],
+    "syntheticFaces": "disabled through font-synthesis: none",
+    "remoteRequests": 0,
+    "totalFontBytes": 50324
+  },
+  "fallbacks": {
+    "display": ["Times New Roman", "serif"],
+    "body": ["Helvetica Neue", "sans-serif"]
+  },
+  "qualityScore": {
+    "total": 9.4,
+    "legibility": 9.4,
+    "brandSpecificity": 9.5,
+    "roleContrast": 9.7,
+    "scriptCoverage": 8.5,
+    "realWeightStyleCoverage": 9.2,
+    "licenseProvenance": 10,
+    "loadingPerformance": 9.8,
+    "limitation": "The bundled subsets cover the site's current Latin content only."
+  }
+}

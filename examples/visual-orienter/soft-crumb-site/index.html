@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4eee3">
+  <meta name="description" content="Soft Crumb makes small-batch laminated pastries for thoughtful weekend pickup in Portland, Maine.">
+  <title>Soft Crumb — Laminated for the weekend</title>
+  <link rel="preload" href="./assets/fonts/instrument-serif-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/libre-franklin-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/images/hero-croissant.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" aria-label="Primary">
+    <a class="wordmark" href="#top" aria-label="Soft Crumb home">Soft Crumb</a>
+    <nav class="primary-nav" aria-label="Site">
+      <a href="#today">Today</a>
+      <a href="#process">Process</a>
+      <a href="#pickup">Pickup</a>
+    </nav>
+    <button class="bag-trigger" type="button" data-open-bag aria-haspopup="dialog" aria-controls="bag-dialog">
+      <span>Bag</span>
+      <span class="bag-count" data-bag-count aria-label="0 items">0</span>
+    </button>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Layered by</p>
+        <h1 id="hero-title">Time.<br>Made for<br>weekends.</h1>
+        <p class="hero-intro">Small-batch laminated pastries.<br>Seasonal fillings. Thoughtful pickup.</p>
+        <a class="text-link" href="#today">Choose today’s pastries <span aria-hidden="true">↘</span></a>
+      </div>
+
+      <div class="hero-object" aria-hidden="true">
+        <div class="hero-object-shadow"></div>
+        <img src="./assets/images/hero-croissant.webp" alt="" width="1535" height="1024" fetchpriority="high">
+      </div>
+
+      <div class="paper-fold" aria-hidden="true">
+        <span class="paper-fold__edge"></span>
+      </div>
+
+      <aside class="pickup-note" aria-labelledby="pickup-note-title">
+        <p class="eyebrow eyebrow--green">Weekend pickup</p>
+        <h2 id="pickup-note-title">Sat &amp; Sun<br>8am–2pm</h2>
+        <p>Order by Friday at 6pm.<br>123 Mill Street, Portland, ME.</p>
+        <a class="text-link text-link--small" href="#pickup">Pickup details <span aria-hidden="true">→</span></a>
+      </aside>
+    </section>
+
+    <section class="selection" id="today" aria-labelledby="today-title">
+      <header class="selection-intro">
+        <p class="eyebrow">July 25–26 · weekend lineup</p>
+        <h2 id="today-title">This weekend</h2>
+        <p>The lineup is set.<br>We bake yours for pickup.</p>
+        <p class="availability"><span aria-hidden="true"></span> Three pickup batches remain</p>
+      </header>
+
+      <div class="pastry-list">
+        <article class="pastry" data-product-id="classic" data-name="Classic Croissant" data-price="4.75">
+          <div class="pastry-visual pastry-visual--classic">
+            <img src="./assets/images/pastry-trio.webp" alt="" width="1774" height="887" loading="lazy">
+          </div>
+          <div class="pastry-copy">
+            <p class="pastry-number">01</p>
+            <h3>Classic Croissant</h3>
+            <p>Cultured butter, sea salt</p>
+            <p class="price">$4.75</p>
+            <div class="buy-control">
+              <button class="add-button" type="button" data-add>
+                <span>Add to bag</span><span aria-hidden="true">+</span>
+              </button>
+              <div class="stepper" data-stepper hidden>
+                <button type="button" data-remove aria-label="Remove one Classic Croissant">−</button>
+                <output data-quantity aria-live="polite">0</output>
+                <button type="button" data-add aria-label="Add one Classic Croissant">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pastry" data-product-id="pistachio" data-name="Pistachio &amp; Raspberry" data-price="5.50">
+          <div class="pastry-visual pastry-visual--pistachio">
+            <img src="./assets/images/pastry-trio.webp" alt="" width="1774" height="887" loading="lazy">
+          </div>
+          <div class="pastry-copy">
+            <p class="pastry-number">02</p>
+            <h3>Pistachio &amp; Raspberry</h3>
+            <p>Pistachio frangipane, raspberry jam</p>
+            <p class="price">$5.50</p>
+            <div class="buy-control">
+              <button class="add-button" type="button" data-add>
+                <span>Add to bag</span><span aria-hidden="true">+</span>
+              </button>
+              <div class="stepper" data-stepper hidden>
+                <button type="button" data-remove aria-label="Remove one Pistachio and Raspberry">−</button>
+                <output data-quantity aria-live="polite">0</output>
+                <button type="button" data-add aria-label="Add one Pistachio and Raspberry">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pastry pastry--wide-mobile" data-product-id="apricot" data-name="Apricot &amp; Thyme Danish" data-price="5.75">
+          <div class="pastry-visual pastry-visual--apricot">
+            <img src="./assets/images/pastry-trio.webp" alt="" width="1774" height="887" loading="lazy">
+          </div>
+          <div class="pastry-copy">
+            <p class="pastry-number">03</p>
+            <h3>Apricot &amp; Thyme Danish</h3>
+            <p>Apricot, thyme, crème pâtissière</p>
+            <p class="price">$5.75</p>
+            <div class="buy-control">
+              <button class="add-button" type="button" data-add>
+                <span>Add to bag</span><span aria-hidden="true">+</span>
+              </button>
+              <div class="stepper" data-stepper hidden>
+                <button type="button" data-remove aria-label="Remove one Apricot and Thyme Danish">−</button>
+                <output data-quantity aria-live="polite">0</output>
+                <button type="button" data-add aria-label="Add one Apricot and Thyme Danish">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="process" id="process" aria-labelledby="process-title">
+      <header>
+        <p class="eyebrow">Thoughtful process</p>
+        <h2 id="process-title">The wait<br>is the work.</h2>
+      </header>
+      <ol class="process-list">
+        <li>
+          <span class="process-number">01</span>
+          <div>
+            <h3>Time &amp; care</h3>
+            <p>We laminate in small batches for flavor, lift, and a clean shatter.</p>
+          </div>
+        </li>
+        <li>
+          <span class="process-number">02</span>
+          <div>
+            <h3>Seasonal fillings</h3>
+            <p>We buy what tastes best now—never a filling from a plastic tub.</p>
+          </div>
+        </li>
+        <li>
+          <span class="process-number">03</span>
+          <div>
+            <h3>Made to order</h3>
+            <p>Your box is baked the morning of pickup. The wait is worth it.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="pickup" id="pickup" aria-labelledby="pickup-title">
+      <div class="pickup-copy">
+        <p class="eyebrow eyebrow--green">Your weekend</p>
+        <h2 id="pickup-title">Reserve<br>the weekend.</h2>
+        <p class="pickup-lede">Choose your pastries today. We’ll laminate, proof, and bake them for your Saturday or Sunday.</p>
+        <dl class="pickup-facts">
+          <div>
+            <dt>Pickup</dt>
+            <dd>Sat &amp; Sun · 8am–2pm</dd>
+          </div>
+          <div>
+            <dt>Order by</dt>
+            <dd>Friday · 6pm</dd>
+          </div>
+          <div>
+            <dt>Find us</dt>
+            <dd>123 Mill Street<br>Portland, Maine</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="reservation-slip" aria-labelledby="slip-title">
+        <p class="slip-kicker">Weekend order · preview</p>
+        <h3 id="slip-title">Your pastry paper</h3>
+        <p data-slip-summary>No pastries selected yet.</p>
+        <div class="slip-rule"></div>
+        <p class="slip-total"><span>Current bag</span><strong data-bag-total>$0.00</strong></p>
+        <button class="primary-button" type="button" data-pickup-cta>Choose from today</button>
+        <p class="slip-note">No payment taken in this demo.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="wordmark">Soft Crumb</p>
+    <p>Small-batch pastry for a slower weekend.</p>
+    <a href="mailto:hello@softcrumbbakery.com">hello@softcrumbbakery.com</a>
+  </footer>
+
+  <dialog class="bag-dialog" id="bag-dialog" aria-labelledby="bag-title">
+    <div class="bag-panel">
+      <header class="bag-panel__header">
+        <div>
+          <p class="eyebrow">Weekend bag</p>
+          <h2 id="bag-title">Reserve a box</h2>
+        </div>
+        <button class="dialog-close" type="button" data-close-bag aria-label="Close bag">×</button>
+      </header>
+
+      <div class="bag-empty" data-bag-empty>
+        <p>Your bag is waiting for something flaky.</p>
+        <button class="text-link text-link--button" type="button" data-shop-now>See today’s pastries <span aria-hidden="true">→</span></button>
+      </div>
+
+      <form class="reservation-form" data-reservation-form hidden>
+        <ul class="bag-items" data-bag-items aria-label="Selected pastries"></ul>
+        <p class="bag-total-row"><span>Total</span><strong data-dialog-total>$0.00</strong></p>
+
+        <fieldset>
+          <legend>Pickup day</legend>
+          <div class="choice-row">
+            <label><input type="radio" name="pickup-day" value="Saturday" checked><span>Saturday</span></label>
+            <label><input type="radio" name="pickup-day" value="Sunday"><span>Sunday</span></label>
+          </div>
+        </fieldset>
+
+        <label class="select-label" for="pickup-time">Pickup time
+          <select id="pickup-time" name="pickup-time">
+            <option>8:00–9:00am</option>
+            <option>9:00–10:00am</option>
+            <option>10:00–11:00am</option>
+            <option>11:00am–12:00pm</option>
+            <option>12:00–1:00pm</option>
+            <option>1:00–2:00pm</option>
+          </select>
+        </label>
+
+        <button class="primary-button primary-button--full" type="submit">Reserve this box · <span data-reserve-total>$0.00</span></button>
+        <p class="form-note">Demo reservation only. Nothing will be charged.</p>
+      </form>
+
+      <section class="success-state" data-success-state hidden aria-live="polite">
+        <p class="success-mark" aria-hidden="true">✓</p>
+        <p class="eyebrow eyebrow--green">Box held</p>
+        <h2>We’ll see you <span data-success-day>Saturday</span>.</h2>
+        <p>Your pickup window is <strong data-success-time>8:00–9:00am</strong>. Confirmation <strong data-reservation-code>SC-000</strong>.</p>
+        <button class="primary-button primary-button--full" type="button" data-finish>Done</button>
+      </section>
+    </div>
+  </dialog>
+
+  <button class="mobile-bag" type="button" data-open-bag hidden>
+    <span><strong data-mobile-count>0</strong> in bag</span>
+    <span data-mobile-total>$0.00</span>
+  </button>
+  <p class="sr-only" aria-live="polite" data-live-status></p>
+</body>
+</html>

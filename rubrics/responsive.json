@@ -1,0 +1,157 @@
+{
+  "$schema": "./rubric.schema.json",
+  "schemaVersion": "1.0",
+  "id": "responsive",
+  "critic": "responsive-and-accessibility-director",
+  "purpose": "Verify that the thesis, hierarchy, interaction, and accessibility survive deliberate viewport transformation.",
+  "mode": "hybrid",
+  "weight": 15,
+  "hardGate": true,
+  "requiredEvidence": [
+    "desktop, tablet, and mobile screenshots",
+    "DOM geometry at every viewport",
+    "keyboard and primary-interaction results",
+    "reduced-motion and overflow checks"
+  ],
+  "scale": {
+    "min": 0,
+    "max": 4,
+    "anchors": {
+      "0": "A required viewport or interaction is broken or inaccessible.",
+      "1": "Content is present but clipped, cramped, misordered, or mechanically stacked.",
+      "2": "The page is usable across viewports but loses hierarchy or art direction.",
+      "3": "The layout recomposes deliberately and remains accessible with minor issues.",
+      "4": "Every viewport has a native-feeling composition that preserves the thesis, action, and accessibility."
+    }
+  },
+  "checks": [
+    {
+      "id": "responsive-recomposition",
+      "question": "Does each viewport deliberately transform the focal relationship?",
+      "passCondition": "Scale, alignment, crop, overlap, order, or object role change to preserve the thesis.",
+      "failureSignals": [
+        "desktop columns merely stack",
+        "signature composition disappears",
+        "tablet is an accidental midpoint"
+      ],
+      "evidence": [
+        "multi-viewport screenshots",
+        "DOM geometry",
+        "responsive rules"
+      ],
+      "weight": 5,
+      "gate": true
+    },
+    {
+      "id": "reading-order",
+      "question": "Does visual and DOM reading order remain logical?",
+      "passCondition": "Headings, content, objects, controls, and state follow a coherent semantic and visual sequence.",
+      "failureSignals": [
+        "CSS order contradicts DOM order",
+        "decorative object interrupts reading",
+        "context appears after dependent action"
+      ],
+      "evidence": [
+        "DOM structure",
+        "screenshots",
+        "keyboard traversal"
+      ],
+      "weight": 4,
+      "gate": true
+    },
+    {
+      "id": "object-crop-and-role",
+      "question": "Do important images and objects retain intentional crop and structural roles?",
+      "passCondition": "Assets are repositioned, recropped, simplified, or replaced without losing meaning or focus.",
+      "failureSignals": [
+        "subject clipped",
+        "object reduced to tiny decoration",
+        "critical detail hidden on mobile"
+      ],
+      "evidence": [
+        "multi-viewport screenshots",
+        "object bounds",
+        "asset rules"
+      ],
+      "weight": 3,
+      "gate": false
+    },
+    {
+      "id": "type-and-spacing",
+      "question": "Do type scale, line length, wrapping, density, and whitespace fit each viewport?",
+      "passCondition": "Text remains readable and expressive without orphaned words, collisions, or monotonous spacing.",
+      "failureSignals": [
+        "headline collision",
+        "extreme line length",
+        "tiny body copy",
+        "desktop spacing blindly scaled"
+      ],
+      "evidence": [
+        "screenshots",
+        "computed typography",
+        "element bounds"
+      ],
+      "weight": 4,
+      "gate": true
+    },
+    {
+      "id": "overflow-and-zoom",
+      "question": "Is all required content reachable without unintended overflow or zoom failure?",
+      "passCondition": "No critical clipping or horizontal overflow occurs and content supports browser zoom.",
+      "failureSignals": [
+        "horizontal scrollbar",
+        "fixed-height clipped content",
+        "viewport units prevent zoomed access"
+      ],
+      "evidence": [
+        "DOM overflow checks",
+        "screenshots",
+        "zoom test"
+      ],
+      "weight": 5,
+      "gate": true
+    },
+    {
+      "id": "touch-and-keyboard",
+      "question": "Are controls operable and states visible by touch and keyboard?",
+      "passCondition": "Targets are appropriately sized, focus is visible, dialogs manage focus, and controls expose clear states.",
+      "failureSignals": [
+        "hover-only action",
+        "tiny touch target",
+        "missing focus",
+        "keyboard trap"
+      ],
+      "evidence": [
+        "interaction results",
+        "focus screenshots",
+        "DOM accessibility evidence"
+      ],
+      "weight": 5,
+      "gate": true
+    },
+    {
+      "id": "reduced-motion",
+      "question": "Does reduced motion preserve meaning and function?",
+      "passCondition": "Non-essential motion is removed or simplified without hiding content, state, or navigation.",
+      "failureSignals": [
+        "content remains invisible",
+        "scroll interaction becomes unusable",
+        "large motion persists"
+      ],
+      "evidence": [
+        "reduced-motion computed styles",
+        "interaction capture"
+      ],
+      "weight": 3,
+      "gate": true
+    }
+  ],
+  "acceptance": {
+    "minimumNormalizedScore": 3.25,
+    "blockOnGateFailure": true,
+    "blockingRules": [
+      "Any critical overflow, inaccessible interaction, or missing content blocks acceptance.",
+      "A mechanically stacked mobile page fails when it loses the central thesis."
+    ]
+  }
+}

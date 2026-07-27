@@ -1,0 +1,11 @@
+{
+  "goal": "Create a premium long-form landing page for a confectionery brand.",
+  "audience": "Design-conscious gift buyers",
+  "primaryAction": "Explore the collection",
+  "creativeIdea": "A cool-blue product theatre where sculptural confectionery interrupts an editorial tasting narrative.",
+  "mode": "quality",
+  "constraints": ["responsive", "production-ready", "blue palette"],
+  "forbiddenPatterns": ["generic SaaS layout", "repeated feature cards", "decorative gradient text"],
+  "requiredInteractions": ["product exploration", "reduced-motion alternative"],
+  "references": []
+}

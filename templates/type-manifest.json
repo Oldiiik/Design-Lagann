@@ -1,0 +1,207 @@
+{
+  "schemaVersion": "1.0",
+  "generatedBy": "@design-lagann/type-router",
+  "mode": "balanced",
+  "decision": {
+    "status": "unconfigured",
+    "candidateId": "",
+    "candidateLabel": "",
+    "rationale": []
+  },
+  "artDirection": {
+    "contrastStrategy": "",
+    "headline": {
+      "strategy": "balance-then-curate",
+      "measureCh": {
+        "mobile": 11,
+        "tablet": 12.5,
+        "desktop": 14
+      },
+      "maxLines": {
+        "mobile": 4,
+        "tablet": 3,
+        "desktop": 3
+      },
+      "minLineFillRatio": 0.42,
+      "minLastLineCharacters": 4,
+      "maxSingleWordLines": 0,
+      "forbiddenOrphanWords": [
+        "a",
+        "an",
+        "and",
+        "at",
+        "by",
+        "for",
+        "from",
+        "in",
+        "of",
+        "or",
+        "the",
+        "to",
+        "with"
+      ],
+      "emphasis": [],
+      "accentOnly": [],
+      "authoredLines": {},
+      "exactLineCounts": {},
+      "choreography": {
+        "sourceText": "",
+        "copyRequiredAtImplementation": true,
+        "strategy": "balance-then-curate",
+        "suggestions": {
+          "desktop": [],
+          "tablet": [],
+          "mobile": []
+        }
+      }
+    }
+  },
+  "context": {
+    "brandVoice": [],
+    "contentDensity": "medium",
+    "languages": [],
+    "scripts": [],
+    "referenceTypography": null
+  },
+  "roles": {
+    "display": {},
+    "body": {},
+    "utility": {},
+    "data": {}
+  },
+  "fontFaces": [],
+  "preloads": [],
+  "cssVariables": {},
+  "responsiveTokens": {
+    "mobile": {},
+    "tablet": {},
+    "desktop": {}
+  },
+  "performance": {
+    "localOnly": true,
+    "fileCount": 0,
+    "estimatedTransferKb": 0,
+    "preloadCount": 0,
+    "budgets": {
+      "localOnly": true,
+      "maxFontFiles": 6,
+      "maxTransferKb": 360,
+      "preloadLimit": 2,
+      "fontDisplay": "swap"
+    }
+  },
+  "quality": {
+    "score": 0,
+    "percentage": 0,
+    "minimum": 8.2,
+    "passed": false,
+    "dimensions": {
+      "legibility": {},
+      "specificity": {},
+      "roleContrast": {},
+      "artDirection": {},
+      "referenceFidelity": {},
+      "coverage": {},
+      "weightRange": {},
+      "fallbackCompatibility": {},
+      "provenanceLicense": {},
+      "performance": {}
+    }
+  },
+  "gates": {
+    "passed": false,
+    "hardFailures": [],
+    "warnings": []
+  },
+  "screenshotValidation": {
+    "schemaVersion": "1.0",
+    "status": "required-before-acceptance",
+    "viewports": [
+      {
+        "id": "desktop",
+        "width": 1440,
+        "height": 1000,
+        "display": {
+          "maxLines": 3,
+          "exactLines": null,
+          "measureCh": {}
+        },
+        "body": {
+          "measureCh": {}
+        }
+      },
+      {
+        "id": "tablet",
+        "width": 1024,
+        "height": 900,
+        "display": {
+          "maxLines": 3,
+          "exactLines": null,
+          "measureCh": {}
+        },
+        "body": {
+          "measureCh": {}
+        }
+      },
+      {
+        "id": "mobile",
+        "width": 390,
+        "height": 844,
+        "display": {
+          "maxLines": 4,
+          "exactLines": null,
+          "measureCh": {}
+        },
+        "body": {
+          "measureCh": {}
+        }
+      }
+    ],
+    "thresholds": {
+      "minDisplayToBodySizeRatio": 2.35,
+      "minShortestDisplayLineFillRatio": 0.42,
+      "maxSingleWordDisplayLines": 0,
+      "minLastDisplayLineCharacters": 4,
+      "maxFontLoadLayoutShift": 0.02,
+      "maxHorizontalOverflowPx": 0
+    },
+    "requiredComputedRoles": [
+      "display",
+      "body",
+      "utility",
+      "data"
+    ],
+    "requiredComputedProperties": [
+      "fontFamily",
+      "fontSize",
+      "fontWeight",
+      "fontStyle",
+      "fontStretch",
+      "fontOpticalSizing",
+      "fontVariationSettings",
+      "fontSynthesis",
+      "lineHeight",
+      "letterSpacing",
+      "textTransform",
+      "lineCount"
+    ],
+    "requireDocumentFontsReady": true,
+    "requireFamilyChecks": true,
+    "requiredJudgments": [
+      "hierarchyDistinct",
+      "wrapsIntentional",
+      "typePersonalityMatches",
+      "fallbackStable"
+    ],
+    "requiredEvidence": [
+      "fresh screenshot path",
+      "SHA-256 screenshot hash",
+      "loaded-font confirmation",
+      "document.fonts.check confirmation for every declared family",
+      "computed family per role",
+      "computed typography properties per role",
+      "measured wrap and line-length data"
+    ]
+  },
+  "rules": []
+}

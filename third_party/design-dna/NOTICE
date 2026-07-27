@@ -1,0 +1,4 @@
+Upstream: https://github.com/zanwei/design-dna
+License: MIT
+
+Design Lagann does not vendor design-dna source. It offers an original compatible provider and optional external installation detection.

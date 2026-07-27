@@ -1,0 +1,313 @@
+{
+  "schemaVersion": "0.4.0",
+  "id": "orientation-a78716293cd9",
+  "briefContract": {
+    "goal": "Build a complete responsive website for Soft Crumb that converts today’s seasonal pastry selection into weekend pickup reservations.",
+    "audience": "Local pastry customers planning Saturday or Sunday pickup",
+    "brandTruth": "Soft Crumb specializes in laminated pastries, seasonal fillings, and weekend pickup.",
+    "primaryAction": "reserve pastries for weekend pickup",
+    "desiredRecall": "A pastry and its pickup ritual physically organizing the page.",
+    "subject": "Art-directed high-fidelity laminated pastry imagery",
+    "sections": [
+      "Hero",
+      "Today’s pastry selection",
+      "Three-stage process",
+      "Weekend pickup",
+      "Bag or reservation"
+    ],
+    "requiredInteractions": [
+      "add or remove a pastry from the bag",
+      "choose a pickup day or time",
+      "reserve the current bag"
+    ],
+    "requiredStates": [
+      "empty bag",
+      "configured bag",
+      "reservation success"
+    ],
+    "constraints": [
+      "responsive desktop and mobile art direction",
+      "semantic accessible controls",
+      "production-plausible local assets",
+      "generated frames remain creative references"
+    ],
+    "forbiddenPatterns": [
+      "generic split hero",
+      "repeated card grid",
+      "stock bakery template",
+      "improvised SVG food",
+      "fake reservation state"
+    ],
+    "fieldEvidence": {
+      "goal": {
+        "source": "brief",
+        "confidence": "exact"
+      },
+      "brandTruth": {
+        "source": "brief",
+        "confidence": "exact"
+      },
+      "primaryAction": {
+        "source": "brief",
+        "confidence": "exact"
+      },
+      "desiredRecall": {
+        "source": "brief",
+        "confidence": "exact"
+      }
+    },
+    "assets": [
+      {
+        "id": "laminated-pastry",
+        "role": "hero",
+        "description": "Art-directed high-fidelity laminated pastry imagery",
+        "requiredMedium": "transparent or composition-integrated raster"
+      }
+    ]
+  },
+  "exactRequirements": [
+    {
+      "id": "goal",
+      "source": "brief",
+      "confidence": "exact",
+      "value": "Build a complete responsive website for Soft Crumb that converts today’s seasonal pastry selection into weekend pickup reservations."
+    },
+    {
+      "id": "brand-truth",
+      "source": "brief",
+      "confidence": "exact",
+      "value": "Soft Crumb specializes in laminated pastries, seasonal fillings, and weekend pickup."
+    },
+    {
+      "id": "primary-action",
+      "source": "brief",
+      "confidence": "exact",
+      "value": "reserve pastries for weekend pickup"
+    },
+    {
+      "id": "audience",
+      "source": "brief",
+      "confidence": "exact",
+      "value": "Local pastry customers planning Saturday or Sunday pickup"
+    },
+    {
+      "id": "sections",
+      "source": "brief",
+      "confidence": "exact",
+      "value": [
+        "Hero",
+        "Today’s pastry selection",
+        "Three-stage process",
+        "Weekend pickup",
+        "Bag or reservation"
+      ]
+    },
+    {
+      "id": "interactions",
+      "source": "brief",
+      "confidence": "exact",
+      "value": [
+        "add or remove a pastry from the bag",
+        "choose a pickup day or time",
+        "reserve the current bag"
+      ]
+    },
+    {
+      "id": "states",
+      "source": "brief",
+      "confidence": "exact",
+      "value": [
+        "empty bag",
+        "configured bag",
+        "reservation success"
+      ]
+    },
+    {
+      "id": "constraints",
+      "source": "brief",
+      "confidence": "exact",
+      "value": [
+        "responsive desktop and mobile art direction",
+        "semantic accessible controls",
+        "production-plausible local assets",
+        "generated frames remain creative references"
+      ]
+    }
+  ],
+  "generationContract": {
+    "targetModel": "gpt-image-2",
+    "execution": "external-only",
+    "localNodeGeneration": false,
+    "statement": "This package emits production-oriented prompts and validates externally generated local files. It does not call GPT Image 2.",
+    "outputRole": "creative-reference",
+    "groundTruth": false
+  },
+  "candidates": [
+    {
+      "id": "direction-a",
+      "name": "Lamination as page architecture",
+      "thesis": "A folded paper and pastry-layer axis opens, overlaps, and carries the visitor from promise to selection to pickup.",
+      "organizingMechanism": "folded-lamination-axis",
+      "signatureRelationship": "The hero croissant and curling paper jointly become the page hinge instead of sitting beside the layout.",
+      "pageNarrative": "The pastry opens the promise, the fold reveals today’s selection, a rust process band changes cadence, and the packaging closes the reservation.",
+      "objectRole": "anchor and bridge",
+      "materialRestraint": "Warm paper, pastry layers, one rust field, and restrained depth on the reservation action.",
+      "responsiveMutation": "Turn the wide fold into a tall diagonal reveal, redistribute the product lineup, and move the shared bag action into the thumb zone.",
+      "assetMediumHypothesis": "Use art-directed transparent raster pastry and packaging assets, CSS type/layout, and a bounded CSS or raster fold mask.",
+      "recallTarget": "A pastry and its pickup ritual physically organizing the page.",
+      "refuses": [
+        "fragile fixed-position collage",
+        "decorative clay blobs",
+        "SVG pastry illustration"
+      ],
+      "differenceProof": "Its memory hook is lamination/fold geometry; changing palette or type would not turn it into the order-slip or pickup-window directions.",
+      "fingerprint": "7765edecfd1dea57",
+      "prompts": {
+        "desktop": {
+          "id": "direction-a-desktop",
+          "targetModel": "gpt-image-2",
+          "viewport": "desktop",
+          "aspect": "landscape",
+          "fullPage": true,
+          "creativeReferenceOnly": true,
+          "prompt": "Use case: ui-mockup\nAsset type: whole-page desktop website visual-orientation frame, candidate A of 3\nPrimary request: Design a high-fidelity, production-plausible responsive homepage mockup for “Soft Crumb”, a small independent bakery specializing in laminated pastries, seasonal fillings, and weekend pickup.\nCreative thesis: Lamination becomes the page architecture. One continuous folded-paper and pastry-layer axis opens, overlaps, and carries the eye from hero to today’s selection to pickup. The composition should be memorable even with all effects removed.\nRequired content: a strong hero; today’s pastry selection; a short three-step process; weekend pickup information; one clear working-bag or reservation control represented visually; concise real-brand copy.\nStyle/medium: polished whole website UI mockup, not an illustration and not a mood board; editorial art direction with tactile real pastry photography and physically believable paper/crumb textures.\nComposition/framing: entire desktop landing page in a single tall 3:2 frame from header through closing pickup action; asymmetric editorial composition; a singular croissant or laminated pastry must cut through the headline axis and visibly bridge into the selection section; varied section rhythm; purposeful whitespace; no standard split hero.\nTypography: an expressive high-contrast serif for display paired with a disciplined humanist sans for reading and utility; typography is structural, not decorative.\nColor palette: warm cultured-butter cream, baked apricot, dark oxblood, small fennel-green accent; high readable contrast.\nMaterials/textures: crisp flaky pastry layers, fibrous order paper, restrained clay-like depth only on the reservation control; one consistent upper-left light direction.\nText (verbatim where visible): “SOFT CRUMB”, “TODAY”, “WEEKEND PICKUP”, “RESERVE A BOX”. Keep all other copy very short and believable.\nConstraints: functional-looking navigation and controls; clear hierarchy; practical spacing; legible type; believable grid; no impossible overlaps on controls; no fake dashboards; no browser chrome; no watermark; no unrelated logos.\nAvoid: generic SaaS layout, left-copy/right-image hero, centered headline-and-two-CTA stack, repeated rounded card grid, bento boxes, excessive clay blobs, excessive shadows, gradient glow, stock bakery template, invented SVG illustration, tiny illegible text.",
+          "sha256": "3e7b43aa30421bfccd5442315c316f91318acea0f06034f8f29ee4c051bec2d4"
+        },
+        "mobile": {
+          "id": "direction-a-mobile",
+          "targetModel": "gpt-image-2",
+          "viewport": "mobile",
+          "aspect": "portrait",
+          "fullPage": true,
+          "creativeReferenceOnly": true,
+          "prompt": "Create the intentional mobile companion frame (390×844 portrait, shown as one complete tall webpage, no phone/device mockup) for the attached Soft Crumb Direction A desktop reference. Preserve its core creative thesis: pastry lamination becomes page architecture through folded paper layers and one hero croissant that physically bridges content zones. Recompose—do not merely stack—the desktop. Use a decisive crop of the croissant and folded-paper edge as a recurring hinge between the hero, today’s selection, the three-stage process, weekend pickup, and the reserve-a-box interaction. Preserve the cream, apricot/rust, oxblood, and fennel palette; preserve the expressive editorial serif plus highly readable humanist sans roles; preserve restrained material depth. Keep Soft Crumb branding, weekend laminated pastry offer, believable selection names/prices, pickup facts, and a simple reachable reserve/bag control. Ensure 44px-style touch targets, readable copy, clear hierarchy, no horizontal overflow, and a compact sticky or thumb-reachable bag action only if it serves the composition. Do not invent extra controls or fake metrics. Avoid generic stacked cards, centered everything, bubbly novelty fonts, tiny labels, excessive rounded containers, glow, glass, clay blobs, decorative SVG doodles, and repeated boxes. Generated image is a creative reference only, not an engineering specification.",
+          "sha256": "79c0080ea09be2814c179f1c3fec9827ff4a401a5c4399876f23a57bc5b82dbb"
+        }
+      }
+    },
+    {
+      "id": "direction-b",
+      "name": "The bakery order slip",
+      "thesis": "The entire page behaves like one numbered order slip being printed, torn, annotated, and folded.",
+      "organizingMechanism": "numbered-order-rail",
+      "signatureRelationship": "A persistent numbered rail sets the reading order while one pastry interrupts it and the bag becomes the torn claim area.",
+      "pageNarrative": "Printed thesis, today’s menu, process, pickup window, and the yellow bag receipt form one operational story.",
+      "objectRole": "interrupt and evidence",
+      "materialRestraint": "Receipt paper, black ink, cobalt registration, and one butter-yellow action field with almost no shadow.",
+      "responsiveMutation": "Keep the rail as a mobile edge index while desktop side regions become a single numbered receipt sequence.",
+      "assetMediumHypothesis": "Use one art-directed transparent pastry raster, lightweight paper texture, CSS rules/type, and non-interactive registration graphics.",
+      "recallTarget": "A pastry and its pickup ritual physically organizing the page.",
+      "refuses": [
+        "scrapbook clutter",
+        "fake barcode controls",
+        "menu without honest selection logic"
+      ],
+      "differenceProof": "Its order rail and claim receipt—not color—define the composition.",
+      "fingerprint": "3cee308628cbf2fa",
+      "prompts": {
+        "desktop": {
+          "id": "direction-b-desktop",
+          "targetModel": "gpt-image-2",
+          "viewport": "desktop",
+          "aspect": "landscape",
+          "fullPage": true,
+          "creativeReferenceOnly": true,
+          "prompt": "Use case: ui-mockup\nAsset type: whole-page desktop website visual-orientation frame, candidate B of 3\nPrimary request: Design a high-fidelity, production-plausible responsive homepage mockup for “Soft Crumb”, a small independent bakery specializing in laminated pastries, seasonal fillings, and weekend pickup.\nCreative thesis: The entire page behaves like one continuous bakery order slip being printed, torn, annotated, and folded. A vertical numbered order rail is the main reading axis; pastries interrupt that rail at deliberate moments and the bag state lives at the torn end of the slip.\nRequired content: a strong hero; today’s pastry selection; a short three-step process; weekend pickup information; one clear bag/reservation interaction represented visually; concise real-brand copy.\nStyle/medium: polished whole website UI mockup, not an illustration and not a mood board; contemporary poster typography plus art-directed real pastry cutouts; graphic but production-feasible.\nComposition/framing: entire desktop landing page in a single tall 3:2 frame from header through closing pickup action; asymmetric vertical flow; huge type and a narrow order rail weave through sections; one pastry image crosses the rail and changes the text alignment; product selection appears as a staggered editorial list, not cards; no standard split hero.\nTypography: one wide expressive grotesk for the brand and headings, paired with a highly readable serif for descriptions and a mono face only for order numbers, prices, and pickup time.\nColor palette: warm receipt paper, near-black ink, saturated butter yellow, one cobalt-blue registration accent; high readable contrast.\nMaterials/textures: fibrous thermal/order paper, crisp flaky pastry photography, restrained torn edges and registration marks; almost no shadow.\nText (verbatim where visible): “SOFT CRUMB”, “TODAY / 05”, “PICKUP 08:00—14:00”, “ADD TO WEEKEND BAG”. Keep all other copy short and believable.\nConstraints: functional-looking navigation and controls; clear hierarchy; practical spacing; legible type; believable grid; no impossible controls; no fake dashboard; no browser chrome; no watermark; no unrelated logos.\nAvoid: generic SaaS layout, left-copy/right-image hero, centered headline-and-two-CTA stack, repeated rounded cards, bento grid, clay blobs, glassmorphism, gradient glow, stock bakery template, invented SVG illustration, tiny illegible text, scrapbook clutter.",
+          "sha256": "837790cba6d23593aa8f7ddfbf44502d70fe33792d40fcbb940f8e345f260f4b"
+        },
+        "mobile": {
+          "id": "direction-b-mobile",
+          "targetModel": "gpt-image-2",
+          "viewport": "mobile",
+          "aspect": "portrait",
+          "fullPage": true,
+          "creativeReferenceOnly": true,
+          "prompt": "Create the intentional mobile companion frame (390×844 portrait, shown as one complete tall webpage, no phone/device mockup) for the attached Soft Crumb Direction B desktop reference. Preserve the unmistakable concept: the whole bakery site is one continuous numbered order slip. Keep the rough receipt-paper surface, perforated/torn edges, black ink, electric cobalt registration marks, and one sharp yolk-yellow claim-ticket/bag area. Preserve the condensed display grotesk, readable editorial serif for descriptions, and compact mono for operational data. Recompose—do not simply stack—the desktop: the numbered rail should remain a persistent edge/index; the large hero pastry must interrupt the slip and reading order; today’s menu, process, pickup details, and weekend bag should feel printed onto one unfolding physical artifact. Make the final bag action thumb-reachable and obviously functional. Include Soft Crumb branding, seasonal laminated pastry offer, believable selection/prices, three-stage process, Saturday/Sunday pickup, and simple bag interaction. Use readable type and reachable touch targets, no horizontal overflow, no fake controls/metrics. Avoid cards, pill UI, generic centered mobile landing page, novelty bubbly type, glow, glass, clay blobs, decorative SVG doodles, excessive roundness. Generated image is a creative reference only, not an engineering specification.",
+          "sha256": "49ca50518dfa5044ca1e3b0ba196574f1fed6515dada6920a291ae8da51f16fc"
+        }
+      }
+    },
+    {
+      "id": "direction-c",
+      "name": "The weekend pickup window",
+      "thesis": "The architectural bakery aperture and one continuous service ledge become the page.",
+      "organizingMechanism": "pickup-window-ledge",
+      "signatureRelationship": "The ledge carries pastries, production evidence, selection, process, claim ticket, and reservation through one spatial sentence.",
+      "pageNarrative": "The bakery aperture establishes trust, the ledge becomes today’s menu, the dark process field changes its role, and pickup controls resolve beneath it.",
+      "objectRole": "stage and bridge",
+      "materialRestraint": "Porcelain, aubergine, stone, brushed steel, apricot, and one herb-green annotation system.",
+      "responsiveMutation": "Turn the wide service ledge into a changing mobile crop and descending reading hinge while separating dense process and reservation states.",
+      "assetMediumHypothesis": "Use staged bakery photography, consistent transparent pastry rasters, semantic DOM for claim/menu/form states, and robust CSS or a reusable perspective ledge asset.",
+      "recallTarget": "A pastry and its pickup ritual physically organizing the page.",
+      "refuses": [
+        "portrait file mislabeled as desktop",
+        "simultaneous configured and success states",
+        "essential handwritten copy"
+      ],
+      "differenceProof": "Its physical service aperture and ledge remain the thesis independent of palette or effects.",
+      "fingerprint": "b4baa30e61923112",
+      "prompts": {
+        "desktop": {
+          "id": "direction-c-desktop",
+          "targetModel": "gpt-image-2",
+          "viewport": "desktop",
+          "aspect": "landscape",
+          "fullPage": true,
+          "creativeReferenceOnly": true,
+          "prompt": "Repair the attached Soft Crumb Direction C reference by creating a GENUINE WIDE DESKTOP WEBSITE FRAME. Output must be a 3:2 landscape composition (approximately 1536×1024), wider than it is tall, showing the complete landing page from header through reservation in one wide artboard. Do not output portrait, mobile, a long vertical page, a phone, or a device mockup.\n\nPreserve the thesis: THE WEEKEND PICKUP WINDOW BECOMES THE PAGE. Keep the architectural arched pass-through and one continuous stone-and-brushed-metal pastry ledge as the page axis. Recompose for desktop simultaneity: hero and bakery aperture occupy the broad opening; the ledge crosses horizontally and diagonally into today’s pastry list; the dark aubergine process band changes the ledge’s role; pickup information and a compact reservation state close the composition. Keep real laminated pastries integrated on the ledge, the clipped physical claim ticket, deep aubergine, warm porcelain, fermented apricot, steel, and herb green. Preserve characterful serif plus compact legible grotesk roles.\n\nFix the UI contradiction: show a clean initial reservation state only—no “Reserved” success message at the same time as an active “Add to bag” button. The claim ticket may preview pickup identity but must not invent a confirmed reservation number. Connect any displayed price to a visibly selected pastry or omit the total. Keep today’s selection, concise three-stage process, weekend pickup, and one honest reserve/bag interaction. Make operational copy readable, with real control affordances and no fake metrics.\n\nAvoid portrait layout, generic split hero, repeated cards, pills, glow, glass, clay blobs, decorative SVG doodles, tiny handwritten essential information, or stock bakery styling. This generated frame remains a creative reference, not an implementation specification.",
+          "sha256": "7f90090669903c8418a91ca840d9ecf34f5de6ee194de5d0140616b33b3326c8"
+        },
+        "mobile": {
+          "id": "direction-c-mobile",
+          "targetModel": "gpt-image-2",
+          "viewport": "mobile",
+          "aspect": "portrait",
+          "fullPage": true,
+          "creativeReferenceOnly": true,
+          "prompt": "Create the intentional mobile companion frame (390×844 portrait, shown as one complete tall webpage, no phone/device mockup) for the attached Soft Crumb Direction C desktop reference. Preserve its one visual thesis: THE WEEKEND PICKUP WINDOW BECOMES THE PAGE. Recompose—do not merely stack—the desktop. The arched bakery pass-through should become a changing crop/aperture, while one continuous stone-and-brushed-metal pastry ledge descends or zigzags through hero, today’s pastry selection, the three-stage process, pickup facts, and reservation. Real laminated pastries should physically travel along and interrupt the ledge. Preserve the clipped physical claim ticket as the bag/reservation state and make the main action thumb-reachable. Preserve deep aubergine, warm porcelain, fermented apricot, brushed steel, and herb-green accents; preserve a characterful contemporary serif plus compact legible grotesk. Include Soft Crumb brand, weekend promise, believable menu/prices/availability, process, Saturday/Sunday pickup, and a simple reserve/bag control. Use readable type, clear touch targets, intentional whitespace, and no horizontal overflow. Do not invent fake controls or metrics. Avoid generic mobile card stacks, centered everything, pills, glow, glassmorphism, clay blobs, decorative SVG doodles, repeated rounded panels, or stock bakery template styling. Generated image is a creative reference only, not an engineering specification.",
+          "sha256": "cb05ef63e3ed999cee4641dde211435add898a5b8f336fa59d54ac54fc952239"
+        }
+      }
+    }
+  ],
+  "requiredEvidence": {
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "localFiles": true,
+    "sha256Binding": true,
+    "generationProvenance": [
+      "provider",
+      "requestedModel",
+      "reportedModel or explicit unreported",
+      "generatedAt",
+      "generationMode",
+      "humanEdits"
+    ],
+    "independentCritic": true,
+    "criticDimensions": [
+      "originality",
+      "productFit",
+      "hierarchy",
+      "feasibility",
+      "responsiveViability",
+      "implementationDifficulty",
+      "accessibilityFakeUiRisk",
+      "assetMediumImplications"
+    ]
+  },
+  "groundTruthPolicy": {
+    "generatedImagesAreGroundTruth": false,
+    "pixelSimilarityIsAcceptance": false,
+    "exactValuesMayBeInferredFromImage": false,
+    "implementationRequiresBrowserVerification": true
+  },
+  "humanApproval": {
+    "status": "pending",
+    "candidateId": null,
+    "decidedBy": null,
+    "decidedAt": null,
+    "note": null
+  }
+}

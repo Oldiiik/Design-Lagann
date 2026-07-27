@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Rivet FM is a continuous independent radio relay broadcasting machine rhythm, field recordings, and guest transmissions."
+    />
+    <meta name="theme-color" content="#0a0a0a" />
+    <title>Rivet FM — Independent Radio Relay</title>
+    <link
+      rel="preload"
+      href="../assets/fonts/roboto-condensed/RobotoCondensed-Variable-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="../assets/fonts/ibm-plex-mono/IBMPlexMono-Regular-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="../assets/fonts/ibm-plex-mono/IBMPlexMono-Bold-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="../assets/images/industrial-tuner.webp"
+      as="image"
+      type="image/webp"
+    />
+    <link
+      rel="icon"
+      href="../assets/images/industrial-tuner.webp"
+      type="image/webp"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#broadcast">Skip to broadcast controls</a>
+
+    <header class="site-header">
+      <a class="station-mark" href="#top" aria-label="Rivet FM home">
+        <span class="station-mark__block" aria-hidden="true"></span>
+        <span>RVT / FM</span>
+      </a>
+      <p>Independent broadcast relay</p>
+      <div class="header-meta">
+        <span id="stationClock">--:--:--</span>
+        <span>UTC +06</span>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="live-stage" aria-labelledby="station-title">
+        <div class="masthead">
+          <p class="masthead__index">TX–24 / CHANNEL A</p>
+          <h1 id="station-title">
+            <span>RIVET</span>
+            <span class="masthead__suffix">FM</span>
+          </h1>
+          <p class="masthead__promise">
+            Twenty-four hours of machine rhythm,<br />
+            field recordings, and live assembly.
+          </p>
+        </div>
+
+        <div class="frequency-axis" id="broadcast">
+          <div class="axis-rule" aria-hidden="true">
+            <span class="axis-label axis-label--min">88</span>
+            <span class="axis-label axis-label--mid">98</span>
+            <span class="axis-label axis-label--max">108 MHz</span>
+            <span class="axis-ticks"></span>
+            <span class="axis-progress"></span>
+          </div>
+
+          <label class="visually-hidden" for="frequencyTuner">
+            Tune radio frequency from 88 to 108 megahertz
+          </label>
+          <div class="tuning-module">
+            <div class="tuning-module__hardware" aria-hidden="true">
+              <img
+                class="tuning-module__base"
+                src="../assets/images/industrial-tuner.webp"
+                alt=""
+                width="1536"
+                height="1024"
+                decoding="async"
+                fetchpriority="high"
+              />
+              <span class="tuning-module__knob-window">
+                <img
+                  class="tuning-module__knob"
+                  src="../assets/images/industrial-tuner.webp"
+                  alt=""
+                  width="1536"
+                  height="1024"
+                  decoding="async"
+                />
+              </span>
+              <span class="tuning-module__focus-ring"></span>
+              <span class="tuning-module__status-light"></span>
+              <span class="tuning-module__axis-bridge"></span>
+            </div>
+            <input
+              class="frequency-tuner"
+              id="frequencyTuner"
+              type="range"
+              min="88"
+              max="108"
+              step="0.1"
+              value="99.8"
+              aria-describedby="tunerHelp signalStatus"
+            />
+          </div>
+
+          <button
+            class="play-control"
+            id="playControl"
+            type="button"
+            aria-pressed="false"
+            aria-describedby="signalStatus"
+          >
+            <span class="play-control__icon" aria-hidden="true"></span>
+            <span class="play-control__copy">
+              <span class="play-control__verb">Start relay</span>
+              <span>Simulated stream</span>
+            </span>
+          </button>
+
+          <p class="visually-hidden" id="tunerHelp">
+            Rivet FM locks at 99.8 megahertz. Use the arrow keys or drag the
+            hardware knob.
+          </p>
+
+          <div class="tuner-readout" id="tunerReadout" aria-hidden="true">
+            <span class="tuner-readout__needle"></span>
+            <span class="tuner-readout__value">99.8</span>
+          </div>
+        </div>
+
+        <aside class="on-air" aria-labelledby="onAirLabel">
+          <div class="on-air__state">
+            <span class="signal-lamp" aria-hidden="true"></span>
+            <span id="onAirLabel">On air now</span>
+          </div>
+          <p class="on-air__title" id="currentProgram">Open Circuit</p>
+          <p class="on-air__host" id="currentHost">Guest transmission desk</p>
+          <p class="signal-status" id="signalStatus" role="status" aria-live="polite">
+            Signal locked / 99.8 MHz
+          </p>
+        </aside>
+
+        <div class="stage-stamp" aria-hidden="true">
+          <span>24H</span>
+          <span>NO ADS</span>
+        </div>
+      </section>
+
+      <section class="schedule" aria-labelledby="schedule-title">
+        <header class="schedule__header">
+          <p>Transmission log / local time</p>
+          <h2 id="schedule-title">Today on the line</h2>
+          <a href="#broadcast">Tune to 99.8 <span aria-hidden="true">↗</span></a>
+        </header>
+
+        <ol class="schedule__list">
+          <li data-start="0" data-end="3">
+            <time datetime="00:00">00:00</time>
+            <strong>Night Shift</strong>
+            <span>Field recordings / low frequency</span>
+          </li>
+          <li data-start="3" data-end="7">
+            <time datetime="03:00">03:00</time>
+            <strong>Cold Start</strong>
+            <span>Leftfield electronics / archive</span>
+          </li>
+          <li data-start="7" data-end="12">
+            <time datetime="07:00">07:00</time>
+            <strong>Morning Metal</strong>
+            <span>Post-punk / machine rhythm</span>
+          </li>
+          <li data-start="12" data-end="18">
+            <time datetime="12:00">12:00</time>
+            <strong>Open Circuit</strong>
+            <span>Guest transmissions / live desk</span>
+          </li>
+          <li data-start="18" data-end="24">
+            <time datetime="18:00">18:00</time>
+            <strong>Rivet Assembly</strong>
+            <span>Labels in session / open channel</span>
+          </li>
+        </ol>
+
+        <footer class="schedule__footer">
+          <p>
+            Built by listeners. No algorithms, no ad breaks, no passive
+            recommendation loop.
+          </p>
+          <p>Warehouse 04 / Almaty / transmitting continuously</p>
+        </footer>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

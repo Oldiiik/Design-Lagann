@@ -1,0 +1,336 @@
+{
+  "schemaVersion": "1.0",
+  "fetchedOn": "2026-07-23",
+  "format": "WOFF2",
+  "subset": "latin",
+  "sourcePolicy": "Official Google Fonts CSS API binaries from fonts.gstatic.com, paired with the corresponding SIL Open Font License files from the official google/fonts repository.",
+  "totalWoff2Files": 12,
+  "totalWoff2Bytes": 331512,
+  "directions": {
+    "editorial": {
+      "display": "Instrument Serif",
+      "text": "Libre Franklin",
+      "rationale": "A sharply expressive news-and-culture serif paired with a restrained Franklin grotesque."
+    },
+    "industrial": {
+      "display": "Roboto Condensed",
+      "technical": "IBM Plex Mono",
+      "rationale": "A space-efficient technical sans paired with a machine-readable mono for labels, frequencies, and control states."
+    },
+    "retro-future": {
+      "display": "Syne",
+      "technical": "Space Mono",
+      "rationale": "Syne supplies unconventional geometric tension without the generic sci-fi-dashboard tell, stabilized by a readable mono.",
+      "rejectedComparisons": [
+        {
+          "family": "Orbitron",
+          "reason": "Its literal electronic styling is too recognizable as a default generated sci-fi choice for this direction."
+        }
+      ]
+    },
+    "organic": {
+      "display": "Fraunces",
+      "text": "Nunito Sans",
+      "rationale": "A warm optical-size variable serif paired with a soft, humanist-leaning sans."
+    }
+  },
+  "files": [
+    {
+      "family": "Instrument Serif",
+      "direction": "editorial",
+      "role": "expressive serif / display",
+      "filename": "instrument-serif/InstrumentSerif-Regular-latin.woff2",
+      "weight": "400",
+      "style": "normal",
+      "subset": "latin",
+      "bytes": 21032,
+      "sha256": "5eb09b5ac0e28b67c2f041c8ba6d244604ca0c0980d65912ab2d47fed84ddc31",
+      "upstreamUrl": "https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjg.woff2",
+      "sourceCssUrl": "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap",
+      "familyRepository": "https://github.com/google/fonts/tree/main/ofl/instrumentserif",
+      "license": {
+        "id": "OFL-1.1",
+        "filename": "instrument-serif/OFL.txt",
+        "upstreamUrl": "https://raw.githubusercontent.com/google/fonts/main/ofl/instrumentserif/OFL.txt"
+      }
+    },
+    {
+      "family": "Instrument Serif",
+      "direction": "editorial",
+      "role": "expressive serif / accent",
+      "filename": "instrument-serif/InstrumentSerif-Italic-latin.woff2",
+      "weight": "400",
+      "style": "italic",
+      "subset": "latin",
+      "bytes": 22128,
+      "sha256": "5a51946dfffa82972bc98745359c46761515641fda557c25116459a9f83da4a7",
+      "upstreamUrl": "https://fonts.gstatic.com/s/instrumentserif/v5/jizHRFtNs2ka5fXjeivQ4LroWlx-6zAjjH7M.woff2",
+      "sourceCssUrl": "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap",
+      "familyRepository": "https://github.com/google/fonts/tree/main/ofl/instrumentserif",
+      "license": {
+        "id": "OFL-1.1",
+        "filename": "instrument-serif/OFL.txt",
+        "upstreamUrl": "https://raw.githubusercontent.com/google/fonts/main/ofl/instrumentserif/OFL.txt"
+      }
+    },
+    {
+      "family": "Libre Franklin",
+      "direction": "editorial",
+      "role": "neutral sans / text",
+      "filename": "libre-franklin/LibreFranklin-Variable-latin.woff2",
+      "weight": "300 800",
+      "style": "normal",
+      "axes": {
+        "wght": "300..800"
+      },
+      "subset": "latin",
+      "bytes": 29292,
+      "sha256": "52e605852c72cc2df1473df1fb7f26a3a0be58e31835bc8f33f29b1918c82cbd",
+      "upstreamUrl": "https://fonts.gstatic.com/s/librefranklin/v20/jizDREVItHgc8qDIbSTKq4XkRiUf2zc.woff2",
+      "sourceCssUrl": "https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300..800&display=swap",
+      "familyRepository": "https://github.com/google/fonts/tree/main/ofl/librefranklin",
+      "license": {
+        "id": "OFL-1.1",
+        "filename": "libre-franklin/OFL.txt",
+        "upstreamUrl": "https://raw.githubusercontent.com/google/fonts/main/ofl/librefranklin/OFL.txt"
+      }
+    },
+    {
+      "family": "Roboto Condensed",
+      "direction": "industrial",
+      "role": "condensed technical sans / display",
+      "filename": "roboto-condensed/RobotoCondensed-Variable-latin.woff2",
+      "weight": "300 900",
+      "style": "normal",
+      "axes": {
+        "wght": "300..900"
+      },
+      "subset": "latin",
+      "bytes": 51412,
+      "sha256": "8d230115e58faa2ed303bee567b91d1a792e0c958a0118998b53648b2ab7c057",
+      "upstreamUrl": "https://fonts.gstatic.com/s/robotocondensed/v31/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQ.woff2",
+      "sourceCssUrl": "https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300..900&display=swap",
+      "familyRepository": "https://github.com/google/fonts/tree/main/ofl/robotocondensed",
+      "license": {
+        "id": "OFL-1.1",
+        "filename": "roboto-condensed/OFL.txt",
+        "upstreamUrl": "https://raw.githubusercontent.com/google/fonts/main/ofl/robotocondensed/OFL.txt"
+      }
+    },
+    {
+      "family": "IBM Plex Mono",
+      "direction": "industrial",
+      "role": "mono / control labels and data",
+      "filename": "ibm-plex-mono/IBMPlexMono-Regular-latin.woff2",
+      "weight": "400",
+      "style": "normal",
+      "subset": "latin",
+      "bytes": 14708,
+      "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+      "upstreamUrl": "https://fonts.gstatic.com/s/ibmplexmono/v20/-F63fjptAgt5VM-kVkqdyU8n1i8q1w.woff2",
+      "sourceCssUrl": "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap",
+      "familyRepository": "https://github.com/google/fonts/tree/main/ofl/ibmplexmono",
+      "license": {
+        "id": "OFL-1.1",
+        "filename": "ibm-plex-mono/OFL.txt",
+        "upstreamUrl": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/OFL.txt"
+      }
+    },
+    {
+      "family": "IBM Plex Mono",
+      "direction": "industrial",
+      "role": "mono / emphasized control labels",
+      "filename": "ibm-plex-mono/IBMPlexMono-Bold-latin.woff2",
+      "weight": "700",
+      "style": "normal",
+      "subset": "latin",
+      "bytes": 14908,
+      "sha256": "4f84d86cfd060f4ded334358ff8a4c81d4db2ed5addd568359d693f44a87765a",
+      "upstreamUrl": "https://fonts.gstatic.com/s/ibmplexmono/v20/-F6qfjptAgt5VM-kVkqdyU8n3pQPwlBFgg.woff2",
+      "sourceCssUrl": "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap",
+      "familyRepository": "https://github.com/google/fonts/tree/main/ofl/ibmplexmono",
+      "license": {
+        "id": "OFL-1.1",
+        "filename": "ibm-plex-mono/OFL.txt",
+        "upstreamUrl": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/OFL.txt"
+      }
+    },
+    {
+      "family": "Syne",
+      "direction": "retro-future",
+      "role": "preferred geometric display",
+      "selectionStatus": "preferred",
+      "filename": "syne/Syne-Variable-latin.woff2",
+      "weight": "400 800",
+      "style": "normal",
+      "axes": {
+        "wght": "400..800"
+      },
+      "subset": "latin",
+      "bytes": 34608,
+      "sha256": "68b623f0e45b905041b2edb9b2e4f563a505f13db1cd06b5f1946eb2e1f47048",
+      "upstreamUrl": "https://fonts.gstatic.com/s/syne/v24/8vIH7w4qzmVxm2BL9A.woff2",
+      "sourceCssUrl": "https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap",
+      "familyRepository": "https://github.com/google/fonts/tree/main/ofl/syne",
+      "license": {
+        "id": "OFL-1.1",
+        "filename": "syne/OFL.txt",
+        "upstreamUrl": "https://raw.githubusercontent.com/google/fonts/main/ofl/syne/OFL.txt"
+      }
+    },
+    {
+      "family": "Orbitron",
+      "direction": "retro-future",
+      "role": "rejected comparison / generic sci-fi tell",
+      "selectionStatus": "rejected-comparison",
+      "rejectionReason": "Retained only to document the cliché comparison; do not use as the preferred retro-future display face.",
+      "filename": "orbitron/Orbitron-Variable-latin.woff2",
+      "weight": "400 900",
+      "style": "normal",
+      "axes": {
+        "wght": "400..900"
+      },
+      "subset": "latin",
+      "bytes": 11800,
+      "sha256": "c25a9f9da5d9f3db1bf2a01474722dc9b377675b7bbab6d0dfda6902794fd1ed",
+      "upstreamUrl": "https://fonts.gstatic.com/s/orbitron/v35/yMJRMIlzdpvBhQQL_Qq7dy0.woff2",
+      "sourceCssUrl": "https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap",
+      "familyRepository": "https://github.com/google/fonts/tree/main/ofl/orbitron",
+      "license": {
+        "id": "OFL-1.1",
+        "filename": "orbitron/OFL.txt",
+        "upstreamUrl": "https://raw.githubusercontent.com/google/fonts/main/ofl/orbitron/OFL.txt"
+      }
+    },
+    {
+      "family": "Space Mono",
+      "direction": "retro-future",
+      "role": "readable mono / text and telemetry",
+      "filename": "space-mono/SpaceMono-Regular-latin.woff2",
+      "weight": "400",
+      "style": "normal",
+      "subset": "latin",
+      "bytes": 16520,
+      "sha256": "fb4a81a2d0a893e5c38c394a7e716a1cef0b24610a0af49c96f6d529bd66bf2b",
+      "upstreamUrl": "https://fonts.gstatic.com/s/spacemono/v17/i7dPIFZifjKcF5UAWdDRYEF8RQ.woff2",
+      "sourceCssUrl": "https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap",
+      "familyRepository": "https://github.com/google/fonts/tree/main/ofl/spacemono",
+      "license": {
+        "id": "OFL-1.1",
+        "filename": "space-mono/OFL.txt",
+        "upstreamUrl": "https://raw.githubusercontent.com/google/fonts/main/ofl/spacemono/OFL.txt"
+      }
+    },
+    {
+      "family": "Space Mono",
+      "direction": "retro-future",
+      "role": "readable mono / emphasized telemetry",
+      "filename": "space-mono/SpaceMono-Bold-latin.woff2",
+      "weight": "700",
+      "style": "normal",
+      "subset": "latin",
+      "bytes": 16724,
+      "sha256": "2d46bd159b53f55c41167a4f1540a074649464194fd1e416f5b4694a6c0f282c",
+      "upstreamUrl": "https://fonts.gstatic.com/s/spacemono/v17/i7dMIFZifjKcF5UAWdDRaPpZUFWaHg.woff2",
+      "sourceCssUrl": "https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap",
+      "familyRepository": "https://github.com/google/fonts/tree/main/ofl/spacemono",
+      "license": {
+        "id": "OFL-1.1",
+        "filename": "space-mono/OFL.txt",
+        "upstreamUrl": "https://raw.githubusercontent.com/google/fonts/main/ofl/spacemono/OFL.txt"
+      }
+    },
+    {
+      "family": "Fraunces",
+      "direction": "organic",
+      "role": "warm variable serif / display",
+      "filename": "fraunces/Fraunces-Variable-latin.woff2",
+      "weight": "300 700",
+      "style": "normal",
+      "axes": {
+        "opsz": "9..144",
+        "wght": "300..700"
+      },
+      "subset": "latin",
+      "bytes": 67304,
+      "sha256": "7234ed860a9cc83045413c4faee63c960a8f2d1917adcf728119307d56e0d783",
+      "upstreamUrl": "https://fonts.gstatic.com/s/fraunces/v38/6NU78FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0KxC9TeA.woff2",
+      "sourceCssUrl": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&display=swap",
+      "familyRepository": "https://github.com/google/fonts/tree/main/ofl/fraunces",
+      "license": {
+        "id": "OFL-1.1",
+        "filename": "fraunces/OFL.txt",
+        "upstreamUrl": "https://raw.githubusercontent.com/google/fonts/main/ofl/fraunces/OFL.txt"
+      }
+    },
+    {
+      "family": "Nunito Sans",
+      "direction": "organic",
+      "role": "humanist sans / text",
+      "filename": "nunito-sans/NunitoSans-Variable-latin.woff2",
+      "weight": "300 900",
+      "style": "normal",
+      "axes": {
+        "wght": "300..900"
+      },
+      "subset": "latin",
+      "bytes": 31076,
+      "sha256": "29e3890496844a9ea81975c52771c587c872b4eb317026422d1995b88d21b57d",
+      "upstreamUrl": "https://fonts.gstatic.com/s/nunitosans/v19/pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t1R-s.woff2",
+      "sourceCssUrl": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300..900&display=swap",
+      "familyRepository": "https://github.com/google/fonts/tree/main/ofl/nunitosans",
+      "license": {
+        "id": "OFL-1.1",
+        "filename": "nunito-sans/OFL.txt",
+        "upstreamUrl": "https://raw.githubusercontent.com/google/fonts/main/ofl/nunitosans/OFL.txt"
+      }
+    }
+  ],
+  "licenseFiles": [
+    {
+      "filename": "instrument-serif/OFL.txt",
+      "bytes": 4405,
+      "sha256": "129ed7618959716959f2941fdd5b49e0ad6e6c1d78726761786a00253d865521"
+    },
+    {
+      "filename": "libre-franklin/OFL.txt",
+      "bytes": 4495,
+      "sha256": "2710268527181a27b8e938617551bae29e714e6525247be6679bf897a9942a60"
+    },
+    {
+      "filename": "roboto-condensed/OFL.txt",
+      "bytes": 4393,
+      "sha256": "0e4cc6ece88573545be2ed25835363662a6182ba4a4c1b5c8feda52add30e8a6"
+    },
+    {
+      "filename": "ibm-plex-mono/OFL.txt",
+      "bytes": 4456,
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+    },
+    {
+      "filename": "orbitron/OFL.txt",
+      "bytes": 4426,
+      "sha256": "ab609b0e110d622435ff337cdf233288556e011bbf9bd0550be98846c0630819"
+    },
+    {
+      "filename": "space-mono/OFL.txt",
+      "bytes": 4392,
+      "sha256": "8e4ee42b2553e1e01504e61cb0d46d148cd8c9e5eacaa3622a7df2d4f2955b9f"
+    },
+    {
+      "filename": "syne/OFL.txt",
+      "bytes": 4402,
+      "sha256": "cc43cdce6f91c57989af8459341c276655e34224e954fa69c2ad700831a742d8"
+    },
+    {
+      "filename": "fraunces/OFL.txt",
+      "bytes": 4391,
+      "sha256": "bdf4c22802eaf804f998195871c6b8938aac2ac14b2d78a8bd66a6f1eced833b"
+    },
+    {
+      "filename": "nunito-sans/OFL.txt",
+      "bytes": 4393,
+      "sha256": "efbb0c9e864cef973982d9a17567e6be5c3d1759695574586f3f18c7ecca064b"
+    }
+  ]
+}

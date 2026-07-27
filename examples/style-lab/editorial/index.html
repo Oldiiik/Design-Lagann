@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Morrow Editions is an independent press for formally restless fiction, essays, and translation."
+    />
+    <title>Morrow Editions — The Unfinished Morning</title>
+    <link
+      rel="preload"
+      href="../assets/fonts/instrument-serif/InstrumentSerif-Regular-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="../assets/fonts/instrument-serif/InstrumentSerif-Italic-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="../assets/fonts/libre-franklin/LibreFranklin-Variable-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="preload" href="../assets/images/editorial-cover.webp" as="image" type="image/webp" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#featured-edition">Skip to the featured edition</a>
+
+    <div class="site-shell">
+      <header class="masthead">
+        <a class="wordmark" href="#top" aria-label="Morrow Editions, home">
+          <span>Morrow</span>
+          <span>Editions</span>
+        </a>
+        <p class="imprint">
+          Independent press
+          <span aria-hidden="true">/</span>
+          Vol. 06
+        </p>
+        <a class="catalogue-link" href="#catalogue">Autumn list ↓</a>
+      </header>
+
+      <main id="top">
+        <section class="featured" id="featured-edition" aria-labelledby="page-title">
+          <div class="book-stage" id="book-stage" data-state="closed">
+            <div class="binding" aria-hidden="true">
+              <span>ME—06</span>
+            </div>
+
+            <div class="leaf leaf-left">
+              <p class="folio">New fiction · September 14</p>
+              <h1 id="page-title">
+                <span>A new book</span>
+                <span>opens</span>
+                <span>the page.</span>
+              </h1>
+
+              <div class="opening-note">
+                <p>
+                  Morrow publishes formally restless writing in editions made to be
+                  kept, marked, and returned to.
+                </p>
+                <button
+                  class="text-action"
+                  id="open-book"
+                  type="button"
+                  aria-controls="excerpt"
+                  aria-expanded="false"
+                >
+                  <span>Open the new edition</span>
+                  <span aria-hidden="true">↗</span>
+                </button>
+              </div>
+            </div>
+
+            <article
+              class="leaf leaf-right excerpt"
+              id="excerpt"
+              aria-labelledby="excerpt-title"
+              aria-hidden="true"
+              inert
+            >
+              <button class="close-action" id="close-book" type="button">
+                Close book <span aria-hidden="true">×</span>
+              </button>
+              <p class="section-label">From the opening pages</p>
+              <h2 id="excerpt-title">The Unfinished Morning</h2>
+              <p class="byline">A novel by Ilya Rowan</p>
+              <blockquote>
+                “By seven, the city had misplaced its horizon. Mara put the kettle
+                on anyway.”
+              </blockquote>
+              <p class="edition-note">
+                184 pages · thread-sewn paperback<br />
+                First edition of 600
+              </p>
+              <button
+                class="reserve-action"
+                id="reserve-copy"
+                type="button"
+                aria-pressed="false"
+              >
+                Reserve copy · $24
+              </button>
+              <p class="reserve-status" id="reserve-status" aria-live="polite"></p>
+            </article>
+
+            <div class="cover-hinge" aria-hidden="true">
+              <div class="book-cover">
+                <div class="cover-face cover-front">
+                  <img
+                    class="cover-art"
+                    src="../assets/images/editorial-cover.webp"
+                    alt=""
+                    width="1024"
+                    height="1536"
+                    fetchpriority="high"
+                    draggable="false"
+                  />
+                  <p class="cover-imprint">Morrow Editions · 006</p>
+                  <div class="cover-title">
+                    <span>The</span>
+                    <strong>Unfinished</strong>
+                    <strong>Morning</strong>
+                  </div>
+                  <p class="cover-author">Ilya Rowan</p>
+                  <span class="cover-mark">M</span>
+                </div>
+                <div class="cover-face cover-back">
+                  <p class="back-label">A note from the editor</p>
+                  <p>
+                    A quiet book about the things that begin before we are ready.
+                    Printed in an edition small enough to know by number.
+                  </p>
+                  <span class="edition-number">006 / 600</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="motion-cue" aria-hidden="true">
+            <span>the binding continues</span>
+            <span>↓</span>
+          </p>
+        </section>
+
+        <section class="catalogue" id="catalogue" aria-labelledby="catalogue-title">
+          <span class="continuing-binding" aria-hidden="true"></span>
+          <header class="catalogue-intro">
+            <p class="section-label">The autumn list / 2026</p>
+            <h2 id="catalogue-title">Three books.<br />One long season.</h2>
+            <p>
+              Fiction, essays, and translation selected for what lingers after the
+              final page.
+            </p>
+          </header>
+
+          <ol class="title-list">
+            <li>
+              <span class="list-number">01</span>
+              <span class="list-title">The Unfinished Morning</span>
+              <span class="list-meta">Ilya Rowan · Fiction</span>
+            </li>
+            <li>
+              <span class="list-number">02</span>
+              <span class="list-title">Inventory of Rain</span>
+              <span class="list-meta">Sora Bell · Essays</span>
+            </li>
+            <li>
+              <span class="list-number">03</span>
+              <span class="list-title">The Blue Orchard</span>
+              <span class="list-meta">Ana Velez · Translation</span>
+            </li>
+          </ol>
+
+          <footer class="colophon">
+            <p>Books for the margins of the day.</p>
+            <p>© <span id="current-year">2026</span> Morrow Editions</p>
+          </footer>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

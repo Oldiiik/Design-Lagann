@@ -1,0 +1,35 @@
+{
+  "goal": "",
+  "audience": "",
+  "primaryAction": "",
+  "brandTruths": [],
+  "businessTruths": [],
+  "desiredRecall": "",
+  "voice": [],
+  "creativeThesis": "",
+  "executionProfile": "balanced",
+  "acceptancePolicy": "elite-v1",
+  "constraints": [],
+  "forbiddenPatterns": [],
+  "antiReferences": [],
+  "interactions": [],
+  "requiredStates": [],
+  "assets": [],
+  "sections": [],
+  "evaluationRequirements": [
+    "desktop, tablet, and mobile screenshot evidence",
+    "independent semantic art-direction critic",
+    "executed build, test, accessibility, and declared-interaction checks",
+    "the same elite-v1 acceptance contract in every execution profile"
+  ],
+  "references": [
+    {
+      "url": "",
+      "role": "",
+      "reason": "",
+      "strengths": [],
+      "weaknesses": [],
+      "similarityRisk": ""
+    }
+  ]
+}

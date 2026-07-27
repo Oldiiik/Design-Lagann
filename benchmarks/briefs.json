@@ -1,0 +1,32 @@
+[
+  {
+    "id": "premium-ecommerce",
+    "category": "premium ecommerce",
+    "goal": "Create a high-consideration product page with editorial storytelling, clear purchase flow, and deliberate mobile recomposition.",
+    "prompt": "Build a complete responsive product page for an independent premium audio brand launching one flagship portable speaker. Make the product feel engineered, tactile, and culturally relevant. Include a strong opening, product story, key specifications, color selection, purchase interaction, and support details. Use original editorial composition, purposeful whitespace, and deliberate mobile recomposition. Avoid generic ecommerce templates, repetitive feature cards, gratuitous effects, and stock-looking imagery. The result must feel like a real brand launch, not a design exercise."
+  },
+  {
+    "id": "saas-dashboard",
+    "category": "SaaS dashboard",
+    "goal": "Create a dense operational dashboard with clear hierarchy, trustworthy states, accessible data, and fast expert workflows.",
+    "prompt": "Build a complete responsive operations dashboard for a small renewable-energy network. Operators need to scan live site health, investigate anomalies, compare output, and acknowledge incidents. Include global status, a useful data view, incident context, filtering, and one working expert interaction. Create a confident visual hierarchy and a distinctive information architecture without hiding density inside generic cards. Avoid dashboard-template grids, decorative charts, glassmorphism, and oversized marketing typography. The interface must feel credible in daily professional use."
+  },
+  {
+    "id": "creative-portfolio",
+    "category": "creative portfolio",
+    "goal": "Create an original portfolio where project work remains the focal point and motion supports narrative rather than spectacle.",
+    "prompt": "Build a complete responsive portfolio for an independent type designer whose work spans custom alphabets, editorial systems, and cultural identities. The work itself must drive the composition. Include a memorable introduction, selected projects, a short practice statement, and contact details. Use one defensible creative thesis, editorial pacing, integrated type specimens, and restrained purposeful motion. Avoid tiled project-card grids, generic studio minimalism, floating mockups, and animation used as decoration. The page should remain recognizable from memory five minutes later."
+  },
+  {
+    "id": "education-product",
+    "category": "education product",
+    "goal": "Create an approachable learning interface with strong information sequencing, progress clarity, and inclusive responsive behavior.",
+    "prompt": "Build a complete responsive lesson experience for an adult language-learning product focused on listening and spoken recall. Include current progress, a playable lesson moment, transcript assistance, a practice interaction, and a clear next step. Make the learning sequence immediately understandable and inclusive without becoming childish. Use an original but quiet visual system that supports concentration. Avoid generic course cards, gamification clutter, dashboard chrome, and ornamental gradients. Mobile behavior must feel intentionally recomposed for focused practice."
+  },
+  {
+    "id": "mobile-app-landing",
+    "category": "mobile app landing page",
+    "goal": "Create a conversion-focused launch page that demonstrates the product, avoids generic phone-mockup repetition, and works on mobile.",
+    "prompt": "Build a complete responsive launch page for a mobile field-recording app used by musicians and sound artists. Demonstrate how capture, annotation, and spatial organization work; include a strong opening, product proof, workflow, pricing, and download action. Develop one memorable spatial idea that integrates product UI with the page rather than placing screenshots beside copy. Avoid repeated phone mockups, SaaS feature-card grids, glow-heavy dark mode, and empty superlatives. The brand should feel authored, useful, and specific."
+  }
+]

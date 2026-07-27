@@ -1,0 +1,172 @@
+{
+  "$schema": "./rubric.schema.json",
+  "schemaVersion": "1.0",
+  "id": "anti-ai-patterns",
+  "critic": "anti-ai-pattern-director",
+  "purpose": "Detect clusters of interchangeable template grammar and decorative-effect substitution that make a page feel assembled rather than directed.",
+  "mode": "hybrid",
+  "weight": 0,
+  "hardGate": true,
+  "requiredEvidence": [
+    "whole-page screenshots at all required viewports",
+    "structured vision report",
+    "DOM structure and repeated-pattern evidence",
+    "computed surface and effect evidence"
+  ],
+  "scale": {
+    "min": 0,
+    "max": 4,
+    "anchors": {
+      "0": "A dominant template pattern defines the page and no specific thesis is visible.",
+      "1": "Several reinforcing AI-pattern signals make the page highly interchangeable.",
+      "2": "The page has specific moments but still relies on obvious generated-layout habits.",
+      "3": "Familiar conventions are controlled by a clear brand-specific direction.",
+      "4": "The page feels authored and content-specific without novelty for novelty's sake."
+    }
+  },
+  "checks": [
+    {
+      "id": "blocking-pattern-cluster",
+      "question": "Do three or more high-confidence generic signals reinforce one structural root cause?",
+      "passCondition": "No dominant cluster makes the page interchangeable or hides the creative thesis.",
+      "failureSignals": [
+        "split hero plus floating image plus glow",
+        "repeated rounded cards plus identical section wrappers",
+        "generic copy plus stock imagery plus default CTA hierarchy"
+      ],
+      "evidence": [
+        "structured vision signals",
+        "whole-page screenshots",
+        "DOM and CSS pattern counts"
+      ],
+      "weight": 5,
+      "gate": true
+    },
+    {
+      "id": "template-interchangeability",
+      "question": "Could the layout represent hundreds of unrelated products after changing copy and colors?",
+      "passCondition": "Major spatial relationships arise from the actual content, brand truth, or interaction.",
+      "failureSignals": [
+        "default left-copy right-image hero",
+        "centered eyebrow headline paragraph CTA stack",
+        "generic social-proof and feature sequence"
+      ],
+      "evidence": [
+        "whole-page screenshots",
+        "creative thesis comparison"
+      ],
+      "weight": 5,
+      "gate": false
+    },
+    {
+      "id": "container-dependence",
+      "question": "Does the page use cards and rounded containers only where grouping or interaction requires them?",
+      "passCondition": "Information hierarchy is carried by composition and typography, with containers reserved for real roles.",
+      "failureSignals": [
+        "every idea enclosed in a card",
+        "default three-card or bento grid",
+        "pills used for most labels and actions"
+      ],
+      "evidence": [
+        "DOM repeated structures",
+        "computed radii and surfaces",
+        "screenshots"
+      ],
+      "weight": 3,
+      "gate": false
+    },
+    {
+      "id": "effect-substitution",
+      "question": "Are effects serving hierarchy instead of standing in for composition?",
+      "passCondition": "The design remains specific when gradients, glow, blur, shadows, glass, clay depth, and decorative motion are mentally removed.",
+      "failureSignals": [
+        "more effects added to a conventional structure",
+        "hierarchy depends on elevation everywhere",
+        "visual noise increases without conceptual clarity"
+      ],
+      "evidence": [
+        "computed effect inventory",
+        "effect-off composition assessment",
+        "screenshots"
+      ],
+      "weight": 4,
+      "gate": false
+    },
+    {
+      "id": "detached-decoration",
+      "question": "Do floating shapes, renders, and ornaments have structural or narrative roles?",
+      "passCondition": "Decorative objects connect to alignment, transition, meaning, or interaction.",
+      "failureSignals": [
+        "random floating objects",
+        "blobs used to fill empty space",
+        "render placed beside copy without integration"
+      ],
+      "evidence": [
+        "object map",
+        "screenshots",
+        "DOM geometry"
+      ],
+      "weight": 3,
+      "gate": false
+    },
+    {
+      "id": "repetitive-page-cadence",
+      "question": "Does the page vary structure and transitions according to the narrative?",
+      "passCondition": "Sections change density, scale, crop, alignment, or material intentionally without becoming arbitrary.",
+      "failureSignals": [
+        "identical max-width wrapper in every section",
+        "same heading and grid recipe repeated",
+        "uniform reveal animation on all content"
+      ],
+      "evidence": [
+        "whole-page screenshots",
+        "section geometry",
+        "animation inventory"
+      ],
+      "weight": 3,
+      "gate": false
+    },
+    {
+      "id": "generic-assets-and-copy",
+      "question": "Do imagery and language feel specific to the real brand and offer?",
+      "passCondition": "Assets are art-directed for the composition and copy contains concrete product truth.",
+      "failureSignals": [
+        "stock-looking hero image",
+        "generic benefit claims",
+        "decorative dashboard unrelated to the product"
+      ],
+      "evidence": [
+        "screenshots",
+        "asset manifest",
+        "content inventory"
+      ],
+      "weight": 3,
+      "gate": false
+    },
+    {
+      "id": "mobile-template-collapse",
+      "question": "Does mobile recompose rather than collapse into a generic vertical feed?",
+      "passCondition": "The focal relationship, hierarchy, and object role are intentionally transformed for touch and narrow width.",
+      "failureSignals": [
+        "all desktop columns simply stack",
+        "card feed replaces the original direction",
+        "signature relationship disappears"
+      ],
+      "evidence": [
+        "desktop and mobile screenshots",
+        "responsive DOM geometry"
+      ],
+      "weight": 3,
+      "gate": false
+    }
+  ],
+  "acceptance": {
+    "minimumNormalizedScore": 3,
+    "blockOnGateFailure": true,
+    "blockingRules": [
+      "Three reinforcing high-confidence signals with one structural cause form a blocking cluster.",
+      "Do not treat a single familiar convention as proof of AI generation.",
+      "Repair the structural cause instead of adding novelty or effects."
+    ]
+  }
+}

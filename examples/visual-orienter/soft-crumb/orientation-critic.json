@@ -1,0 +1,338 @@
+{
+  "schemaVersion": "0.4.0",
+  "planId": "orientation-a78716293cd9",
+  "critic": {
+    "provider": "Codex independent subagent",
+    "model": "Codex host model id unreported",
+    "criticId": "soft-crumb-blind-visual-critic",
+    "generatedAt": "2026-07-23T12:22:00.000Z",
+    "independentOfGeneration": true
+  },
+  "limitations": {
+    "generatedImagesAreCreativeReferences": true,
+    "pixelSimilarityIsNotAcceptance": true,
+    "implementationRequiresVerification": true
+  },
+  "candidateReports": [
+    {
+      "candidateId": "direction-a",
+      "verdict": "shortlist",
+      "coverage": {
+        "fullPage": true,
+        "viewports": [
+          "desktop",
+          "mobile"
+        ],
+        "dimensions": [
+          "originality",
+          "productFit",
+          "hierarchy",
+          "feasibility",
+          "responsiveViability",
+          "implementationDifficulty",
+          "accessibilityFakeUiRisk",
+          "assetMediumImplications"
+        ]
+      },
+      "evidence": {
+        "imageHashes": {
+          "desktop": "57d567e0fff79db211883a453cc6e266a8b48421a9a6cb4b2a06ff59ce9f8635",
+          "mobile": "914266f9b5970c0d86d8bfa803bab64119c0650f3ecd656b80c5df219065cfef"
+        }
+      },
+      "scorecard": {
+        "originality": {
+          "score": 8.1,
+          "evidence": "The giant croissant bridges headline, pickup information, and the curling paper plane. The luxury-editorial vocabulary is familiar, but the fold makes it brand-specific.",
+          "blocker": false
+        },
+        "productFit": {
+          "score": 9.6,
+          "evidence": "Lamination is the hero, five concrete pastries form today’s selection, seasonal fillings and weekend pickup are explicit, and Reserve a box is consistently emphasized.",
+          "blocker": false
+        },
+        "hierarchy": {
+          "score": 9.3,
+          "evidence": "The sequence is immediate: promise and croissant, pickup window, today’s products, three-step process, then reservation.",
+          "blocker": false
+        },
+        "feasibility": {
+          "score": 8,
+          "evidence": "Typography, product information, grids, and controls can be semantic DOM/CSS; the paper curl, matched shadows, and pastry cutouts require art direction.",
+          "blocker": false
+        },
+        "responsiveViability": {
+          "score": 9.3,
+          "evidence": "Mobile changes the hero crop, moves pickup below the promise, redistributes products, retains the process band, and introduces a practical bottom reservation action.",
+          "blocker": false
+        },
+        "implementationDifficulty": {
+          "score": 6.2,
+          "evidence": "The asset workload includes hero pastry, five product cutouts, packaging, paper masks, and carefully matched lighting across two compositions.",
+          "blocker": false
+        },
+        "accessibilityFakeUiRisk": {
+          "score": 3.2,
+          "evidence": "Contrast and reading order are strong; repeated reservation controls, an icon-only bag, small product metadata, and the sticky action still need accessible implementation.",
+          "blocker": false
+        },
+        "assetMediumImplications": {
+          "score": 9,
+          "evidence": "Use art-directed transparent raster food and packaging, semantic DOM for commerce, and a bounded CSS or raster mask for the fold.",
+          "blocker": false
+        }
+      },
+      "observations": {
+        "dominantRelationship": "The laminated pastry and curling sheet jointly form the page axis; product, pickup, and action appear to emerge from the fold.",
+        "hierarchy": "Hero promise → pickup constraint → today’s selection → process → reserved weekend.",
+        "responsiveTransformation": "The wide fold becomes a tall diagonal reveal; product density is redistributed and the primary action moves into a mobile bottom zone.",
+        "implementationRisks": [
+          "The paper curl and product shadows could become brittle fixed-position collage work.",
+          "Seven or more photographic assets need consistent lighting, background removal, crop tolerance, and licensing.",
+          "The three-column mobile process copy needs a deliberate readable transformation."
+        ],
+        "fakeUiRisks": [
+          "All reservation controls must share one real bag state.",
+          "The bag icon requires an accessible name and live quantity state.",
+          "Pickup and menu arrows must be real links with adequate touch targets."
+        ],
+        "assetMediumImplications": [
+          "Use high-fidelity raster photography or transparent product renders for every pastry.",
+          "Do not recreate food or packaging as improvised SVG.",
+          "Keep all text and commerce controls in semantic HTML.",
+          "Implement the fold with a bounded CSS mask or licensed raster layer and a simpler fallback."
+        ]
+      },
+      "findings": [
+        {
+          "id": "a-commerce-state",
+          "severity": 2,
+          "category": "fake-ui",
+          "evidence": "Header, hero, and mobile footer present reservation and bag states in several locations.",
+          "requiredAdaptation": "Drive every reservation control from one functional bag state."
+        },
+        {
+          "id": "a-mobile-process-density",
+          "severity": 1,
+          "category": "accessibility",
+          "evidence": "Three process columns remain side by side in the mobile frame.",
+          "requiredAdaptation": "Preserve the numbered sweep while increasing text size or changing the narrow-screen sequence."
+        }
+      ]
+    },
+    {
+      "candidateId": "direction-b",
+      "verdict": "consider",
+      "coverage": {
+        "fullPage": true,
+        "viewports": [
+          "desktop",
+          "mobile"
+        ],
+        "dimensions": [
+          "originality",
+          "productFit",
+          "hierarchy",
+          "feasibility",
+          "responsiveViability",
+          "implementationDifficulty",
+          "accessibilityFakeUiRisk",
+          "assetMediumImplications"
+        ]
+      },
+      "evidence": {
+        "imageHashes": {
+          "desktop": "d67c8b8db0a64319086accb096b7ef00beed57f14024a27bc5d5ae0b63522f0a",
+          "mobile": "c4d3f119786a262cc8eb2a047e687f7afc45a000ac07c45ad45c5f0100542e7c"
+        }
+      },
+      "scorecard": {
+        "originality": {
+          "score": 9.2,
+          "evidence": "The whole experience behaves like a numbered order slip with a persistent rail, printed menu, torn layers, and a yellow bag receipt. It is the least interchangeable direction.",
+          "blocker": false
+        },
+        "productFit": {
+          "score": 8.7,
+          "evidence": "Daily scarcity, baked-small language, pickup timing, order-ahead behavior, and receipt metaphors fit the operation, though the hard industrial voice is less aligned with the name Soft Crumb.",
+          "blocker": false
+        },
+        "hierarchy": {
+          "score": 8.7,
+          "evidence": "The condensed headline dominates, the pastry anchors the center, the menu forms the evidence block, and the yellow bag region closes the sequence; some operational copy is small.",
+          "blocker": false
+        },
+        "feasibility": {
+          "score": 8.8,
+          "evidence": "The system is mainly typography, rules, color blocks, one transparent pastry, paper texture, and torn-edge masks.",
+          "blocker": false
+        },
+        "responsiveViability": {
+          "score": 8.8,
+          "evidence": "Mobile retains the numbered rail, enlarges the pastry between thesis and menu, turns process steps vertical, and resolves pickup and bag at the end.",
+          "blocker": false
+        },
+        "implementationDifficulty": {
+          "score": 4.7,
+          "evidence": "The main challenge is precision in typography, paper texture, torn edges, and long-page rhythm; it needs fewer custom photographic assets than A or C.",
+          "blocker": false
+        },
+        "accessibilityFakeUiRisk": {
+          "score": 6.7,
+          "evidence": "The bag is empty while Add to weekend bag has no visibly selected pastry; barcode and registration marks can resemble controls, and several labels are small.",
+          "blocker": false
+        },
+        "assetMediumImplications": {
+          "score": 8.6,
+          "evidence": "Use one transparent raster pastry, lightweight paper texture, CSS typography and rules, a torn-edge mask, and maintained or supplied icons.",
+          "blocker": false
+        }
+      },
+      "observations": {
+        "dominantRelationship": "A numbered order slip becomes the entire information architecture, culminating in a yellow weekend-bag receipt.",
+        "hierarchy": "Printed thesis → today’s menu → process → pickup window → bag action.",
+        "responsiveTransformation": "The left registration rail persists while desktop side regions become one numbered mobile sequence.",
+        "implementationRisks": [
+          "The condensed display face must be licensed, locally hosted, and kept out of body copy.",
+          "Paper texture and torn edges must remain lightweight and avoid trapping content in raster imagery.",
+          "The long mobile receipt needs restrained spacing and reliable anchor navigation."
+        ],
+        "fakeUiRisks": [
+          "No visible menu-row selector explains what Add to weekend bag will add.",
+          "Empty-bag copy conflicts with the action state.",
+          "Barcode and crosshair ornaments must not receive interactive styling or focus.",
+          "Tiny uppercase navigation and metadata need larger targets and text."
+        ],
+        "assetMediumImplications": [
+          "Use one art-directed transparent raster for the hero pastry.",
+          "Use CSS for rules, numbering, yellow state, and layout.",
+          "Use a lightweight local raster texture or subtle CSS noise for paper.",
+          "Treat barcode and registration marks as hidden decorative graphics, not controls."
+        ]
+      },
+      "findings": [
+        {
+          "id": "b-selection-logic",
+          "severity": 2,
+          "category": "fake-ui",
+          "evidence": "Menu lines show names and prices but no selection state; the empty bag still exposes Add to weekend bag.",
+          "requiredAdaptation": "Add explicit row selection or change the action to an honest menu-entry step."
+        },
+        {
+          "id": "b-small-operational-type",
+          "severity": 1,
+          "category": "accessibility",
+          "evidence": "Navigation, process notes, and receipt annotations use compressed small text in both frames.",
+          "requiredAdaptation": "Preserve the print hierarchy while enforcing readable minimum sizes and touch targets."
+        }
+      ]
+    },
+    {
+      "candidateId": "direction-c",
+      "verdict": "consider",
+      "coverage": {
+        "fullPage": true,
+        "viewports": [
+          "desktop",
+          "mobile"
+        ],
+        "dimensions": [
+          "originality",
+          "productFit",
+          "hierarchy",
+          "feasibility",
+          "responsiveViability",
+          "implementationDifficulty",
+          "accessibilityFakeUiRisk",
+          "assetMediumImplications"
+        ]
+      },
+      "evidence": {
+        "imageHashes": {
+          "desktop": "0379ba08a7e1133d86538ff866f031821c80fc5739d6d8d0aa120b0ce81c8926",
+          "mobile": "c594bed6f0957e40093f3c7271b8b6217aaf6dd28ba363b83487d8540813ac28"
+        }
+      },
+      "scorecard": {
+        "originality": {
+          "score": 9.2,
+          "evidence": "The continuous stone-and-metal pastry ledge is the page axis, intersecting the bakery aperture, clipped receipt, process band, and pastry cutouts.",
+          "blocker": false
+        },
+        "productFit": {
+          "score": 9.4,
+          "evidence": "The frames clearly communicate laminated pastries, named products, prices, availability, weekend hours, pickup, production process, and reservation.",
+          "blocker": false
+        },
+        "hierarchy": {
+          "score": 9.2,
+          "evidence": "Desktop moves from headline and bakery window through the ledge to menu, dark process band, and reservation; mobile preserves the sequence but becomes dense.",
+          "blocker": false
+        },
+        "feasibility": {
+          "score": 7.2,
+          "evidence": "The page is possible with semantic HTML/CSS and real form behavior, but requires difficult clipping, overlap, perspective matching, and responsive art direction.",
+          "blocker": false
+        },
+        "responsiveViability": {
+          "score": 8.2,
+          "evidence": "The repaired landscape frame proves an actual desktop composition; mobile changes the ledge angle and preserves all major sections, though process and pickup are tight.",
+          "blocker": false
+        },
+        "implementationDifficulty": {
+          "score": 8.3,
+          "evidence": "Numerous pastry cutouts, staged bakery photography, shared ledge geometry, receipt overlap, cross-section stacking, and breakpoint-specific crops create the largest burden.",
+          "blocker": false
+        },
+        "accessibilityFakeUiRisk": {
+          "score": 6.1,
+          "evidence": "Desktop is now an initial state, but mobile still shows Add to bag and Reserved simultaneously and its claim check implies completion; supporting copy is small.",
+          "blocker": false
+        },
+        "assetMediumImplications": {
+          "score": 8.4,
+          "evidence": "The concept needs staged bakery photography and consistent raster cutouts with verified lighting, perspective, masking, resolution, and rights.",
+          "blocker": false
+        }
+      },
+      "observations": {
+        "dominantRelationship": "A bakery service ledge carries products, production evidence, pickup state, and page transitions.",
+        "hierarchy": "Bakery window and promise → ledge menu → process band → reservation form and pickup assurances.",
+        "responsiveTransformation": "The wide ledge becomes a descending mobile crop and reading hinge, but process and reservation need a less dense narrow-screen transformation.",
+        "implementationRisks": [
+          "Matching the window photograph, pastry lighting, ledge perspective, and repeated cutouts requires extensive art direction.",
+          "The mobile process and split reservation region risk tiny text or overflow.",
+          "Availability, pickup time, quantity, price, and confirmation require a real state model."
+        ],
+        "fakeUiRisks": [
+          "The mobile frame still shows Add to bag and Reserved simultaneously.",
+          "The mobile claim ticket number and date imply a completed reservation.",
+          "The price must be connected to a selected pastry.",
+          "Handwritten notes cannot carry essential information."
+        ],
+        "assetMediumImplications": [
+          "Use real raster photography for the baker and bakery aperture.",
+          "Use separately art-directed transparent raster assets for pastries.",
+          "Build receipt, menu, availability, and reservation states as semantic DOM.",
+          "Use CSS ledge geometry only where perspective remains robust; otherwise commission a reusable background asset."
+        ]
+      },
+      "findings": [
+        {
+          "id": "c-mobile-reservation-conflict",
+          "severity": 2,
+          "category": "fake-ui",
+          "evidence": "The unchanged mobile frame shows an active Add to bag control, Reserved confirmation, and claim-check success cues at once.",
+          "requiredAdaptation": "Define mutually exclusive empty, configured, submitting, success, and editable states."
+        },
+        {
+          "id": "c-mobile-density",
+          "severity": 2,
+          "category": "accessibility",
+          "evidence": "Three process columns and the reservation composition remain horizontally dense on mobile.",
+          "requiredAdaptation": "Recompose those regions instead of scaling the wide geometry."
+        }
+      ]
+    }
+  ]
+}

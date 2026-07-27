@@ -1,0 +1,19 @@
+node_modules/
+coverage/
+dist/
+.next/
+.DS_Store
+*.log
+*.zip
+.playwright-cli/
+output/
+
+# Local brand iterations; GitHub ships only the canonical assets.
+assets/brand/*-v[0-9]*
+assets/brand/design-lagann-logo-original-*
+assets/brand/design-lagann-logo-cutout-*
+assets/brand/design-lagann-portal-*
+assets/brand/design-lagann-social-preview.jpg
+
+# Runtime state belongs to the frontend project using Design God.
+.design-god/

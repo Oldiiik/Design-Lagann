@@ -1,0 +1,102 @@
+{
+  "version": "1.0.0",
+  "name": "Design Lagann blind reference-relative benchmark",
+  "mission": "Measure whether Design Lagann produces work that feels more art-directed, memorable, and human-designed than the same coding agent with no design layer, Impeccable alone, or Design DNA alone.",
+  "variants": {
+    "base": {
+      "label": "Base",
+      "reference": true
+    },
+    "base-impeccable": {
+      "label": "Base + Impeccable",
+      "reference": true
+    },
+    "base-design-dna": {
+      "label": "Base + Design DNA",
+      "reference": true
+    },
+    "design-lagann": {
+      "label": "Design Lagann",
+      "reference": false
+    }
+  },
+  "runPolicy": {
+    "independentRunsPerCell": 3,
+    "sameBaseAgentAndModel": true,
+    "freshContextPerRun": true,
+    "requiredMetrics": {
+      "taskCompletion": [0, 10],
+      "visualCoherence": [0, 10],
+      "originality": [0, 10],
+      "typography": [0, 10],
+      "pageRhythm": [0, 10],
+      "responsiveBehavior": [0, 10],
+      "interactionPolish": [0, 10]
+    },
+    "requiredScreenshots": {
+      "desktop": {
+        "width": 1440,
+        "height": 1000
+      },
+      "tablet": {
+        "width": 834,
+        "height": 1112
+      },
+      "mobile": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    "requiredCritics": [
+      "task-completion",
+      "visual-art-direction",
+      "interaction-accessibility",
+      "regression"
+    ],
+    "requiredEvidence": [
+      "canonical prompt and SHA-256",
+      "clean source commit",
+      "desktop, tablet, and mobile screenshots with SHA-256",
+      "start, finish, and elapsed timing",
+      "input, output, and total token counts",
+      "versioned critic reports",
+      "structured regression notes"
+    ]
+  },
+  "blindEvaluation": {
+    "method": "opaque-randomized-artifact-ids",
+    "mappingCommitment": "SHA-256 of a post-rating-revealed salt plus the canonical artifact-to-variant mapping",
+    "pairing": "all unordered variant pairs within each brief and repetition",
+    "minimumRatersPerPair": 3,
+    "revealMappingOnlyAfterRatingsClose": true,
+    "requiredDimensions": [
+      "creativeThesis",
+      "composition",
+      "objectLayoutIntegration",
+      "pageRhythm",
+      "materialDiscipline",
+      "typographyImagery",
+      "interactionQuality",
+      "memorability"
+    ],
+    "requiredHumanMeasures": [
+      "pairwise preference",
+      "AI-generated likelihood for both artifacts",
+      "five-minute unaided recall for both artifacts",
+      "save/share intent for both artifacts"
+    ]
+  },
+  "claimGate": {
+    "subjectVariantId": "design-lagann",
+    "minimumOverallPairwiseWinRate": 0.65,
+    "minimumHeadToHeadWinRate": 0.6,
+    "minimumPerBriefWinRate": 0.6,
+    "minimumWilson95LowerBound": 0.55,
+    "maximumAiGeneratedLikelihood": 35,
+    "minimumFiveMinuteRecallRate": 0.65,
+    "minimumSaveShareIntent": 4,
+    "maximumCriticalRegressions": 0,
+    "claimLanguage": "Passing authorizes a bounded claim for this benchmark corpus only; it never proves universal design superiority."
+  },
+  "claimRule": "Incomplete, unblinded, internally inconsistent, or unrated evidence cannot produce an analysis or quality claim. A complete corpus may be analyzed; a quality claim is allowed only if every claim gate also passes."
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "0.4.0",
+  "project": "Soft Crumb small-site implementation",
+  "goal": "Build a compact, responsive bakery website that turns today's laminated pastry selection into a real weekend pickup reservation interaction.",
+  "brandTruth": "Soft Crumb makes small-batch laminated pastries with seasonal fillings for Saturday and Sunday pickup.",
+  "audienceAndMoment": "A local customer planning a weekend treat before Friday's order cutoff.",
+  "primaryAction": "Choose pastries and reserve a Saturday or Sunday pickup window.",
+  "contentInventory": [
+    "brand promise",
+    "three available pastries and prices",
+    "three-stage process",
+    "pickup days, hours, cutoff, and address",
+    "shared bag state and reservation success"
+  ],
+  "requiredInteractions": [
+    "add and remove each pastry",
+    "open and close the shared bag",
+    "choose Saturday or Sunday",
+    "choose a pickup window",
+    "submit a demo reservation",
+    "show a mutually exclusive success state"
+  ],
+  "assetReality": {
+    "dominantFoodAssets": "Generated specifically for this implementation as chroma-key raster sources, converted locally to alpha WebP.",
+    "fonts": "Local OFL-licensed Instrument Serif and Libre Franklin WOFF2 files.",
+    "brandMark": "Semantic text wordmark; no supplied logo exists."
+  },
+  "constraints": [
+    "static HTML, CSS, and JavaScript",
+    "works at desktop, tablet, and mobile widths",
+    "semantic controls and visible keyboard focus",
+    "no improvised SVG food or decorative product art",
+    "generated direction frames remain creative references rather than pixel specifications",
+    "no payment or network submission in the demo"
+  ],
+  "antiReferences": [
+    "generic split hero",
+    "centered headline and two CTA stack",
+    "repeated rounded card grid",
+    "floating pastry decoration unrelated to composition",
+    "excessive clay, glow, blur, or neumorphic effects",
+    "fake reserved state before submission",
+    "desktop columns merely stacked on mobile"
+  ],
+  "visualReference": {
+    "source": "../soft-crumb/reference-design.json",
+    "candidateId": "direction-a",
+    "recommendationScore": 8.27,
+    "role": "creative reference",
+    "groundTruth": false,
+    "selectionNote": "The user asked to proceed with a small bakery implementation after reviewing the new Design Lagann visual-orientation result. This implementation uses the deterministic Direction A recommendation without mutating the fixture's separate pending-approval record."
+  },
+  "successEvidence": [
+    "no horizontal overflow at 1440x1000, 1024x900, and 390x844",
+    "local fonts and raster assets load",
+    "bag count, product quantities, and totals stay synchronized",
+    "day and time selection produce one success state",
+    "keyboard and reduced-motion behavior are usable",
+    "rendered screenshots preserve the pastry-and-paper hinge"
+  ]
+}

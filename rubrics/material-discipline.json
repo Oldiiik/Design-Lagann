@@ -1,0 +1,137 @@
+{
+  "$schema": "./rubric.schema.json",
+  "schemaVersion": "1.0",
+  "id": "material-discipline",
+  "critic": "material-director",
+  "purpose": "Ensure surfaces, depth, effects, and motion communicate hierarchy through one restrained physical logic.",
+  "mode": "hybrid",
+  "weight": 10,
+  "hardGate": false,
+  "requiredEvidence": [
+    "rendered screenshots",
+    "computed CSS effect inventory",
+    "material budget",
+    "interaction and reduced-motion observation"
+  ],
+  "scale": {
+    "min": 0,
+    "max": 4,
+    "anchors": {
+      "0": "Materials are contradictory, illegible, or functionally harmful.",
+      "1": "Effects are abundant but arbitrary and hierarchy is noisy.",
+      "2": "The material language is coherent yet overused or weakly differentiated by role.",
+      "3": "Materials are restrained, role-based, and physically consistent with minor excess.",
+      "4": "Material behavior is distinctive, economical, and inseparable from hierarchy and interaction."
+    }
+  },
+  "checks": [
+    {
+      "id": "light-and-shadow-logic",
+      "question": "Do light direction and shadow character remain physically coherent?",
+      "passCondition": "Raised, inset, and floating elements share a consistent light model with intentional exceptions.",
+      "failureSignals": [
+        "conflicting shadow directions",
+        "shadow styles vary without role",
+        "depth obscures edges or text"
+      ],
+      "evidence": [
+        "screenshots",
+        "computed box and text shadows"
+      ],
+      "weight": 4,
+      "gate": false
+    },
+    {
+      "id": "role-based-depth",
+      "question": "Is depth reserved for elements whose function or narrative role requires it?",
+      "passCondition": "Elevation distinguishes action, state, focal objects, or transition while quiet content remains flat.",
+      "failureSignals": [
+        "every section is raised",
+        "decorative containers compete with controls",
+        "no quiet depth level"
+      ],
+      "evidence": [
+        "surface inventory",
+        "screenshots",
+        "material budget"
+      ],
+      "weight": 5,
+      "gate": false
+    },
+    {
+      "id": "effect-budget",
+      "question": "Does every glow, blur, gradient, texture, and transparency have a documented role?",
+      "passCondition": "Effects are limited in frequency and visibly strengthen hierarchy, state, or atmosphere.",
+      "failureSignals": [
+        "glow everywhere",
+        "multiple unrelated gradients",
+        "blur used to simulate quality"
+      ],
+      "evidence": [
+        "computed effect counts",
+        "material budget",
+        "screenshots"
+      ],
+      "weight": 5,
+      "gate": false
+    },
+    {
+      "id": "shape-and-border-roles",
+      "question": "Do radii, borders, and shape families reflect semantic roles?",
+      "passCondition": "Controls, surfaces, focal objects, and editorial regions use distinct but related shape logic.",
+      "failureSignals": [
+        "universal large radius",
+        "pills used indiscriminately",
+        "borders added to every surface"
+      ],
+      "evidence": [
+        "computed radii and borders",
+        "screenshots"
+      ],
+      "weight": 3,
+      "gate": false
+    },
+    {
+      "id": "material-motion",
+      "question": "Does motion behave consistently with the material model and interaction state?",
+      "passCondition": "Timing, easing, deformation, and state transitions reinforce physical roles and respect reduced motion.",
+      "failureSignals": [
+        "uniform fade-up on all content",
+        "spring behavior on supposedly rigid surfaces",
+        "motion contradicts pressed or elevated state"
+      ],
+      "evidence": [
+        "interaction observation",
+        "motion styles",
+        "reduced-motion capture"
+      ],
+      "weight": 3,
+      "gate": false
+    },
+    {
+      "id": "effect-free-legibility",
+      "question": "Does the interface remain legible and hierarchical when decorative effects are removed?",
+      "passCondition": "Typography, scale, placement, and spacing preserve the visual order independently.",
+      "failureSignals": [
+        "controls disappear without shadow",
+        "sections merge without glow",
+        "composition depends on gradients"
+      ],
+      "evidence": [
+        "composition proof",
+        "computed style inventory",
+        "screenshots"
+      ],
+      "weight": 4,
+      "gate": false
+    }
+  ],
+  "acceptance": {
+    "minimumNormalizedScore": 3.1,
+    "blockOnGateFailure": false,
+    "blockingRules": [
+      "More effects never compensate for a lower composition score.",
+      "Material coherence requires quiet zones and role-based depth."
+    ]
+  }
+}

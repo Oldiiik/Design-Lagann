@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "design-lagann-strict-run-state",
+  "runId": "design-lagann-example",
+  "mode": {
+    "profile": "balanced",
+    "label": "BALANCED",
+    "banner": "DESIGN LAGANN MODE: BALANCED",
+    "isSuperQuality": false
+  },
+  "acceptancePolicy": {
+    "id": "elite-v1",
+    "invariantAcrossModes": true
+  },
+  "pipelinePolicy": {
+    "strictStageOrder": true,
+    "implementationTarget": "local-workspace",
+    "designDelegationToSites": false,
+    "sitesUse": "deployment-only-after-local-verification",
+    "sitesDeploymentCondition": "explicit-user-request-or-existing-openai-hosting-json",
+    "visualFramesAreReferenceOnly": true,
+    "conceptFramesCanSatisfyProjectAssets": false
+  },
+  "verdict": "in-progress",
+  "current": {
+    "id": "plan-intake",
+    "status": "current",
+    "missing": []
+  },
+  "next": {
+    "id": "direction-frames",
+    "status": "blocked",
+    "blockedBy": "plan-intake"
+  },
+  "completed": [],
+  "blocked": [
+    "direction-frames",
+    "approved-selected-pair",
+    "design-contract",
+    "asset-acquisition",
+    "implementation-source",
+    "rendered-critique",
+    "repair",
+    "final-proof"
+  ],
+  "sourceOfTruth": "Validated project artifacts; planned work never counts as executed."
+}

@@ -1,0 +1,44 @@
+{
+  "version": "1.0.0",
+  "id": "site-plan-example",
+  "createdAt": "2026-07-26T00:00:00.000Z",
+  "profile": "balanced",
+  "goal": "Replace with the concrete project goal.",
+  "audience": "Define the primary audience.",
+  "primaryAction": "Define one primary action and its success state.",
+  "sections": [
+    {
+      "id": "section-1",
+      "purpose": "Opening / primary promise",
+      "contentStatus": "must-use-real-or-approved-copy",
+      "responsiveTransformationRequired": true
+    }
+  ],
+  "uiSources": [
+    { "id": "watermelon-ui", "kind": "component-system", "url": "https://watermelon.sh/" },
+    { "id": "variant", "kind": "inspiration-feed", "url": "https://variant.com/" },
+    { "id": "grayblocks", "kind": "cross-tool-block-library", "url": "https://grayblocks.net/" }
+  ],
+  "referenceFidelity": {
+    "mode": "principle-synthesis",
+    "claimBoundary": "Use reference-close only for an approved, hash-bound, user-owned, licensed, or authorized source."
+  },
+  "assetBoundaries": {
+    "isolatedObjectRule": "Generate only the named subject as a transparent PNG; do not bake in sky, scene, page background, copy, or UI.",
+    "identityArtworkRule": "Generate identity lines, dividers, contours, and ornaments as transparent raster assets.",
+    "functionalGeometryRule": "Reserve CSS for explicitly functional interface geometry.",
+    "directionFrameRule": "Never crop a production asset from a full-page direction frame.",
+    "svgAllowed": false
+  },
+  "motionVideoStage": {
+    "status": "not-requested",
+    "stageCount": 0,
+    "engine": null
+  },
+  "creationGates": [
+    "site-plan-approved-or-explicitly-adopted",
+    "reference-rights-and-fidelity-mode-resolved",
+    "asset-composition-boundaries-resolved",
+    "direction-evidence-track-resolved"
+  ]
+}

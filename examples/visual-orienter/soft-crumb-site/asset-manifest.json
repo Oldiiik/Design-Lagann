@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "0.4.0",
+  "status": "implementation-ready; rendered quality pending browser evidence",
+  "transferBudgetBytes": 420000,
+  "currentDominantAssetBytes": 291020,
+  "hardGates": {
+    "improvisedSvgFood": "pass",
+    "localFiles": "pass",
+    "provenanceRecorded": "pass-with-limitation",
+    "responsiveBehaviorSpecified": "pass",
+    "accessibleFallbackSpecified": "pass"
+  },
+  "limitations": [
+    "The built-in host did not report an actual model id or exact generation timestamp; requested and reported model fields remain separate.",
+    "Generated asset publication remains subject to the project owner's normal review and platform terms."
+  ],
+  "assets": [
+    {
+      "id": "hero-croissant",
+      "intent": "dominant hero food object",
+      "role": ["anchor", "bridge"],
+      "selectedMedium": "transparent WebP raster",
+      "rejectedAlternatives": {
+        "svg": "Food material, lamination, lighting, and edge fidelity require raster.",
+        "css": "Cannot provide truthful pastry texture.",
+        "threejs": "Static object does not justify runtime cost."
+      },
+      "localPath": "assets/images/hero-croissant.webp",
+      "sourcePath": "assets/images/source/hero-croissant-chroma.png",
+      "dimensions": {"width": 1535, "height": 1024},
+      "bytes": 147788,
+      "sha256": "8F3B3DB518891BBC6B22C118DD174EF5AA8247B48A2907AA1FCCED86680A8812",
+      "sourceSha256": "9786E37F85FEF49027D0BB6FBCCA61C16986A7C63A9BDCCCB0108216E7F93DC4",
+      "provenance": {
+        "sourceType": "generated",
+        "provider": "OpenAI Media Service via Codex image_gen",
+        "requestedModel": "gpt-image-2",
+        "reportedModel": null,
+        "modelStatus": "requested-model-not-confirmed-by-host-tool",
+        "promptRef": "generation-prompts.json#hero-croissant"
+      },
+      "responsiveBehavior": "Large central bridge on desktop; decisive upper-right crop on mobile; full object is not required at narrow width.",
+      "accessibility": "Decorative image with empty alt because the adjacent headline and product section carry the meaning.",
+      "fallback": "The title, fold, and pickup note preserve hierarchy if the image fails.",
+      "readinessScore": {
+        "total": 91,
+        "intentFidelity": 25,
+        "compositionUtility": 20,
+        "artDirectionCoherence": 15,
+        "sourceQuality": 9,
+        "responsiveReadiness": 10,
+        "provenanceReadiness": 5,
+        "performanceReadiness": 7,
+        "accessibilityReadiness": 5
+      }
+    },
+    {
+      "id": "pastry-trio",
+      "intent": "three product menu images",
+      "role": ["product evidence"],
+      "selectedMedium": "transparent WebP raster sprite sheet",
+      "rejectedAlternatives": {
+        "svg": "Blocked for food and dominant decorative product imagery.",
+        "threeSeparateNetworkFiles": "The single consistent-lighting sheet reduces transfer and preserves visual coherence."
+      },
+      "localPath": "assets/images/pastry-trio.webp",
+      "sourcePath": "assets/images/source/pastry-trio-chroma.png",
+      "dimensions": {"width": 1774, "height": 887},
+      "bytes": 143232,
+      "sha256": "F564EF6239F6AD86D81BC25DB6C65DFAC9E3D6993CEDC2BBE45E0F9DA23FD090",
+      "sourceSha256": "060F7F4382FB52BF924295B216564B4669A1EADCEFB35BEFAED858AFF03DE3FB",
+      "provenance": {
+        "sourceType": "generated",
+        "provider": "OpenAI Media Service via Codex image_gen",
+        "requestedModel": "gpt-image-2",
+        "reportedModel": null,
+        "modelStatus": "requested-model-not-confirmed-by-host-tool",
+        "promptRef": "generation-prompts.json#pastry-trio"
+      },
+      "responsiveBehavior": "Three CSS-clipped slices form one desktop lineup; mobile uses two columns and one full-width product without changing the underlying file.",
+      "accessibility": "Each crop is decorative with empty alt; semantic product headings, ingredient copy, price, and controls immediately follow.",
+      "fallback": "Names, ingredients, prices, and controls remain complete if the image fails.",
+      "readinessScore": {
+        "total": 90,
+        "intentFidelity": 25,
+        "compositionUtility": 19,
+        "artDirectionCoherence": 15,
+        "sourceQuality": 9,
+        "responsiveReadiness": 10,
+        "provenanceReadiness": 5,
+        "performanceReadiness": 7,
+        "accessibilityReadiness": 5
+      }
+    },
+    {
+      "id": "paper-fold",
+      "intent": "simple page-architecture geometry",
+      "role": ["bridge", "transition"],
+      "selectedMedium": "CSS clip-path and gradients",
+      "rejectedAlternatives": {
+        "raster": "Unnecessary transfer and brittle scaling.",
+        "svg": "Simple geometry is more maintainable as CSS."
+      },
+      "responsiveBehavior": "Wide diagonal sheet on desktop; taller diagonal reveal on mobile.",
+      "accessibility": "Purely decorative and hidden from the accessibility tree.",
+      "fallback": "Solid paper-deep field remains when clipping is unsupported."
+    }
+  ]
+}

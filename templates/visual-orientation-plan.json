@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "0.4.0",
+  "id": "",
+  "briefContract": {
+    "goal": "",
+    "audience": null,
+    "brandTruth": "",
+    "primaryAction": "",
+    "desiredRecall": "",
+    "subject": "",
+    "sections": [],
+    "requiredInteractions": [],
+    "requiredStates": [],
+    "constraints": [],
+    "forbiddenPatterns": [],
+    "fieldEvidence": {
+      "goal": {
+        "source": "brief",
+        "confidence": "exact"
+      },
+      "brandTruth": {
+        "source": "",
+        "confidence": "inferred"
+      },
+      "primaryAction": {
+        "source": "",
+        "confidence": "inferred"
+      },
+      "desiredRecall": {
+        "source": "",
+        "confidence": "inferred"
+      }
+    },
+    "assets": []
+  },
+  "exactRequirements": [],
+  "generationContract": {
+    "targetModel": "gpt-image-2",
+    "execution": "external-only",
+    "localNodeGeneration": false,
+    "statement": "This package emits prompts and validates externally generated local files. It does not call GPT Image 2.",
+    "outputRole": "creative-reference",
+    "groundTruth": false
+  },
+  "candidates": [],
+  "requiredEvidence": {
+    "viewports": [
+      "desktop",
+      "mobile"
+    ],
+    "localFiles": true,
+    "sha256Binding": true,
+    "generationProvenance": [
+      "provider",
+      "model",
+      "generatedAt",
+      "generationMode",
+      "humanEdits"
+    ],
+    "independentCritic": true,
+    "criticDimensions": [
+      "originality",
+      "productFit",
+      "hierarchy",
+      "feasibility",
+      "responsiveViability",
+      "implementationDifficulty",
+      "accessibilityFakeUiRisk",
+      "assetMediumImplications"
+    ]
+  },
+  "groundTruthPolicy": {
+    "generatedImagesAreGroundTruth": false,
+    "pixelSimilarityIsAcceptance": false,
+    "exactValuesMayBeInferredFromImage": false,
+    "implementationRequiresBrowserVerification": true
+  },
+  "humanApproval": {
+    "status": "pending",
+    "candidateId": null,
+    "decidedBy": null,
+    "decidedAt": null,
+    "note": null
+  }
+}

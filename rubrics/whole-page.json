@@ -1,0 +1,150 @@
+{
+  "$schema": "./rubric.schema.json",
+  "schemaVersion": "1.0",
+  "id": "whole-page",
+  "critic": "whole-page-art-director",
+  "purpose": "Judge the page as a continuous visual narrative rather than a collection of individually polished sections.",
+  "mode": "vision",
+  "weight": 15,
+  "hardGate": false,
+  "requiredEvidence": [
+    "full-page desktop, tablet, and mobile screenshots",
+    "structured vision reports",
+    "section geometry and page blueprint"
+  ],
+  "scale": {
+    "min": 0,
+    "max": 4,
+    "anchors": {
+      "0": "The page has no readable hierarchy or sequence.",
+      "1": "Sections are individually legible but assembled, repetitive, or disconnected.",
+      "2": "The page is coherent and usable but predictable or rhythmically flat.",
+      "3": "The page has a strong focal hierarchy, varied rhythm, and deliberate narrative with minor gaps.",
+      "4": "Every section advances a compelling visual sequence with controlled tension, surprise, and closure."
+    }
+  },
+  "checks": [
+    {
+      "id": "first-screen-silhouette",
+      "question": "Does the first screen have a recognizable silhouette and dominant relationship?",
+      "passCondition": "Scale, crop, type, object, and negative space create a specific first impression at each viewport.",
+      "failureSignals": [
+        "interchangeable split layout",
+        "no dominant element",
+        "mobile silhouette loses the concept"
+      ],
+      "evidence": [
+        "first-screen screenshots",
+        "DOM geometry"
+      ],
+      "weight": 4,
+      "gate": false
+    },
+    {
+      "id": "focal-hierarchy",
+      "question": "Can the eye identify a deliberate order of attention through the page?",
+      "passCondition": "Primary, secondary, and quiet regions are visibly differentiated by composition rather than effects alone.",
+      "failureSignals": [
+        "everything has equal emphasis",
+        "multiple competing focal points",
+        "CTA emphasis overwhelms the story"
+      ],
+      "evidence": [
+        "whole-page screenshots",
+        "vision focal assessment"
+      ],
+      "weight": 4,
+      "gate": false
+    },
+    {
+      "id": "negative-space-tension",
+      "question": "Is whitespace purposeful and balanced with density?",
+      "passCondition": "Open space isolates, directs, pauses, or creates tension rather than appearing as accidental emptiness.",
+      "failureSignals": [
+        "uniform padding",
+        "large dead zones",
+        "content crowded into containers"
+      ],
+      "evidence": [
+        "screenshots",
+        "section geometry",
+        "pixel blank-band evidence"
+      ],
+      "weight": 3,
+      "gate": false
+    },
+    {
+      "id": "section-narrative",
+      "question": "Does each section add a distinct narrative function?",
+      "passCondition": "The sequence moves from premise to evidence, detail, action, and closure without redundant component blocks.",
+      "failureSignals": [
+        "sections interchangeable in order",
+        "repeated feature summaries",
+        "content feels appended"
+      ],
+      "evidence": [
+        "page blueprint",
+        "whole-page screenshots",
+        "content inventory"
+      ],
+      "weight": 4,
+      "gate": false
+    },
+    {
+      "id": "transition-logic",
+      "question": "Do adjacent sections connect through intentional visual change?",
+      "passCondition": "Scale, alignment, crop, object state, density, or material shifts advance the narrative.",
+      "failureSignals": [
+        "same wrapper repeated",
+        "hard section cuts with no relationship",
+        "surprise without content purpose"
+      ],
+      "evidence": [
+        "whole-page screenshots",
+        "transition map"
+      ],
+      "weight": 3,
+      "gate": false
+    },
+    {
+      "id": "rhythm-and-pacing",
+      "question": "Does the page vary pace while remaining coherent?",
+      "passCondition": "Dense and quiet moments, type scale, image scale, and section length create deliberate cadence.",
+      "failureSignals": [
+        "identical section heights",
+        "repetitive heading-grid rhythm",
+        "no visual pause"
+      ],
+      "evidence": [
+        "full-page screenshots",
+        "section bounds"
+      ],
+      "weight": 3,
+      "gate": false
+    },
+    {
+      "id": "visual-closure",
+      "question": "Does the ending resolve the page's idea and action?",
+      "passCondition": "The final region echoes or completes the thesis and gives the primary action earned emphasis.",
+      "failureSignals": [
+        "generic CTA banner",
+        "page simply stops",
+        "footer introduces an unrelated visual system"
+      ],
+      "evidence": [
+        "lower-page screenshots",
+        "vision narrative assessment"
+      ],
+      "weight": 2,
+      "gate": false
+    }
+  ],
+  "acceptance": {
+    "minimumNormalizedScore": 3.1,
+    "blockOnGateFailure": false,
+    "blockingRules": [
+      "A high hero score cannot compensate for a repetitive or unfinished full page.",
+      "Score the complete page at every required viewport."
+    ]
+  }
+}

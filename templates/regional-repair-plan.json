@@ -1,0 +1,24 @@
+{
+  "version": "0.5.0",
+  "profile": "balanced",
+  "maxRepairPasses": 1,
+  "repairs": [
+    {
+      "id": "repair-example",
+      "findingIds": ["finding-example"],
+      "region": "#example",
+      "viewports": ["mobile"],
+      "files": ["styles.css"],
+      "action": "Repair the cited root cause.",
+      "successCriterion": "The region clears the cited defect without whole-page regression.",
+      "designDnaFields": [],
+      "screenshotEvidence": {
+        "fullPageContext": true,
+        "cropRequired": true,
+        "cropLabel": "#example"
+      },
+      "forbiddenFixes": []
+    }
+  ],
+  "rule": "Crops may guide a bounded repair. Only a fresh full-page desktop, tablet, and mobile comparison may close the run."
+}

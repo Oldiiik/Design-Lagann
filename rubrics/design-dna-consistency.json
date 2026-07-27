@@ -1,0 +1,139 @@
+{
+  "$schema": "./rubric.schema.json",
+  "schemaVersion": "1.0",
+  "id": "design-dna-consistency",
+  "critic": "design-dna-consistency",
+  "purpose": "Verify that the synthesized project DNA is expressed contextually without becoming a rigid token checklist or reference collage.",
+  "mode": "hybrid",
+  "weight": 10,
+  "hardGate": false,
+  "requiredEvidence": [
+    "project-design-dna.json",
+    "rendered screenshots",
+    "computed CSS and DOM geometry",
+    "interaction observation"
+  ],
+  "scale": {
+    "min": 0,
+    "max": 4,
+    "anchors": {
+      "0": "The rendered system contradicts or lacks the project DNA.",
+      "1": "Tokens recur, but composition and behavior are inconsistent or generic.",
+      "2": "The system is mostly coherent with several contextual mismatches.",
+      "3": "The DNA is clearly expressed across systems and viewports with minor drift.",
+      "4": "Every visual and behavioral system reinforces the thesis while adapting intelligently to context."
+    }
+  },
+  "checks": [
+    {
+      "id": "semantic-color",
+      "question": "Do colors perform documented semantic and compositional roles?",
+      "passCondition": "Palette roles remain coherent while allowing purposeful focal and narrative exceptions.",
+      "failureSignals": [
+        "arbitrary accent colors",
+        "every section introduces a new palette",
+        "contrast role contradicts hierarchy"
+      ],
+      "evidence": [
+        "computed color frequencies",
+        "project DNA",
+        "screenshots"
+      ],
+      "weight": 3,
+      "gate": false
+    },
+    {
+      "id": "typographic-rhythm",
+      "question": "Does typography express the documented hierarchy and personality?",
+      "passCondition": "Scale, line length, weight, spacing, and wrapping form a coherent editorial rhythm.",
+      "failureSignals": [
+        "token-correct but visually flat type",
+        "generic oversized headline treatment",
+        "inconsistent line length"
+      ],
+      "evidence": [
+        "computed typography",
+        "screenshots",
+        "project DNA"
+      ],
+      "weight": 4,
+      "gate": false
+    },
+    {
+      "id": "composition-grammar",
+      "question": "Are alignment, overlap, crop, negative space, and intentional grid breaks used consistently?",
+      "passCondition": "The same compositional logic is recognizable without making every section identical.",
+      "failureSignals": [
+        "random asymmetry",
+        "rigid repeated wrappers",
+        "signature geometry disappears outside the hero"
+      ],
+      "evidence": [
+        "DOM geometry",
+        "whole-page screenshots",
+        "composition rules"
+      ],
+      "weight": 5,
+      "gate": false
+    },
+    {
+      "id": "object-and-imagery-rules",
+      "question": "Do images and objects follow the documented roles, crops, and integration behavior?",
+      "passCondition": "Dominant assets have intentional viewpoint, crop, scale, and structural roles across viewports.",
+      "failureSignals": [
+        "inconsistent image treatment",
+        "detached product renders",
+        "stock crop conflicts with layout"
+      ],
+      "evidence": [
+        "asset manifest",
+        "object map",
+        "screenshots"
+      ],
+      "weight": 4,
+      "gate": false
+    },
+    {
+      "id": "material-and-motion-rules",
+      "question": "Do surfaces and motion follow their role-based budgets?",
+      "passCondition": "Depth, radii, borders, effects, and motion vary by function while preserving one physical logic.",
+      "failureSignals": [
+        "same raised treatment everywhere",
+        "unrelated animation styles",
+        "decorative effects exceed budget"
+      ],
+      "evidence": [
+        "computed effects",
+        "interaction observation",
+        "project DNA"
+      ],
+      "weight": 3,
+      "gate": false
+    },
+    {
+      "id": "responsive-context",
+      "question": "Does the DNA adapt by viewport instead of freezing desktop values?",
+      "passCondition": "The documented transformation rules preserve relationships while changing geometry, density, and interaction.",
+      "failureSignals": [
+        "blind scaling",
+        "desktop crop reused on mobile",
+        "motion or density unsuitable for touch"
+      ],
+      "evidence": [
+        "multi-viewport screenshots",
+        "computed responsive styles",
+        "project DNA"
+      ],
+      "weight": 3,
+      "gate": false
+    }
+  ],
+  "acceptance": {
+    "minimumNormalizedScore": 3,
+    "blockOnGateFailure": false,
+    "blockingRules": [
+      "Consistency means shared relationships, not identical components.",
+      "Do not reward token repetition when the composition contradicts the thesis."
+    ]
+  }
+}

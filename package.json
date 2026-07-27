@@ -1,0 +1,48 @@
+{
+  "name": "design-lagann",
+  "version": "1.0.0",
+  "description": "A cross-host design agent that plans, art-directs, builds, animates, and verifies distinctive interfaces for Codex, Claude Code, and Cursor.",
+  "type": "module",
+  "private": false,
+  "packageManager": "pnpm@11.9.0",
+  "license": "Apache-2.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "playwright": "^1.54.0"
+  },
+  "bin": {
+    "design-lagann": "./bin/design-lagann.mjs"
+  },
+  "files": [
+    ".claude-plugin/",
+    ".codex-plugin/",
+    ".mcp.json",
+    "apps/cli/src/",
+    "bin/",
+    "packages/",
+    "rubrics/",
+    "skills/",
+    "templates/",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE.md",
+    "PRODUCT.md",
+    "README.md",
+    "SECURITY.md"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "validate": "node scripts/validate.mjs",
+    "check": "pnpm validate && pnpm test",
+    "release:verify": "pnpm check && pnpm benchmark",
+    "release:package": "node scripts/package-release.mjs",
+    "benchmark": "node benchmarks/run.mjs",
+    "cli": "node apps/cli/src/cli.mjs"
+  }
+}

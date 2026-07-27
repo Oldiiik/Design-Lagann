@@ -1,0 +1,11 @@
+{
+  "file": "images/direction-c-desktop-rejected-portrait.png",
+  "sha256": "5551ff1c388ff46d867a4e3fbb707d9c05e37d10ce0cc569c6714472a995d5c0",
+  "dimensions": {
+    "width": 864,
+    "height": 1821,
+    "aspect": "portrait"
+  },
+  "rejection": "Submitted as desktop evidence but matched mobile portrait geometry.",
+  "repair": "Regenerated as a verified 1536×1024 landscape frame and removed the simultaneous desktop success/action state."
+}

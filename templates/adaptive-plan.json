@@ -1,0 +1,45 @@
+{
+  "version": "1.0.0",
+  "runId": "design-lagann-example",
+  "requestedProfile": "auto",
+  "profile": "balanced",
+  "displayLabel": "BALANCED",
+  "targetDepth": "Expanded depth: 3 desktop directions, bounded evidence gathering, and up to 1 repair pass.",
+  "selectionReason": "Balanced is the safe default when neither Fast nor Quality conditions dominate.",
+  "modeBanner": "[DESIGN LAGANN MODE: BALANCED] Expanded depth: 3 desktop directions, bounded evidence gathering, and up to 1 repair pass. Quality bar: elite-v1 (invariant).",
+  "qualityBarDisclosure": {
+    "id": "elite-v1",
+    "invariantAcrossModes": true,
+    "statement": "elite-v1 is invariant: the mode changes exploration and repair depth, never the final quality bar."
+  },
+  "escalationHistory": [],
+  "qualityContract": {
+    "id": "elite-v1",
+    "semanticScoreFloor": 8.8,
+    "structuralDimensionFloor": 8,
+    "aiLikelihoodCeiling": 0.2,
+    "criticConfidenceFloor": 0.8,
+    "immutableAcrossProfiles": true
+  },
+  "directionEvidence": {
+    "track": "exploratory-orientation",
+    "reason": "No approved current visual direction makes exploration safely skippable.",
+    "explorationClaimAllowed": true
+  },
+  "capturePlan": {
+    "iterationViewports": ["desktop", "mobile"],
+    "regionCropsAfterTriage": true,
+    "acceptanceViewports": ["desktop", "tablet", "mobile"],
+    "acceptanceRequiresFreshBeforeAfterVision": true
+  },
+  "claimPolicy": {
+    "semanticAcceptance": "Requires the full acceptance proof regardless of profile.",
+    "benchmarkOrBestInWorldClaim": "Requires a separate blind human benchmark claim gate."
+  },
+  "deliveryPolicy": {
+    "implementationTarget": "local-workspace",
+    "designDelegationToSites": false,
+    "sitesUse": "deployment-only",
+    "sitesDeploymentCondition": "explicit-user-request-or-existing-openai-hosting-json"
+  }
+}

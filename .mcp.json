@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "design-lagann": {
+      "command": "node",
+      "args": ["${PLUGIN_ROOT}/packages/mcp-server/src/server.mjs"]
+    }
+  }
+}

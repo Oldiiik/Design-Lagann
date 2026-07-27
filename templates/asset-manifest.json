@@ -1,0 +1,37 @@
+{
+  "strategy": "Materialize newly created images and artwork as local raster bitmaps through the available image generator; use semantic HTML, CSS, or Canvas only for simple UI or runtime geometry.",
+  "svgPolicy": {
+    "id": "no-svg-anywhere",
+    "severity": "hard",
+    "svgAllowed": false,
+    "allowedRasterFormats": [
+      "png",
+      "jpg",
+      "jpeg",
+      "webp",
+      "avif"
+    ],
+    "allowedCodeGeometry": [
+      "html",
+      "css",
+      "canvas"
+    ],
+    "forbiddenArtifacts": [
+      "SVG files or .svg asset paths",
+      "inline <svg> markup",
+      "data:image/svg+xml payloads",
+      "CSS references to SVG",
+      "icon-library components that render SVG",
+      "SVG renderers or fallbacks"
+    ]
+  },
+  "assets": [],
+  "assetBatchPlan": {
+    "version": "1.0.0",
+    "status": "not-required",
+    "contract": {},
+    "batches": []
+  },
+  "renderingBudget": "light-to-medium",
+  "rules": []
+}

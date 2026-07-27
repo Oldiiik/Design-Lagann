@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#514ed0">
+    <meta name="description" content="Soft Crumb is a small-batch bakery making laminated pastries with bright seasonal fillings. Reserve a box for weekend pickup.">
+    <title>Soft Crumb — Croissants with a point of view</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@400;600;800;900&family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#" aria-label="Soft Crumb home">
+        <span class="brand-mark" aria-hidden="true">SC</span>
+        <span>Soft Crumb</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="sr-only">Toggle navigation</span>
+        <span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation" data-nav>
+        <a href="#today">Today’s bake</a>
+        <a href="#process">Our process</a>
+        <a href="#pickup">Pickup</a>
+      </nav>
+
+      <button class="bag-button" type="button" data-open-bag aria-haspopup="dialog">
+        Bag <span aria-live="polite" data-bag-count>0</span>
+      </button>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="day-note">Weekend bake · Almaty</p>
+          <h1 id="hero-title">Tomorrow’s <span>softest hour</span>. Baked today.</h1>
+          <p class="hero-intro">Laminated by hand, filled with bright things, and baked in tiny runs. Pick a box before the counter goes quiet.</p>
+          <div class="hero-actions">
+            <a class="button button-coral" href="#today">Choose your box</a>
+            <a class="text-link" href="#process">Why 36 hours?</a>
+          </div>
+          <p class="pickup-note"><strong>Next pickup:</strong> Saturday, 09:00–13:00</p>
+        </div>
+
+        <figure class="hero-stage">
+          <img src="assets/soft-crumb-hero.png" alt="Clay sculpture of a golden croissant and blueberry-glazed bun on a lavender plinth">
+          <figcaption>
+            <span>House fold</span>
+            <strong>72 layers</strong>
+          </figcaption>
+          <span class="floating-crumb crumb-one" aria-hidden="true"></span>
+          <span class="floating-crumb crumb-two" aria-hidden="true"></span>
+        </figure>
+      </section>
+
+      <aside class="counter-strip" aria-label="Today’s bakery details">
+        <p><span>Saturday</span> Counter opens at 09:00</p>
+        <p><span>Small batch</span> 84 pastries, then we stop</p>
+        <p><span>Made here</span> Dostyk Avenue 48</p>
+      </aside>
+
+      <section class="today" id="today" aria-labelledby="today-title">
+        <div class="section-heading reveal">
+          <p>On the counter</p>
+          <h2 id="today-title">Three good reasons to get up early.</h2>
+          <p>Each box is packed after you order. Choose one, mix three, or trust the baker.</p>
+        </div>
+
+        <div class="bake-layout">
+          <figure class="bake-image reveal">
+            <img src="assets/soft-crumb-lineup.png" loading="lazy" alt="Clay sculptures of a blueberry morning bun, milk bread loaf, and cocoa spiral roll">
+            <figcaption>Modeled after today’s actual bake.</figcaption>
+          </figure>
+
+          <div class="bake-menu" aria-label="Pastries available to reserve">
+            <article class="bake-row reveal">
+              <div>
+                <p class="bake-index">A</p>
+                <h3>Blueberry twist</h3>
+                <p>Wild blueberry, cultured butter, lemon sugar.</p>
+              </div>
+              <div class="bake-order">
+                <span>₸1,800</span>
+                <button type="button" data-add-item="Blueberry twist" data-price="1800">Add</button>
+              </div>
+            </article>
+
+            <article class="bake-row reveal">
+              <div>
+                <p class="bake-index">B</p>
+                <h3>Cloud milk bread</h3>
+                <p>Pull-apart crumb, brown butter glaze, sea salt.</p>
+              </div>
+              <div class="bake-order">
+                <span>₸2,200</span>
+                <button type="button" data-add-item="Cloud milk bread" data-price="2200">Add</button>
+              </div>
+            </article>
+
+            <article class="bake-row reveal">
+              <div>
+                <p class="bake-index">C</p>
+                <h3>Dark spiral</h3>
+                <p>Cocoa lamination, malted cream, cacao nib.</p>
+              </div>
+              <div class="bake-order">
+                <span>₸1,900</span>
+                <button type="button" data-add-item="Dark spiral" data-price="1900">Add</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="process" id="process" aria-labelledby="process-title">
+        <div class="process-intro reveal">
+          <h2 id="process-title">Slow dough.<br>Bright finish.</h2>
+          <p>Our timing is old-fashioned. The flavors are not.</p>
+        </div>
+
+        <ol class="process-steps">
+          <li class="reveal">
+            <span>1</span>
+            <div>
+              <h3>Fold</h3>
+              <p>Butter and dough meet in thin, cool layers. No shortcuts, no dough conditioners.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span>2</span>
+            <div>
+              <h3>Rest</h3>
+              <p>Thirty-six hours builds flavor before a single pastry reaches the oven.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span>3</span>
+            <div>
+              <h3>Fire</h3>
+              <p>A dark bake gives the shell its crackle and keeps the center impossibly soft.</p>
+            </div>
+          </li>
+        </ol>
+        <div class="process-orbit orbit-one" aria-hidden="true"></div>
+        <div class="process-orbit orbit-two" aria-hidden="true"></div>
+      </section>
+
+      <section class="pickup" id="pickup" aria-labelledby="pickup-title">
+        <div class="pickup-copy reveal">
+          <p>Saturday ritual</p>
+          <h2 id="pickup-title">Your box is five minutes away.</h2>
+          <p>Reserve now, then collect from our blue door at Dostyk Avenue 48. We’ll hold your pastries until 13:00.</p>
+          <button class="button button-gold" type="button" data-open-bag>Review your bag</button>
+        </div>
+        <div class="pickup-details reveal">
+          <dl>
+            <div><dt>Pickup</dt><dd>Sat–Sun, 09:00–13:00</dd></div>
+            <div><dt>Preorders close</dt><dd>Friday at 18:00</dd></div>
+            <div><dt>Questions</dt><dd><a href="mailto:hello@softcrumb.example">hello@softcrumb.example</a></dd></div>
+          </dl>
+          <div class="door-shape" aria-hidden="true"><span>48</span></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand brand-footer" href="#" aria-label="Soft Crumb home">
+        <span class="brand-mark" aria-hidden="true">SC</span>
+        <span>Soft Crumb</span>
+      </a>
+      <p>Croissants with soft edges and a sharp point of view.</p>
+      <p>© <span data-year></span> Soft Crumb</p>
+    </footer>
+
+    <dialog class="bag-dialog" data-bag-dialog aria-labelledby="bag-title">
+      <div class="dialog-head">
+        <div>
+          <p>Your Saturday box</p>
+          <h2 id="bag-title">Good choices.</h2>
+        </div>
+        <button class="dialog-close" type="button" data-close-bag aria-label="Close bag">×</button>
+      </div>
+      <div class="bag-empty" data-bag-empty>
+        <p>Your bag is still soft and empty.</p>
+        <button class="button button-blue" type="button" data-close-bag>Browse today’s bake</button>
+      </div>
+      <ul class="bag-list" data-bag-list aria-live="polite"></ul>
+      <div class="bag-total" data-bag-total hidden>
+        <p>Total <strong data-total>₸0</strong></p>
+        <button class="button button-coral" type="button" data-reserve>Reserve for Saturday</button>
+      </div>
+      <p class="reservation-status" role="status" data-reservation-status></p>
+    </dialog>
+  </body>
+</html>

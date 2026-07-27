@@ -1,0 +1,220 @@
+{
+  "$schema": "./rubric.schema.json",
+  "schemaVersion": "1.0",
+  "id": "asset-and-type-direction",
+  "critic": "asset-and-type-evidence",
+  "purpose": "Gate implementation on intent-appropriate media, art-directed dominant assets, truthful provenance, and typography with explicit brand and functional roles.",
+  "mode": "hybrid",
+  "weight": 0,
+  "hardGate": true,
+  "requiredEvidence": [
+    "asset manifest with routing decisions and provenance",
+    "materialization record with local paths, SHA-256 hashes, and rendered use for every required asset",
+    "SVG absence audit covering project filenames, source text, rendered DOM, library renderers, and network requests",
+    "type manifest with role assignments and real font metadata",
+    "reference typography contract with family class, width, contrast, measures, authored line structure, and script pairing when a reference is adopted",
+    "desktop, tablet, and mobile screenshots",
+    "document.fonts.ready, document.fonts.check, computed role styles, loading, fallback, accessibility, and transfer-budget evidence"
+  ],
+  "scale": {
+    "min": 0,
+    "max": 4,
+    "anchors": {
+      "0": "Dominant assets or typography are missing, deceptive, inaccessible, or use a blocked medium.",
+      "1": "Assets and type load, but routing, provenance, quality, or role discipline is materially weak.",
+      "2": "The system is usable with noticeable medium, integration, typography, or responsive gaps.",
+      "3": "Media and typography fit their roles with minor non-blocking limitations.",
+      "4": "Every dominant visual and type role is intentional, traceable, responsive, accessible, performant, and visibly integrated."
+    }
+  },
+  "checks": [
+    {
+      "id": "intent-appropriate-medium",
+      "question": "Was each dominant visual routed to a medium appropriate to its content and behavior?",
+      "passCondition": "New images and artwork are materialized as local PNG, JPEG, WebP, or AVIF raster assets through the available image generator; semantic HTML, CSS, and Canvas are reserved for simple UI or runtime geometry; other runtimes are used only for roles they support and are configured without SVG renderers or fallbacks.",
+      "failureSignals": [
+        "image or artwork exists only as prompt text, placeholder, CSS proxy, Canvas proxy, or vector substitute instead of a real generated raster",
+        "heavy spatial renderer used for a simple static shape",
+        "chart or interactive visualization lacks an accessible HTML data view",
+        "medium choice lacks an intent explanation"
+      ],
+      "evidence": [
+        "asset-manifest.json",
+        "source implementation",
+        "rendered screenshots"
+      ],
+      "weight": 3,
+      "gate": true
+    },
+    {
+      "id": "no-svg-anywhere",
+      "question": "Is the entire implemented site free of SVG files, markup, payloads, renderers, and fallbacks?",
+      "passCondition": "The project contains no .svg files or references, inline <svg> nodes, image/svg+xml MIME or data URI payloads, SVG CSS masks/backgrounds/clip paths, icon-library SVG output, animation or chart SVG renderers, SVG fallbacks, rendered SVG DOM nodes, or SVG network requests at any required viewport.",
+      "failureSignals": [
+        "any .svg file or .svg path appears in implemented source or public assets",
+        "inline <svg> markup or an SVG DOM node is present",
+        "data:image/svg+xml or image/svg+xml appears in source, computed styles, responses, or requests",
+        "icon, chart, animation, or visualization library inserts or exports SVG",
+        "an SVG placeholder, poster, mask, clip path, background, fallback, or data URI is used"
+      ],
+      "evidence": [
+        "recursive filename and source-text scan",
+        "desktop, tablet, and mobile rendered DOM inspection",
+        "browser network request and MIME evidence",
+        "computed styles and runtime renderer configuration",
+        "asset-manifest.json"
+      ],
+      "weight": 3,
+      "gate": true
+    },
+    {
+      "id": "asset-provenance-and-readiness",
+      "question": "Are dominant assets traceable and ready for production use?",
+      "passCondition": "Each asset records source or generation provenance, local path or stable source, rights status, dimensions, format, readiness score, responsive variants, accessible fallback, and transfer-budget impact.",
+      "failureSignals": [
+        "unknown provenance or rights",
+        "missing source or generated-file relationship",
+        "unexplained readiness score",
+        "missing fallback or responsive behavior",
+        "dominant asset exceeds the declared transfer budget without justification"
+      ],
+      "evidence": [
+        "asset-manifest.json",
+        "local asset files",
+        "network and image metadata"
+      ],
+      "weight": 3,
+      "gate": true
+    },
+    {
+      "id": "required-assets-materialized",
+      "question": "Is every required production asset a real, independently verified local file?",
+      "passCondition": "Every required food, product, character, hero-object, editorial, and other raster role is materialized through the available image generator as a separate local PNG, JPEG, WebP, or AVIF production file with valid format, dimensions, provenance, SHA-256, responsive behavior, and rendered-use evidence.",
+      "failureSignals": [
+        "asset status remains planned or prompt-only",
+        "missing or empty expected output",
+        "direction-frame image or crop reused as a production asset",
+        "placeholder, SVG proxy, CSS proxy, gradient, or remote chat image used for a required raster role",
+        "local file lacks a matching SHA-256 or rendered-use record"
+      ],
+      "evidence": [
+        "asset-manifest.json",
+        "asset-materialization.json",
+        "local asset files",
+        "desktop, tablet, and mobile screenshots"
+      ],
+      "weight": 3,
+      "gate": true
+    },
+    {
+      "id": "asset-art-direction",
+      "question": "Do crop, edge treatment, scale, lighting, and placement make dominant assets part of the composition?",
+      "passCondition": "Assets align with the focal relationship, retain quality at required viewports, and act as anchors, bridges, interrupts, reveals, or utilities rather than placed decoration.",
+      "failureSignals": [
+        "stock-looking or low-resolution dominant image",
+        "cutout edge halos or mismatched lighting",
+        "object floats beside content without structural role",
+        "mobile crop removes the visual thesis"
+      ],
+      "evidence": [
+        "desktop, tablet, and mobile screenshots",
+        "asset role map",
+        "vision findings"
+      ],
+      "weight": 3,
+      "gate": true
+    },
+    {
+      "id": "explicit-type-roles",
+      "question": "Does every typeface have an explicit brand or functional role?",
+      "passCondition": "Display, text, data, and interface roles are intentionally assigned; when reference evidence exists, family class, stroke contrast, width, x-height, role ownership, case, tracking, measures, authored line counts, numerals, and script companions are extracted and hard-gated instead of reduced to mood tags.",
+      "failureSignals": [
+        "unexplained system-default typography in quality mode",
+        "typeface selected only because its name matches the desired style",
+        "monospace used for all roles",
+        "too many unrelated families",
+        "reference uses serif-led editorial roles but the selected system collapses to a neutral sans",
+        "a high aggregate router score is used to excuse family-class, width, contrast, role, or line-count drift"
+      ],
+      "evidence": [
+        "type-manifest.json",
+        "project Design DNA",
+        "rendered screenshots"
+      ],
+      "weight": 2,
+      "gate": true
+    },
+    {
+      "id": "font-file-integrity",
+      "question": "Do the declared font files and authored styles match what the browser can render?",
+      "passCondition": "Project-local WOFF2 files load, document.fonts.ready resolves, document.fonts.check passes for every declared family, computed role families match the manifest, real weights and styles are declared, font-synthesis is none, script coverage fits the content, and metric-compatible fallbacks are planned.",
+      "failureSignals": [
+        "missing or failed font request",
+        "declared weight or italic file does not exist",
+        "content script is unsupported",
+        "layout shift or unreadable fallback",
+        "synthetic bold or italic changes the intended hierarchy",
+        "document.fonts.check fails or the computed family reveals browser fallback",
+        "multilingual copy falls into a generic family that contradicts the reference"
+      ],
+      "evidence": [
+        "type-manifest.json",
+        "font files and CSS declarations",
+        "browser network and computed-style evidence"
+      ],
+      "weight": 3,
+      "gate": true
+    },
+    {
+      "id": "reference-conditioned-type-fidelity",
+      "question": "Does the implemented type system preserve the adopted reference relationships?",
+      "passCondition": "Family class, stroke contrast, width, x-height, role ownership, case, tracking, headline and body measures, authored line counts, accent-word treatment, numerals, script pairing, and responsive transformation match the reference-conditioned type contract at every required viewport.",
+      "failureSignals": [
+        "headline line count or inline accent treatment drifts from the adopted reference",
+        "body, display, place-name, or numeral roles use the wrong family class",
+        "display size is used to disguise the wrong width or stroke contrast",
+        "critical copy wraps accidentally rather than following authored breaks and measures",
+        "a multilingual role falls into an incompatible generic browser fallback"
+      ],
+      "evidence": [
+        "type-manifest.json referenceTypography contract",
+        "document.fonts.ready and document.fonts.check results",
+        "computed role typography and line counts",
+        "desktop, tablet, and mobile screenshots"
+      ],
+      "weight": 3,
+      "gate": true
+    },
+    {
+      "id": "rendered-type-quality",
+      "question": "Does typography visibly support hierarchy, brand voice, reading, and responsive composition?",
+      "passCondition": "Personality, scale, spacing, line length, wrapping, contrast, and object–type integration remain deliberate and readable across all required viewports.",
+      "failureSignals": [
+        "display face weakens product tone",
+        "orphaned or collision-prone headline",
+        "body line length harms reading",
+        "type and imagery compete without hierarchy",
+        "mobile typography is only a uniformly scaled desktop system"
+      ],
+      "evidence": [
+        "desktop, tablet, and mobile screenshots",
+        "computed typography evidence",
+        "structured vision findings"
+      ],
+      "weight": 3,
+      "gate": true
+    }
+  ],
+  "acceptance": {
+    "minimumNormalizedScore": 4,
+    "blockOnGateFailure": true,
+    "blockingRules": [
+      "Any SVG file, reference, markup node, MIME/data payload, CSS use, icon-library output, runtime renderer, fallback, rendered DOM node, or network request blocks implementation and acceptance.",
+      "New images and artwork must be real image-generator-produced PNG, JPEG, WebP, or AVIF files; HTML, CSS, and Canvas are limited to simple UI or runtime geometry.",
+      "Every required dominant production asset must be materialized as a separate local hash-bound file; planned, placeholder, or direction-frame-derived assets block implementation and acceptance.",
+      "Router scores are readiness evidence, not a substitute for rendered visual judgment.",
+      "A reference-conditioned family-class, width, contrast, role, fallback, or line-count mismatch blocks acceptance regardless of the aggregate typography score.",
+      "Unknown provenance, missing font files, inaccessible fallbacks, or unsupported script coverage block acceptance."
+    ]
+  }
+}

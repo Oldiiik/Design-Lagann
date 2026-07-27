@@ -1,0 +1,29 @@
+{
+  "version": "0.5.0",
+  "profile": "balanced",
+  "timing": {
+    "startedAt": null,
+    "finishedAt": null,
+    "elapsedMs": null,
+    "elapsedMinutes": null
+  },
+  "phases": [],
+  "tokens": {
+    "input": null,
+    "output": null,
+    "total": null,
+    "status": "unreported"
+  },
+  "quality": {
+    "before": null,
+    "after": null,
+    "gain": null,
+    "evidenceComplete": false
+  },
+  "efficiency": {
+    "qualityGainPerMinute": null,
+    "qualityGainPer10kTokens": null,
+    "valueIndex": null
+  },
+  "claimBoundary": "Quality efficiency remains unavailable until independent comparable before/after evidence and provider-reported tokens exist."
+}

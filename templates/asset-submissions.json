@@ -1,0 +1,22 @@
+{
+  "assets": [
+    {
+      "id": "hero-asset",
+      "path": "assets/generated/hero-asset.webp",
+      "kind": "generated-raster",
+      "status": "generated",
+      "sourcePrompt": "The exact production-asset prompt that created this separate file.",
+      "provenance": {
+        "provider": "provider-reported name",
+        "requestedModel": "requested model or capability",
+        "reportedModel": "provider-reported model or unreported",
+        "generatedAt": "2026-07-24T00:00:00.000Z",
+        "generationId": null
+      },
+      "width": 1800,
+      "height": 1800,
+      "responsiveBehavior": "Preserve the focal edge and recompose crop across desktop, tablet, and mobile.",
+      "alt": ""
+    }
+  ]
+}

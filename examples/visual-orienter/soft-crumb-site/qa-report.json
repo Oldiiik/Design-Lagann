@@ -1,0 +1,146 @@
+{
+  "schemaVersion": "0.4.0",
+  "createdAt": "2026-07-23T13:43:01.3694913Z",
+  "status": "browser-verified",
+  "acceptanceBoundary": {
+    "implementation": "verified",
+    "semanticDesignGodAcceptance": "unverified",
+    "note": "This report proves runtime behavior, responsive integrity, loaded assets, and basic accessibility. It does not claim a perfect or 10/10 semantic vision score without a bound before/after visual comparison."
+  },
+  "target": {
+    "name": "Soft Crumb",
+    "url": "http://127.0.0.1:4175/visual-orienter/soft-crumb-site/",
+    "browser": "Chrome 150.0.7871.181",
+    "platform": "Windows 10"
+  },
+  "responsiveEvidence": [
+    {
+      "viewport": "1440x1000",
+      "documentWidth": 1440,
+      "scrollWidth": 1440,
+      "scrollHeight": 3173,
+      "horizontalOverflow": 0,
+      "screenshot": "../../../output/playwright/soft-crumb-site/desktop-final.png",
+      "screenshotSha256": "6535E623C55BDBBC2C341985BF8FDAC023E8B6A0067C94E3F29A559C89E233D5"
+    },
+    {
+      "viewport": "1024x900",
+      "documentWidth": 1024,
+      "scrollWidth": 1024,
+      "scrollHeight": 2549,
+      "horizontalOverflow": 0,
+      "screenshot": "../../../output/playwright/soft-crumb-site/tablet-final.png",
+      "screenshotSha256": "15278DFC86CF36E4CC369A8C8BCDD86CF2400E6A723ED6D5565C3B86C419E87C"
+    },
+    {
+      "viewport": "390x844",
+      "documentWidth": 390,
+      "scrollWidth": 390,
+      "scrollHeight": 4324,
+      "horizontalOverflow": 0,
+      "screenshot": "../../../output/playwright/soft-crumb-site/mobile-final.png",
+      "screenshotSha256": "434B2CDE41AEBC3B31F508CB014D06FBA4545A9AC603CE2B78A9D32223F19331"
+    },
+    {
+      "viewport": "320x700",
+      "documentWidth": 320,
+      "scrollWidth": 320,
+      "scrollHeight": 4441,
+      "horizontalOverflow": 0
+    }
+  ],
+  "runtimeEvidence": {
+    "localFontsLoaded": {
+      "Instrument Serif": true,
+      "Libre Franklin": true
+    },
+    "images": [
+      {
+        "path": "assets/images/hero-croissant.webp",
+        "naturalSize": "1535x1024",
+        "bytes": 147788,
+        "sha256": "8F3B3DB518891BBC6B22C118DD174EF5AA8247B48A2907AA1FCCED86680A8812"
+      },
+      {
+        "path": "assets/images/pastry-trio.webp",
+        "naturalSize": "1774x887",
+        "bytes": 143232,
+        "sha256": "F564EF6239F6AD86D81BC25DB6C65DFAC9E3D6993CEDC2BBE45E0F9DA23FD090"
+      }
+    ],
+    "consoleWarningsOrErrors": [],
+    "failedRequests": [],
+    "externalRequests": [],
+    "encodedResourceBytesObserved": 376100,
+    "staticFirstLoadPayloadBytes": 387770,
+    "payloadBudgetBytes": 420000
+  },
+  "interactionEvidence": {
+    "scenario": [
+      "Added one Classic Croissant.",
+      "Added two Pistachio & Raspberry pastries.",
+      "Verified header and mobile bag count of 3 with a $15.75 total.",
+      "Opened the native reservation dialog.",
+      "Selected Sunday and 10:00–11:00am.",
+      "Submitted the demo reservation.",
+      "Observed a mutually exclusive success state and an SC-xxx confirmation code.",
+      "Closed the success state and verified the shared bag reset to zero."
+    ],
+    "configuredBag": {
+      "count": 3,
+      "total": "$15.75"
+    },
+    "reservation": {
+      "day": "Sunday",
+      "time": "10:00–11:00am",
+      "successVisible": true,
+      "bagResetAfterSuccess": true
+    },
+    "escapeClose": true,
+    "backdropClose": true,
+    "reducedMotionOverride": true
+  },
+  "accessibilityEvidence": {
+    "h1Count": 1,
+    "mainCount": 1,
+    "duplicateIds": [],
+    "unnamedButtons": 0,
+    "imagesWithoutAltAttribute": 0,
+    "documentLanguage": "en",
+    "pickupSelectLabelled": true,
+    "dialogLabelled": true,
+    "visibleInteractiveTargetsBelow44pxAt390px": []
+  },
+  "contrastEvidence": [
+    {
+      "pair": "ink on paper",
+      "ratio": 14.3
+    },
+    {
+      "pair": "fennel on paper",
+      "ratio": 5.56
+    },
+    {
+      "pair": "paper on rust",
+      "ratio": 5.48
+    },
+    {
+      "pair": "paper on rust-dark",
+      "ratio": 8.24
+    },
+    {
+      "pair": "paper on oxblood",
+      "ratio": 12.83
+    }
+  ],
+  "criticRepairs": [
+    "Replaced success-like empty-state copy with a genuine reservation invitation.",
+    "Aligned all product and process copy with weekend pickup instead of same-day availability.",
+    "Restored the compact hero action on mobile.",
+    "Strengthened the reservation paper crease while preserving a flat fallback.",
+    "Raised mobile product and action typography.",
+    "Added a paper backing behind the pickup note where it crosses the pastry.",
+    "Removed horizontal overflow and protected 320px mobile composition.",
+    "Expanded every visible mobile interaction target to at least 44px."
+  ]
+}

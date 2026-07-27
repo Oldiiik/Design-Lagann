@@ -1,0 +1,139 @@
+{
+  "$schema": "./rubric.schema.json",
+  "schemaVersion": "1.0",
+  "id": "art-direction",
+  "critic": "creative-and-composition-director",
+  "purpose": "Judge whether one brand-specific thesis visibly organizes composition, objects, narrative, and action before effects.",
+  "mode": "vision",
+  "weight": 25,
+  "hardGate": true,
+  "requiredEvidence": [
+    "project creative thesis",
+    "desktop, tablet, and mobile screenshots",
+    "structured before and after vision reports",
+    "composition proof"
+  ],
+  "scale": {
+    "min": 0,
+    "max": 4,
+    "anchors": {
+      "0": "No coherent direction; the page is contradictory or unusable.",
+      "1": "A style is visible but the concept and composition are generic.",
+      "2": "The direction is coherent yet conventional, weakly integrated, or inconsistently expressed.",
+      "3": "A specific thesis strongly guides the composition with minor gaps.",
+      "4": "The thesis is unmistakable, content-specific, structurally original, and coherent across viewports."
+    }
+  },
+  "checks": [
+    {
+      "id": "style-independent-thesis",
+      "question": "Can the central idea be stated without naming a style, palette, or effect?",
+      "passCondition": "The thesis connects a specific brand or product truth to a spatial or behavioral mechanism visible in the page.",
+      "failureSignals": [
+        "thesis is only premium, playful, clay, minimal, brutalist, or editorial",
+        "thesis could describe unrelated brands",
+        "rendered page does not communicate the documented idea"
+      ],
+      "evidence": [
+        "creative-direction artifact",
+        "whole-page screenshots",
+        "vision thesis assessment"
+      ],
+      "weight": 5,
+      "gate": true
+    },
+    {
+      "id": "signature-spatial-relationship",
+      "question": "Does the page contain a unique focal relationship tied to the content?",
+      "passCondition": "Type, object, image, and space form a relationship that would not survive unchanged in a generic template.",
+      "failureSignals": [
+        "standard split hero",
+        "placed image unrelated to the type axis",
+        "signature moment exists only as decoration"
+      ],
+      "evidence": [
+        "hero and signature-region screenshots",
+        "page blueprint",
+        "vision finding"
+      ],
+      "weight": 5,
+      "gate": true
+    },
+    {
+      "id": "effect-free-composition",
+      "question": "Would the hierarchy and tension remain strong without decorative effects?",
+      "passCondition": "Scale, placement, alignment, crop, overlap, and whitespace create a distinctive composition before shadows, glow, blur, gradients, or motion.",
+      "failureSignals": [
+        "hierarchy depends on glow or elevation",
+        "removing effects reveals generic boxes",
+        "all emphasis comes from color treatment"
+      ],
+      "evidence": [
+        "composition proof",
+        "rendered screenshot",
+        "computed style evidence"
+      ],
+      "weight": 5,
+      "gate": true
+    },
+    {
+      "id": "object-layout-integration",
+      "question": "Do major objects participate in alignment, reading order, transition, or interaction?",
+      "passCondition": "Each dominant object acts as an anchor, bridge, interrupt, reveal, or utility and changes the page structure.",
+      "failureSignals": [
+        "floating decoration",
+        "object can be removed without compositional consequence",
+        "image sits inside an interchangeable card"
+      ],
+      "evidence": [
+        "object map",
+        "whole-page screenshots",
+        "DOM geometry"
+      ],
+      "weight": 4,
+      "gate": true
+    },
+    {
+      "id": "directional-coherence",
+      "question": "Do type, imagery, material, motion, and interaction express the same thesis?",
+      "passCondition": "Supporting systems reinforce the central idea without introducing competing decorative concepts.",
+      "failureSignals": [
+        "multiple unrelated visual motifs",
+        "motion contradicts the material model",
+        "assets feel placed rather than directed"
+      ],
+      "evidence": [
+        "whole-page screenshots",
+        "project Design DNA",
+        "interaction observation"
+      ],
+      "weight": 3,
+      "gate": false
+    },
+    {
+      "id": "responsive-thesis-preservation",
+      "question": "Does the same thesis survive through deliberate responsive recomposition?",
+      "passCondition": "Mobile and tablet change crop, alignment, scale, or object role while preserving the signature relationship.",
+      "failureSignals": [
+        "desktop columns merely stack",
+        "signature object disappears without replacement",
+        "mobile becomes a generic card feed"
+      ],
+      "evidence": [
+        "desktop, tablet, and mobile screenshots",
+        "responsive transformation rules"
+      ],
+      "weight": 3,
+      "gate": true
+    }
+  ],
+  "acceptance": {
+    "minimumNormalizedScore": 3.25,
+    "blockOnGateFailure": true,
+    "blockingRules": [
+      "A style label is not a creative thesis.",
+      "A weak effect-free composition cannot be rescued by polish.",
+      "The signature relationship and object integration must be visible at every required viewport."
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "design-lagann-project-context",
+  "version": 1,
+  "updatedAt": "2026-07-27T06:26:31.990Z",
+  "artDirection": null,
+  "approvedReferences": [],
+  "tokens": {},
+  "components": [],
+  "assets": [],
+  "motion": null,
+  "pages": [],
+  "approvedSections": [],
+  "rejectedIdeas": [],
+  "unresolvedProblems": [],
+  "recentRequest": {
+    "goal": "Redesign this dashboard and preserve navigation",
+    "references": [],
+    "mode": "balanced",
+    "executionProfile": "balanced",
+    "acceptancePolicy": "elite-v1",
+    "operation": "redesign"
+  },
+  "protectedPaths": [],
+  "decisions": [
+    {
+      "at": "2026-07-27T06:26:31.963Z",
+      "operation": "create",
+      "profile": "fast"
+    },
+    {
+      "at": "2026-07-27T06:26:31.988Z",
+      "operation": "redesign",
+      "profile": "balanced"
+    }
+  ]
+}

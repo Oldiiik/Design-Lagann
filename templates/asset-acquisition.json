@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "kind": "design-lagann-asset-acquisition",
+  "runId": "design-lagann-example",
+  "status": "materialized",
+  "assets": [
+    {
+      "id": "",
+      "role": "",
+      "intent": "",
+      "medium": "transparent-raster",
+      "kind": "generated-photo",
+      "status": "generated",
+      "localPath": "assets/generated/example.webp",
+      "sha256": "",
+      "format": "webp",
+      "width": 0,
+      "height": 0,
+      "sourcePrompt": "",
+      "provenance": {
+        "provider": "",
+        "reportedModel": "",
+        "generatedAt": ""
+      },
+      "responsiveBehavior": "",
+      "renderedUse": {
+        "status": "pending-browser-proof"
+      },
+      "directionFrame": false
+    }
+  ],
+  "allRequiredAssetsMaterialized": true,
+  "directionFramesUsedAsAssets": false
+}

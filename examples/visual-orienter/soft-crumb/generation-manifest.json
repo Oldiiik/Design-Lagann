@@ -1,0 +1,159 @@
+{
+  "schemaVersion": "0.4.0",
+  "planId": "orientation-a78716293cd9",
+  "bindingId": "binding-f28c61125fd70215",
+  "projectRoot": "C:\\Users\\User\\OneDrive\\Документы\\Design Lagann\\design-lagann\\examples\\visual-orienter\\soft-crumb",
+  "candidates": [
+    {
+      "candidateId": "direction-a",
+      "images": {
+        "desktop": {
+          "viewport": "desktop",
+          "localPath": "images/direction-a-desktop.png",
+          "sha256": "57d567e0fff79db211883a453cc6e266a8b48421a9a6cb4b2a06ff59ce9f8635",
+          "bytes": 2774737,
+          "promptId": "direction-a-desktop",
+          "promptSha256": "3e7b43aa30421bfccd5442315c316f91318acea0f06034f8f29ee4c051bec2d4",
+          "requestedModel": "gpt-image-2",
+          "model": "gpt-image@2.0",
+          "modelStatus": "different-model-reported",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024,
+            "aspect": "landscape",
+            "status": "verified-from-file"
+          }
+        },
+        "mobile": {
+          "viewport": "mobile",
+          "localPath": "images/direction-a-mobile.png",
+          "sha256": "914266f9b5970c0d86d8bfa803bab64119c0650f3ecd656b80c5df219065cfef",
+          "bytes": 2544992,
+          "promptId": "direction-a-mobile",
+          "promptSha256": "79c0080ea09be2814c179f1c3fec9827ff4a401a5c4399876f23a57bc5b82dbb",
+          "requestedModel": "gpt-image-2",
+          "model": "gpt-image@2.0",
+          "modelStatus": "different-model-reported",
+          "dimensions": {
+            "width": 853,
+            "height": 1844,
+            "aspect": "portrait",
+            "status": "verified-from-file"
+          }
+        }
+      },
+      "provenance": {
+        "provider": "OpenAI Media Service via Codex image_gen",
+        "requestedModel": "gpt-image-2",
+        "reportedModel": "gpt-image@2.0",
+        "modelStatus": "different-model-reported",
+        "generatedAt": "2026-07-23T12:00:42.751Z",
+        "generationMode": "external",
+        "generationId": "call_rCWsJrLj8Q4GXCc8xnVFU4je + call_l4QTmy9OkeVdUzP4zi13vDU7",
+        "humanEdits": "none; files copied byte-for-byte into the fixture",
+        "notes": "The returned PNG embeds C2PA softwareAgent name gpt-image, version 2.0. The host tool did not expose an API model id; requested and reported identifiers are therefore recorded separately."
+      }
+    },
+    {
+      "candidateId": "direction-b",
+      "images": {
+        "desktop": {
+          "viewport": "desktop",
+          "localPath": "images/direction-b-desktop.png",
+          "sha256": "d67c8b8db0a64319086accb096b7ef00beed57f14024a27bc5d5ae0b63522f0a",
+          "bytes": 2590103,
+          "promptId": "direction-b-desktop",
+          "promptSha256": "837790cba6d23593aa8f7ddfbf44502d70fe33792d40fcbb940f8e345f260f4b",
+          "requestedModel": "gpt-image-2",
+          "model": "gpt-image@2.0",
+          "modelStatus": "different-model-reported",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024,
+            "aspect": "landscape",
+            "status": "verified-from-file"
+          }
+        },
+        "mobile": {
+          "viewport": "mobile",
+          "localPath": "images/direction-b-mobile.png",
+          "sha256": "c4d3f119786a262cc8eb2a047e687f7afc45a000ac07c45ad45c5f0100542e7c",
+          "bytes": 2337594,
+          "promptId": "direction-b-mobile",
+          "promptSha256": "49ca50518dfa5044ca1e3b0ba196574f1fed6515dada6920a291ae8da51f16fc",
+          "requestedModel": "gpt-image-2",
+          "model": "gpt-image@2.0",
+          "modelStatus": "different-model-reported",
+          "dimensions": {
+            "width": 852,
+            "height": 1846,
+            "aspect": "portrait",
+            "status": "verified-from-file"
+          }
+        }
+      },
+      "provenance": {
+        "provider": "OpenAI Media Service via Codex image_gen",
+        "requestedModel": "gpt-image-2",
+        "reportedModel": "gpt-image@2.0",
+        "modelStatus": "different-model-reported",
+        "generatedAt": "2026-07-23T12:03:04.114Z",
+        "generationMode": "external",
+        "generationId": "call_EBpgFw4n6yIWmsRBRHcSeYIL + call_zOiTs78rcCgYkejAuJhF4znp",
+        "humanEdits": "none; files copied byte-for-byte into the fixture",
+        "notes": "The returned PNG embeds C2PA softwareAgent name gpt-image, version 2.0. The host tool did not expose an API model id; requested and reported identifiers are therefore recorded separately."
+      }
+    },
+    {
+      "candidateId": "direction-c",
+      "images": {
+        "desktop": {
+          "viewport": "desktop",
+          "localPath": "images/direction-c-desktop.png",
+          "sha256": "0379ba08a7e1133d86538ff866f031821c80fc5739d6d8d0aa120b0ce81c8926",
+          "bytes": 2205659,
+          "promptId": "direction-c-desktop",
+          "promptSha256": "7f90090669903c8418a91ca840d9ecf34f5de6ee194de5d0140616b33b3326c8",
+          "requestedModel": "gpt-image-2",
+          "model": "gpt-image@2.0",
+          "modelStatus": "different-model-reported",
+          "dimensions": {
+            "width": 1536,
+            "height": 1024,
+            "aspect": "landscape",
+            "status": "verified-from-file"
+          }
+        },
+        "mobile": {
+          "viewport": "mobile",
+          "localPath": "images/direction-c-mobile.png",
+          "sha256": "c594bed6f0957e40093f3c7271b8b6217aaf6dd28ba363b83487d8540813ac28",
+          "bytes": 2130938,
+          "promptId": "direction-c-mobile",
+          "promptSha256": "cb05ef63e3ed999cee4641dde211435add898a5b8f336fa59d54ac54fc952239",
+          "requestedModel": "gpt-image-2",
+          "model": "gpt-image@2.0",
+          "modelStatus": "different-model-reported",
+          "dimensions": {
+            "width": 853,
+            "height": 1844,
+            "aspect": "portrait",
+            "status": "verified-from-file"
+          }
+        }
+      },
+      "provenance": {
+        "provider": "OpenAI Media Service via Codex image_gen",
+        "requestedModel": "gpt-image-2",
+        "reportedModel": "gpt-image@2.0",
+        "modelStatus": "different-model-reported",
+        "generatedAt": "2026-07-23T12:17:05.281Z",
+        "generationMode": "external",
+        "generationId": "call_o8D2Ui8K58ipFXkQ8CG8IUkn + call_A7UQRQn94LD7w70MGgT8gnzf",
+        "humanEdits": "desktop regenerated after critic rejected portrait evidence; final files otherwise unedited",
+        "notes": "The returned PNG embeds C2PA softwareAgent name gpt-image, version 2.0. The host tool did not expose an API model id; requested and reported identifiers are therefore recorded separately. The rejected portrait desktop is retained as images/direction-c-desktop-rejected-portrait.png."
+      }
+    }
+  ],
+  "statement": "Local files were hashed and bound to emitted prompts. No image generation occurred in this package."
+}

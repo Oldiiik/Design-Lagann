@@ -1,0 +1,35 @@
+name: Feature request
+description: Propose a focused improvement to the Design God workflow.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem
+      description: What is difficult today, and for whom?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Describe the behavior without prescribing an internal provider.
+    validations:
+      required: true
+  - type: textarea
+    id: proof
+    attributes:
+      label: Acceptance evidence
+      description: What observable result would prove this works?
+    validations:
+      required: true
+  - type: checkboxes
+    id: contracts
+    attributes:
+      label: Workflow contracts
+      options:
+        - label: This keeps planning before creation.
+        - label: This keeps explicit visual-direction approval when visual design changes.
+        - label: This does not introduce SVG.
+

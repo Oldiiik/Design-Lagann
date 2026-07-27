@@ -1,0 +1,286 @@
+{
+  "protocolVersion": "1.0.0",
+  "benchmarkId": null,
+  "generatedAt": "2026-07-27T13:33:53.269Z",
+  "status": "evidence-incomplete",
+  "coverage": {
+    "briefs": 5,
+    "variants": 4,
+    "repetitionsPerCell": 3,
+    "expectedRuns": 60,
+    "validRuns": 0,
+    "minimumExpectedPairwiseRatings": 270,
+    "validPairwiseRatings": 0
+  },
+  "dataIntegrity": {
+    "valid": false,
+    "errorCount": 63,
+    "errors": [
+      {
+        "path": "results.protocolVersion",
+        "message": "Dataset must declare protocolVersion 1.0.0."
+      },
+      {
+        "path": "results.benchmarkId",
+        "message": "Benchmark dataset ID is required."
+      },
+      {
+        "path": "results.blinding",
+        "message": "Valid hashes and seal < close < reveal chronology are required for blind evaluation."
+      },
+      {
+        "path": "coverage.runs.premium-ecommerce::base::1",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.premium-ecommerce::base::2",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.premium-ecommerce::base::3",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.premium-ecommerce::base-impeccable::1",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.premium-ecommerce::base-impeccable::2",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.premium-ecommerce::base-impeccable::3",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.premium-ecommerce::base-design-dna::1",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.premium-ecommerce::base-design-dna::2",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.premium-ecommerce::base-design-dna::3",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.premium-ecommerce::design-lagann::1",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.premium-ecommerce::design-lagann::2",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.premium-ecommerce::design-lagann::3",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.saas-dashboard::base::1",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.saas-dashboard::base::2",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.saas-dashboard::base::3",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.saas-dashboard::base-impeccable::1",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.saas-dashboard::base-impeccable::2",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.saas-dashboard::base-impeccable::3",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.saas-dashboard::base-design-dna::1",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.saas-dashboard::base-design-dna::2",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.saas-dashboard::base-design-dna::3",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.saas-dashboard::design-lagann::1",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.saas-dashboard::design-lagann::2",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.saas-dashboard::design-lagann::3",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.creative-portfolio::base::1",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.creative-portfolio::base::2",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.creative-portfolio::base::3",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.creative-portfolio::base-impeccable::1",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.creative-portfolio::base-impeccable::2",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.creative-portfolio::base-impeccable::3",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.creative-portfolio::base-design-dna::1",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.creative-portfolio::base-design-dna::2",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.creative-portfolio::base-design-dna::3",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.creative-portfolio::design-lagann::1",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.creative-portfolio::design-lagann::2",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.creative-portfolio::design-lagann::3",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.education-product::base::1",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.education-product::base::2",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.education-product::base::3",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.education-product::base-impeccable::1",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.education-product::base-impeccable::2",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.education-product::base-impeccable::3",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.education-product::base-design-dna::1",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.education-product::base-design-dna::2",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.education-product::base-design-dna::3",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.education-product::design-lagann::1",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.education-product::design-lagann::2",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.education-product::design-lagann::3",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.mobile-app-landing::base::1",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.mobile-app-landing::base::2",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.mobile-app-landing::base::3",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.mobile-app-landing::base-impeccable::1",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.mobile-app-landing::base-impeccable::2",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.mobile-app-landing::base-impeccable::3",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.mobile-app-landing::base-design-dna::1",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.mobile-app-landing::base-design-dna::2",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.mobile-app-landing::base-design-dna::3",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.mobile-app-landing::design-lagann::1",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.mobile-app-landing::design-lagann::2",
+        "message": "Required run is missing or invalid."
+      },
+      {
+        "path": "coverage.runs.mobile-app-landing::design-lagann::3",
+        "message": "Required run is missing or invalid."
+      }
+    ],
+    "errorsTruncated": false,
+    "warningCount": 0,
+    "warnings": []
+  },
+  "analysis": null,
+  "claimGate": {
+    "qualityClaimAllowed": false,
+    "subjectVariantId": "design-lagann",
+    "reasons": [
+      "The evidence corpus is incomplete or invalid."
+    ],
+    "scope": "Passing authorizes a bounded claim for this benchmark corpus only; it never proves universal design superiority."
+  },
+  "claim": "No quality or superiority claim is permitted from this dataset."
+}

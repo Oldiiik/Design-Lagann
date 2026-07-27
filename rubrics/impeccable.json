@@ -1,0 +1,134 @@
+{
+  "$schema": "./rubric.schema.json",
+  "schemaVersion": "1.0",
+  "id": "impeccable",
+  "critic": "static-impeccable",
+  "purpose": "Scan source for likely generic, excessive, inaccessible, or brittle implementation patterns without pretending to judge the whole rendered page.",
+  "mode": "static",
+  "weight": 5,
+  "hardGate": false,
+  "requiredEvidence": [
+    "reviewable source files",
+    "static pattern matches with file locations",
+    "rendered evidence before promoting a source signal to a visual finding"
+  ],
+  "scale": {
+    "min": 0,
+    "max": 4,
+    "anchors": {
+      "0": "Source contains severe repeated anti-patterns or accessibility omissions.",
+      "1": "Many high-confidence source patterns likely produce visible slop or brittle behavior.",
+      "2": "Several localized issues remain, with mixed visual impact.",
+      "3": "Source is disciplined with a small number of low-impact signals.",
+      "4": "Source is restrained, role-based, accessible, and free of relevant static anti-patterns."
+    }
+  },
+  "checks": [
+    {
+      "id": "repeated-container-patterns",
+      "question": "Does source create repeated card, panel, pill, or bento structures without semantic need?",
+      "passCondition": "Containers represent grouping, state, or interaction rather than default layout.",
+      "failureSignals": [
+        "same card class across unrelated sections",
+        "large radius on nearly every element",
+        "three-column feature grid as default"
+      ],
+      "evidence": [
+        "source matches",
+        "DOM repetition",
+        "rendered screenshots for visual promotion"
+      ],
+      "weight": 4,
+      "gate": false
+    },
+    {
+      "id": "typography-risks",
+      "question": "Does source avoid tiny text, arbitrary scales, excessive uppercase, and brittle line constraints?",
+      "passCondition": "Typography uses role-based values and resilient wrapping with readable minimums.",
+      "failureSignals": [
+        "body text below readable size",
+        "many one-off font sizes",
+        "fixed heights around headings"
+      ],
+      "evidence": [
+        "source declarations",
+        "computed typography"
+      ],
+      "weight": 4,
+      "gate": false
+    },
+    {
+      "id": "effect-excess",
+      "question": "Does source limit shadows, blur, glow, gradients, and filters to documented roles?",
+      "passCondition": "Effects are tokenized, infrequent, and associated with meaningful states or hierarchy.",
+      "failureSignals": [
+        "many unique box shadows",
+        "blur or glow across unrelated elements",
+        "decorative gradients repeated"
+      ],
+      "evidence": [
+        "source declarations",
+        "computed effect inventory"
+      ],
+      "weight": 5,
+      "gate": false
+    },
+    {
+      "id": "spacing-and-z-index",
+      "question": "Does source use coherent spacing and stacking systems?",
+      "passCondition": "Values follow a small intentional system and z-index expresses documented layers.",
+      "failureSignals": [
+        "many arbitrary spacing values",
+        "extreme z-index",
+        "magic offsets compensating for layout"
+      ],
+      "evidence": [
+        "source declarations",
+        "computed geometry"
+      ],
+      "weight": 3,
+      "gate": false
+    },
+    {
+      "id": "focus-and-motion-safety",
+      "question": "Does source provide visible focus, reduced-motion behavior, and safe interaction states?",
+      "passCondition": "Focusable controls retain visible states and motion can be reduced without hiding content.",
+      "failureSignals": [
+        "outline none without replacement",
+        "missing prefers-reduced-motion",
+        "content initialized invisible without fallback"
+      ],
+      "evidence": [
+        "source matches",
+        "interaction verification"
+      ],
+      "weight": 5,
+      "gate": false
+    },
+    {
+      "id": "honest-promotion",
+      "question": "Are static signals promoted to visual findings only after rendered confirmation?",
+      "passCondition": "The report distinguishes source risk from visible failure and cites the confirming viewport when available.",
+      "failureSignals": [
+        "static scan claims emotional impact",
+        "source pattern declared visible without screenshot evidence",
+        "zero static findings presented as design excellence"
+      ],
+      "evidence": [
+        "critic report",
+        "merged findings",
+        "rendered evidence"
+      ],
+      "weight": 5,
+      "gate": false
+    }
+  ],
+  "acceptance": {
+    "minimumNormalizedScore": 3,
+    "blockOnGateFailure": false,
+    "blockingRules": [
+      "Escalate critical accessibility or runtime findings to the relevant hard gate.",
+      "StaticImpeccableCritic cannot accept or reject whole-page art direction."
+    ]
+  }
+}

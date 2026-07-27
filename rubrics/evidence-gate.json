@@ -1,0 +1,140 @@
+{
+  "$schema": "./rubric.schema.json",
+  "schemaVersion": "1.0",
+  "id": "evidence-gate",
+  "critic": "evidence-integrity",
+  "purpose": "Prevent semantic quality claims when the rendered before/after evidence or comparison is missing, invalid, or incomplete.",
+  "mode": "evidence",
+  "weight": 0,
+  "hardGate": true,
+  "requiredEvidence": [
+    "before desktop, tablet, and mobile screenshots",
+    "after desktop, tablet, and mobile screenshots",
+    "structured vision report for each stage",
+    "before/after comparison",
+    "materialized required assets with local hashes and rendered-use evidence",
+    "build and primary-interaction results",
+    "changed-file scope"
+  ],
+  "scale": {
+    "min": 0,
+    "max": 4,
+    "anchors": {
+      "0": "Required evidence is absent or fabricated.",
+      "1": "Evidence exists for only one stage or one viewport.",
+      "2": "Most artifacts exist but validation or traceability has material gaps.",
+      "3": "Evidence is complete and traceable with only minor non-blocking limitations.",
+      "4": "Evidence is complete, validated, stage-specific, reproducible, and comparison-ready."
+    }
+  },
+  "checks": [
+    {
+      "id": "before-capture-set",
+      "question": "Does a valid before capture exist for every required viewport?",
+      "passCondition": "Desktop, tablet, and mobile screenshots are readable, current, and mapped to the same run.",
+      "failureSignals": [
+        "missing viewport",
+        "stale screenshot",
+        "capture from a different build or route"
+      ],
+      "evidence": [
+        "screenshot files",
+        "capture metadata"
+      ],
+      "weight": 2,
+      "gate": true
+    },
+    {
+      "id": "before-structured-vision",
+      "question": "Was the before capture assessed by a structured vision-capable reviewer?",
+      "passCondition": "The report validates against the request, covers all viewports, and cites visible evidence.",
+      "failureSignals": [
+        "pixel heuristics presented as semantic vision",
+        "blanket praise without regions or viewports",
+        "malformed or missing report"
+      ],
+      "evidence": [
+        "vision-request-before.json",
+        "vision-report-before.json"
+      ],
+      "weight": 3,
+      "gate": true
+    },
+    {
+      "id": "after-capture-set",
+      "question": "Does a valid after capture exist for every required viewport?",
+      "passCondition": "Desktop, tablet, and mobile screenshots are readable and captured after the scoped implementation changes.",
+      "failureSignals": [
+        "before image reused as after",
+        "missing viewport",
+        "after capture predates changed files"
+      ],
+      "evidence": [
+        "after screenshot files",
+        "capture metadata",
+        "changed-file timestamps or commit"
+      ],
+      "weight": 2,
+      "gate": true
+    },
+    {
+      "id": "after-structured-vision",
+      "question": "Was the after capture assessed independently with the same structured criteria?",
+      "passCondition": "A new report covers all after screenshots and records visible evidence, new findings, and limitations.",
+      "failureSignals": [
+        "planned repair copied as observed result",
+        "missing after report",
+        "different or incomplete criteria"
+      ],
+      "evidence": [
+        "vision-request-after.json",
+        "vision-report-after.json"
+      ],
+      "weight": 3,
+      "gate": true
+    },
+    {
+      "id": "comparison-complete",
+      "question": "Does the comparison trace every before finding and identify regressions?",
+      "passCondition": "Every finding has a supported status and the comparison includes rubric deltas, new findings, and measured regressions.",
+      "failureSignals": [
+        "findings silently dropped",
+        "file changes treated as visual proof",
+        "no regression scan"
+      ],
+      "evidence": [
+        "comparison.json",
+        "before and after critiques"
+      ],
+      "weight": 3,
+      "gate": true
+    },
+    {
+      "id": "runtime-and-scope",
+      "question": "Were the build, primary interactions, and changed-file scope verified?",
+      "passCondition": "The target builds or serves, required interactions pass, and only intended project files changed.",
+      "failureSignals": [
+        "untested interaction",
+        "build failure",
+        "unrelated or unreviewable changes"
+      ],
+      "evidence": [
+        "build logs",
+        "interaction results",
+        "changed-file manifest"
+      ],
+      "weight": 2,
+      "gate": true
+    }
+  ],
+  "acceptance": {
+    "minimumNormalizedScore": 4,
+    "blockOnGateFailure": true,
+    "blockingRules": [
+      "Any missing gate artifact makes the run unverified, never accepted.",
+      "Planned, missing, placeholder, or direction-frame-derived production assets make the run unverified.",
+      "Do not emit semantic scores or zero-findings claims without both vision stages.",
+      "Do not infer visual improvement from changed files."
+    ]
+  }
+}

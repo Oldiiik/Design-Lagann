@@ -1,0 +1,110 @@
+{
+  "$schema": "./rubric.schema.json",
+  "schemaVersion": "1.0",
+  "id": "direction-evidence",
+  "critic": "direction-evidence-integrity",
+  "purpose": "Permit adaptive discovery only through an explicit, traceable direction-evidence track without pretending that skipped exploration occurred.",
+  "mode": "evidence",
+  "weight": 0,
+  "hardGate": true,
+  "requiredEvidence": [
+    "one declared direction-evidence track",
+    "current local hashes or source digests",
+    "style-independent thesis and Design DNA contract",
+    "truthful provenance and adoption state",
+    "independent final semantic review"
+  ],
+  "scale": {
+    "min": 0,
+    "max": 4,
+    "anchors": {
+      "0": "Discovery was skipped without a valid alternate evidence track.",
+      "1": "A direction source exists but its provenance, currency, adoption, or contract is materially incomplete.",
+      "2": "The selected track is mostly traceable but still has evidence or claim-boundary gaps.",
+      "3": "The track is current, traceable, and translated into a feasible contract with minor limitations.",
+      "4": "The track is fully current, hash-bound, truthfully adopted, contract-governed, independently reviewed, and responsive-proof ready."
+    }
+  },
+  "checks": [
+    {
+      "id": "declared-track",
+      "question": "Is exactly one direction-evidence track declared?",
+      "passCondition": "The run declares exploratory-orientation, approved-visual-reference, direct-reference, or existing-system and records why it applies.",
+      "failureSignals": [
+        "discovery silently skipped",
+        "multiple conflicting tracks",
+        "mode name used as evidence"
+      ],
+      "evidence": [
+        ".design-lagann/adaptive-plan.json"
+      ],
+      "weight": 3,
+      "gate": true
+    },
+    {
+      "id": "alternate-track-integrity",
+      "question": "When exploration is skipped, is the replacement evidence current and sufficient?",
+      "passCondition": "A direct reference is locally hash-bound and explicitly adopted, or the existing system has current source, screenshot, Design DNA, and contract evidence.",
+      "failureSignals": [
+        "unsupported strong-reference label",
+        "URL-only evidence",
+        "stale cache treated as current proof",
+        "existing styles assumed to be a qualified direction"
+      ],
+      "evidence": [
+        "reference cache manifest",
+        "source digest",
+        "adoption record",
+        "project Design DNA",
+        "DESIGN.md digest"
+      ],
+      "weight": 4,
+      "gate": true
+    },
+    {
+      "id": "claim-boundary",
+      "question": "Does the run describe only the exploration it actually performed?",
+      "passCondition": "Direct-reference and existing-system tracks never claim competing-direction exploration; cache reuse never claims current rendered acceptance.",
+      "failureSignals": [
+        "skipped candidates described as reviewed",
+        "cached DNA presented as fresh screenshot evidence",
+        "automated plan presented as human approval"
+      ],
+      "evidence": [
+        "adaptive plan",
+        "reference manifests",
+        "review report"
+      ],
+      "weight": 3,
+      "gate": true
+    },
+    {
+      "id": "contract-and-final-proof",
+      "question": "Does the selected direction still produce a feasible contract and full final proof?",
+      "passCondition": "The thesis, signature relationship, asset/type plan, DESIGN.md contract, desktop/tablet/mobile final evidence, and independent semantic critic all pass.",
+      "failureSignals": [
+        "style label used instead of a thesis",
+        "missing responsive transformation",
+        "missing final viewport",
+        "missing independent critic"
+      ],
+      "evidence": [
+        "project Design DNA",
+        "DESIGN.md",
+        "final screenshots",
+        "vision report"
+      ],
+      "weight": 5,
+      "gate": true
+    }
+  ],
+  "acceptance": {
+    "minimumNormalizedScore": 4,
+    "blockOnGateFailure": true,
+    "blockingRules": [
+      "A faster profile never counts as evidence.",
+      "Skipping exploration requires a complete alternate evidence track.",
+      "Every track converges on the same full final acceptance contract."
+    ]
+  }
+}

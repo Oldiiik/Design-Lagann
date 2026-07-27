@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "0.4.0",
+  "planId": "",
+  "critic": {
+    "provider": "",
+    "model": "",
+    "criticId": "",
+    "generatedAt": "",
+    "independentOfGeneration": true
+  },
+  "limitations": {
+    "generatedImagesAreCreativeReferences": true,
+    "pixelSimilarityIsNotAcceptance": true,
+    "implementationRequiresVerification": true
+  },
+  "candidateReports": [
+    {
+      "candidateId": "",
+      "verdict": "consider",
+      "coverage": {
+        "fullPage": true,
+        "viewports": [
+          "desktop",
+          "mobile"
+        ],
+        "dimensions": [
+          "originality",
+          "productFit",
+          "hierarchy",
+          "feasibility",
+          "responsiveViability",
+          "implementationDifficulty",
+          "accessibilityFakeUiRisk",
+          "assetMediumImplications"
+        ]
+      },
+      "evidence": {
+        "imageHashes": {
+          "desktop": "",
+          "mobile": ""
+        }
+      },
+      "scorecard": {
+        "originality": {
+          "score": 0,
+          "evidence": "",
+          "blocker": false
+        },
+        "productFit": {
+          "score": 0,
+          "evidence": "",
+          "blocker": false
+        },
+        "hierarchy": {
+          "score": 0,
+          "evidence": "",
+          "blocker": false
+        },
+        "feasibility": {
+          "score": 0,
+          "evidence": "",
+          "blocker": false
+        },
+        "responsiveViability": {
+          "score": 0,
+          "evidence": "",
+          "blocker": false
+        },
+        "implementationDifficulty": {
+          "score": 0,
+          "evidence": "",
+          "blocker": false
+        },
+        "accessibilityFakeUiRisk": {
+          "score": 0,
+          "evidence": "",
+          "blocker": false
+        },
+        "assetMediumImplications": {
+          "score": 0,
+          "evidence": "",
+          "blocker": false
+        }
+      },
+      "observations": {
+        "dominantRelationship": "",
+        "hierarchy": "",
+        "responsiveTransformation": "",
+        "implementationRisks": [],
+        "fakeUiRisks": [],
+        "assetMediumImplications": []
+      },
+      "findings": []
+    }
+  ]
+}

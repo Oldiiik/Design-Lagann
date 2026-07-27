@@ -1,0 +1,71 @@
+{
+  "version": "0.4.0",
+  "creativeThesis": "",
+  "creativeIdea": "",
+  "creativeDirection": {
+    "thesis": "",
+    "designArgument": "",
+    "brandTruth": "",
+    "desiredRecall": "",
+    "signatureMoment": {
+      "description": "",
+      "mechanism": "",
+      "location": "",
+      "responsiveMutation": ""
+    },
+    "compositionGrammar": {
+      "gridLogic": "",
+      "focalRelationship": "",
+      "objectLayoutIntegration": "",
+      "asymmetry": "",
+      "whitespace": "",
+      "sectionTransitions": "",
+      "climax": ""
+    },
+    "narrativeBeats": [],
+    "materialContract": {
+      "lightSource": "",
+      "depthRoles": {},
+      "effectBudget": {},
+      "bannedCombinations": []
+    },
+    "typographyDirection": "",
+    "imageryDirection": "",
+    "motionPurpose": "",
+    "responsiveThesis": "",
+    "antiPatterns": [],
+    "killCriteria": [],
+    "referenceTransformations": [],
+    "feasibility": {}
+  },
+  "directionCandidates": [],
+  "selectedDirection": "",
+  "sourceRoles": [],
+  "palette": {
+    "foundation": "",
+    "ink": "",
+    "accent": "",
+    "support": "",
+    "confidence": "inferred"
+  },
+  "compositionRules": [],
+  "objectIntegrationRules": [],
+  "transitionRules": [],
+  "depthRules": [],
+  "motionRules": [],
+  "system": {
+    "colorStrategy": "",
+    "paletteCandidates": [],
+    "typographyCandidates": [],
+    "spacingRule": "",
+    "depthModel": "",
+    "motionLanguage": ""
+  },
+  "applicationRules": [],
+  "contradictions": [],
+  "resolutions": [],
+  "originalityRules": [],
+  "antiTemplateRules": [],
+  "memorabilityHook": "",
+  "effectBudget": {}
+}

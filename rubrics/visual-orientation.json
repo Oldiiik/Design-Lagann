@@ -1,0 +1,169 @@
+{
+  "$schema": "./rubric.schema.json",
+  "schemaVersion": "1.0",
+  "id": "visual-orientation",
+  "critic": "visual-orientation-evidence",
+  "purpose": "Gate implementation on traceable multi-direction visual exploration, independent selection, feasible Design DNA extraction, and a reference-aware comparison.",
+  "mode": "evidence",
+  "weight": 0,
+  "hardGate": true,
+  "requiredEvidence": [
+    "brief and three to five written direction candidates",
+    "hash-bound local desktop frame for every candidate",
+    "prompt, model, timestamp, and provenance manifest",
+    "independent orientation critic report",
+    "orientation decision with human approval state",
+    "selected desktop and mobile creative references",
+    "reference design contract and DESIGN.md digest",
+    "reference-versus-build comparison"
+  ],
+  "scale": {
+    "min": 0,
+    "max": 4,
+    "anchors": {
+      "0": "Visual orientation evidence is absent, fabricated, or unusable.",
+      "1": "A frame exists but exploration, provenance, selection, or feasibility review is materially incomplete.",
+      "2": "Most orientation artifacts exist, with traceability or creative-reference boundaries still unclear.",
+      "3": "The selected direction is traceable, independently reviewed, and translated into a mostly feasible contract.",
+      "4": "Three to five distinct directions, complete provenance, independent criticism, approval state, feasible contract extraction, and reference-aware comparison are all verified."
+    }
+  },
+  "checks": [
+    {
+      "id": "distinct-written-candidates",
+      "question": "Were three to five materially different directions defined before image generation?",
+      "passCondition": "Each candidate differs in thesis and spatial grammar and documents responsive, feasibility, accessibility, and anti-pattern intent.",
+      "failureSignals": [
+        "fewer than three or more than five candidates",
+        "candidates vary only in palette, typeface, or effects",
+        "candidate thesis is only a style label"
+      ],
+      "evidence": [
+        "brief.json",
+        "direction-candidates.json",
+        "orientation-plan.json"
+      ],
+      "weight": 2,
+      "gate": true
+    },
+    {
+      "id": "generation-provenance",
+      "question": "Is every visual frame bound to a verified local file and truthful generation record?",
+      "passCondition": "Each frame has a matching local path, SHA-256 hash, dimensions, prompt, timestamp, source provenance, requested model, and actual reported model or explicit unreported state.",
+      "failureSignals": [
+        "missing or mismatched image hash",
+        "remote URL or prompt used instead of a local frame",
+        "requested model falsely recorded as the actual model",
+        "local code claims a model invocation that did not occur"
+      ],
+      "evidence": [
+        "generation-manifest.json",
+        "local candidate images",
+        "provider or host result metadata"
+      ],
+      "weight": 3,
+      "gate": true
+    },
+    {
+      "id": "independent-critic",
+      "question": "Did an independent critic inspect every candidate frame under the same declared criteria?",
+      "passCondition": "The critic cites visible evidence and scores originality, product fit, hierarchy, feasibility, responsiveness, accessibility, fake-UI risk, and implementation difficulty without a predetermined winner.",
+      "failureSignals": [
+        "critic scores prompts rather than rendered frames",
+        "preferred winner disclosed before judging",
+        "missing feasibility, accessibility, or fake-UI review",
+        "unreadable or stale image still receives a score"
+      ],
+      "evidence": [
+        "orientation-critic.json",
+        "critic criteria and deterministic selection rules",
+        "candidate image hashes"
+      ],
+      "weight": 3,
+      "gate": true
+    },
+    {
+      "id": "decision-and-approval",
+      "question": "Is selection distinct from human approval and fully traceable?",
+      "passCondition": "The recommendation, selected candidate, approval state, rationale, timestamp, critic digest, and selected desktop hash are recorded; required approval is satisfied before implementation.",
+      "failureSignals": [
+        "recommendation silently treated as approval",
+        "pending or rejected approval ignored",
+        "human override lacks a rationale",
+        "selected frame differs from the recorded hash"
+      ],
+      "evidence": [
+        "orientation-decision.json",
+        "orientation-critic digest",
+        "selected desktop image"
+      ],
+      "weight": 2,
+      "gate": true
+    },
+    {
+      "id": "desktop-mobile-reference",
+      "question": "Do selected desktop and mobile references express the same thesis through deliberate recomposition?",
+      "passCondition": "Both local, hash-bound frames preserve the signature relationship while mobile changes crop, sequence, scale, alignment, or object role instead of merely stacking.",
+      "failureSignals": [
+        "missing selected mobile frame",
+        "desktop columns merely stack",
+        "mobile loses the signature relationship",
+        "image records are stale or unhashed"
+      ],
+      "evidence": [
+        "selected desktop and mobile images",
+        "generation-manifest.json",
+        "responsive orientation notes"
+      ],
+      "weight": 2,
+      "gate": true
+    },
+    {
+      "id": "creative-reference-boundary",
+      "question": "Was the generated image treated as a creative reference rather than ground truth?",
+      "passCondition": "The reference contract labels exact, computed, estimated, and inferred evidence and marks impossible, fake, inaccessible, or invented elements preserve, adapt, or reject.",
+      "failureSignals": [
+        "generated text or geometry copied as exact specification",
+        "fake controls or invented content reproduced",
+        "accessibility defects justified by visual fidelity",
+        "inferences presented as measurements"
+      ],
+      "evidence": [
+        "reference-design.json",
+        "project-design-dna.json",
+        "DESIGN.md"
+      ],
+      "weight": 3,
+      "gate": true
+    },
+    {
+      "id": "reference-aware-comparison",
+      "question": "Was the implementation compared with both the creative reference and the DESIGN.md contract?",
+      "passCondition": "A hash- and digest-bound comparison distinguishes contract violations, creative drift, reference defects, intentional adaptations, and unverifiable claims across required viewports.",
+      "failureSignals": [
+        "pixel similarity used as semantic judgment",
+        "reference defect treated as a repair target",
+        "comparison omits mobile or tablet",
+        "stale reference image or DESIGN.md digest"
+      ],
+      "evidence": [
+        "reference-comparison.json",
+        "selected reference hashes",
+        "DESIGN.md digest",
+        "implementation screenshots"
+      ],
+      "weight": 3,
+      "gate": true
+    }
+  ],
+  "acceptance": {
+    "minimumNormalizedScore": 4,
+    "blockOnGateFailure": true,
+    "blockingRules": [
+      "A prompt, URL, or untraceable chat image is not visual evidence.",
+      "The plugin must never fake a local image-model invocation or model identity.",
+      "Generated frames remain creative references; DESIGN.md is the feasible implementation contract.",
+      "Missing required human approval blocks implementation when approval is configured as required."
+    ]
+  }
+}

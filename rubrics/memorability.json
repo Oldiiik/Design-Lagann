@@ -1,0 +1,123 @@
+{
+  "$schema": "./rubric.schema.json",
+  "schemaVersion": "1.0",
+  "id": "memorability",
+  "critic": "memorability-and-brand-director",
+  "purpose": "Estimate whether the page contains a specific, brand-linked moment worth recalling, while reserving definitive recall claims for blind human testing.",
+  "mode": "vision",
+  "weight": 10,
+  "hardGate": true,
+  "requiredEvidence": [
+    "project recall target",
+    "whole-page screenshots",
+    "structured vision report",
+    "benchmark human ratings when making elite-quality claims"
+  ],
+  "scale": {
+    "min": 0,
+    "max": 4,
+    "anchors": {
+      "0": "Nothing specific can be identified or attributed to the brand.",
+      "1": "The page is polished but interchangeable and difficult to describe.",
+      "2": "One distinctive detail exists but is weakly linked to the brand or page structure.",
+      "3": "A clear brand-linked signature moment anchors recall.",
+      "4": "The entire experience compresses into a singular, brand-specific idea confirmed by human recall evidence."
+    }
+  },
+  "checks": [
+    {
+      "id": "describable-signature-moment",
+      "question": "Can a reviewer describe one specific visual relationship without referencing generic style terms?",
+      "passCondition": "The moment combines content, type, object, space, or behavior in a concise brand-linked description.",
+      "failureSignals": [
+        "only color or shadow is memorable",
+        "reviewer can describe only the product category",
+        "no dominant moment"
+      ],
+      "evidence": [
+        "vision signature-moment assessment",
+        "recall target",
+        "screenshots"
+      ],
+      "weight": 5,
+      "gate": true
+    },
+    {
+      "id": "brand-attribution",
+      "question": "Does the memorable moment arise from this brand's truth rather than a fashionable effect?",
+      "passCondition": "Changing the brand or content would require redesigning the moment.",
+      "failureSignals": [
+        "moment transferable unchanged to unrelated brands",
+        "identity depends on gradient, glow, clay, or glass alone",
+        "generic stock asset is the main hook"
+      ],
+      "evidence": [
+        "creative thesis",
+        "brand truth",
+        "screenshots"
+      ],
+      "weight": 5,
+      "gate": true
+    },
+    {
+      "id": "conceptual-compression",
+      "question": "Does the page communicate one coherent idea rather than many decorative ideas?",
+      "passCondition": "The experience can be summarized as one spatial and narrative concept supported by subordinate systems.",
+      "failureSignals": [
+        "several competing motifs",
+        "each section uses a new gimmick",
+        "no concise page-level description"
+      ],
+      "evidence": [
+        "whole-page vision summary",
+        "project DNA",
+        "screenshots"
+      ],
+      "weight": 4,
+      "gate": false
+    },
+    {
+      "id": "meaningful-surprise",
+      "question": "Does the page create a surprising relationship that remains purposeful?",
+      "passCondition": "Unexpected composition or transition clarifies content, action, or identity.",
+      "failureSignals": [
+        "novelty for novelty's sake",
+        "random asymmetry",
+        "interaction surprise harms usability"
+      ],
+      "evidence": [
+        "screenshots",
+        "interaction observation",
+        "page narrative"
+      ],
+      "weight": 3,
+      "gate": false
+    },
+    {
+      "id": "human-recall-validation",
+      "question": "When an elite-quality claim is made, did blind human raters recall and prefer the intended moment?",
+      "passCondition": "Unaided recall, art-direction preference, and AI-likeness results are recorded with complete benchmark evidence.",
+      "failureSignals": [
+        "automated score presented as human 10/10",
+        "raters shown tool identity",
+        "missing or selective benchmark results"
+      ],
+      "evidence": [
+        "blind pairwise ratings",
+        "five-minute recall responses",
+        "benchmark manifest"
+      ],
+      "weight": 3,
+      "gate": false
+    }
+  ],
+  "acceptance": {
+    "minimumNormalizedScore": 3,
+    "blockOnGateFailure": true,
+    "blockingRules": [
+      "Automated vision may estimate recall potential but cannot prove human memorability.",
+      "A signature moment must be specific to the brand and visible in the rendered page.",
+      "Require blind human evidence before claiming 9/10, 10/10, elite, or benchmark-leading quality."
+    ]
+  }
+}

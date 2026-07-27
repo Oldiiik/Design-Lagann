@@ -1,0 +1,7 @@
+{
+  "name": "design-lagann-smoke-app",
+  "private": true,
+  "scripts": { "dev": "vite" },
+  "dependencies": { "react": "^19.0.0" },
+  "devDependencies": { "vite": "^7.0.0" }
+}

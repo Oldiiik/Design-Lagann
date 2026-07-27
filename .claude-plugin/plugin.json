@@ -1,0 +1,14 @@
+{
+  "name": "design-lagann",
+  "version": "1.0.0",
+  "description": "A host-aware design workflow for creating and evolving production interfaces without requiring image generation.",
+  "author": { "name": "Design Lagann" },
+  "license": "Apache-2.0",
+  "keywords": ["design", "frontend", "ux", "redesign", "motion", "responsive"],
+  "mcpServers": {
+    "design-lagann": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/packages/mcp-server/src/server.mjs"]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "design-lagann",
+  "version": "1.0.0",
+  "description": "Create, redesign, edit, extend, repair, and transform distinctive interfaces through a scoped, context-aware workflow.",
+  "author": { "name": "Design Lagann" },
+  "license": "Apache-2.0",
+  "keywords": ["frontend-design", "art-direction", "redesign", "repair", "responsive-proof", "local-first"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Design Lagann",
+    "shortDescription": "Direct, build, evolve, and prove memorable interfaces.",
+    "longDescription": "Design Lagann identifies whether you are creating, redesigning, editing, extending, repairing, or transforming. It finds or generates its own qualified references, preserves approved work, plans before changing code, choreographs complete motion states, and verifies responsive behavior. Fast, Balanced, and Quality change workflow depth while keeping the same acceptance bar.",
+    "developerName": "Design Lagann",
+    "category": "Developer Tools",
+    "capabilities": ["Read", "Write", "Interactive"],
+    "brandColor": "#5B3DF5",
+    "defaultPrompt": [
+      "Welcome to Design Lagann.",
+      "Tell me what you want to create or change, who it serves, and what must remain untouched.",
+      "I will inspect the project when it exists, choose the smallest safe scope, plan the experience, implement it, and verify the result across desktop, tablet, and mobile.",
+      "Balanced is the default. Fast reduces exploration; Quality adds deeper direction and proof."
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}
