@@ -106,7 +106,7 @@ numbers live in `references/craft.md`.
   continuous QA, and a user who pins a cliché. Twenty trigger queries, half of them near-misses. Three
   fixture pages. All validated in CI.
 
-## Next: prove it behaviourally
+## Not yet done: a behavioural benchmark
 
 The rubric says Lagann is the most complete design skill here. Only a benchmark can say whether it
 produces better interfaces. skill-creator's method:

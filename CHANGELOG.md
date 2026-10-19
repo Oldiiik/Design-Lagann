@@ -33,7 +33,7 @@ restarts at 0.1 because this is a new design, not an update of 1.x.
 
 ### Removed
 - The CLI, MCP server, installer, workspace packages, rubrics JSON, templates, benchmarks and plugin
-  manifests for Codex and Claude. The npm package `design-lagann@1.0.1` is unchanged and still installs 1.x.
+  manifests for Codex and Claude.
 
 ## 1.0.1 and earlier
 The plugin releases remain available under the `v1.0.0` and `v1.0.1` tags.

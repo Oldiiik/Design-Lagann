@@ -1,113 +1,70 @@
 <p align="center"><img src="assets/brand/design-lagann-github-banner.png" alt="Design Lagann" width="100%"></p>
 
-# Design Lagann
+# Lagann
 
-**A design director for coding agents.** Lagann is an Agent Skill
-that gives Claude Code (and other hosts that read `SKILL.md` skills) design *judgment* rather than a house
-style: what kind of task this is, what is already true about the product, which expertise applies right
-now, and when the work is actually done.
-
-It orchestrates the design skills you already have (impeccable, taste-skill, frontend-design,
-ui-ux-pro-max, emil-design-eng, animate, apple-design and others), loads only the part each moment needs,
-resolves their contradictions, hunts generic "AI-made" design without replacing it with the next cliché,
-and verifies the rendered result in a real browser.
-
-> Version **0.1.0**. A clean rewrite as a pure skill. The 1.x plugin (CLI, MCP server, packages) is retired;
-> see [CHANGELOG.md](CHANGELOG.md).
+A design director skill for Claude Code. Lagann gives the agent design judgment instead of a house style:
+it reads what your product already is, picks the right amount of process for the task, pulls in the
+right expertise at the right moment, avoids generic AI-looking design, and checks the result in a real browser.
 
 ## What it does
 
-- **Reads before it designs.** Each project keeps a short `.design-lagann/context.md` (tokens, type,
-  motion language, intentional exceptions, decisions, rejections, how to run and check it), derived from
-  the real code with a bundled scanner. Code beats memory; newer user words beat both.
-- **Picks the smallest mode that fits.** Create runs four stages; Modify loads one checklist; Redesign
-  audits and preserves identity first; Audit only reads; Continuous QA checks the parts you changed.
-- **Four stages for new work.** Discover (product and UX), Imagine (creative direction from the subject,
-  with real alternatives), Construct (design engineering, states, motion with a purpose), Verify
-  (render → inspect → diagnose → correct → verify, bounded).
-- **One precedence model.** User requirements > accessibility, correctness, security > the product's
-  established identity > the task's direction > specialist advice > general taste. A specialist's style
-  ban is a *signal to question*, never an automatic edit.
-- **First-class anti-slop.** Three orders of slop (generator defaults, the cream-and-serif overcorrection,
-  originality theatre), five questions before changing anything, evidence tests (category guess,
-  competitor swap, effects off, decision trace), and a rule to protect what is already distinctive.
-- **Honest verification.** A wrapper around taste-skill's browser inspector sorts findings into defects,
-  quality issues and style signals; a browser sweep checks overflow, names, labels, contrast, targets, LCP,
-  CLS and metadata. Nothing is reported as checked unless it ran.
-
-It is not a style preset. A finance dashboard, an artist's portfolio and a children's app should never
-come out as variations of one template.
+- **Reads your product first.** Tokens, type, motion and past decisions come from your code and are kept
+  in a short `.design-lagann/context.md` per project.
+- **Scales to the task.** A button fix gets a checklist; a new product gets four stages:
+  Discover → Imagine → Construct → Verify.
+- **No default style.** Every visual direction comes from the subject, never from a preset.
+- **Anti-slop.** It catches generic patterns, and also the "cream and serif" overcorrection, without
+  breaking what already works.
+- **Honest verification.** It renders at real widths, separates defects from style choices, and never
+  reports a check it didn't run.
 
 ## Install
 
-Claude Code:
-
 ```bash
-git clone https://github.com/Oldiiik/Design-Lagann.git ~/design-lagann
-ln -s ~/design-lagann/skills/lagann ~/.claude/skills/lagann
+git clone https://github.com/Oldiiik/Design-Lagann.git
+cp -r Design-Lagann/skills/lagann ~/.claude/skills/
 ```
 
-Copying works too (`cp -R skills/lagann ~/.claude/skills/`); the symlink lets `git pull` update it.
-Other hosts: link `skills/lagann` into that host's skills folder (for example `~/.codex/skills/` or
-`~/.cursor/skills/`). Start a new session afterwards. Lagann triggers on design requests by itself.
+Start a new Claude Code session. Lagann triggers on its own for UI work; you can also call `/lagann`.
 
-**Upgrading from the 1.x plugin:** remove `~/.claude/skills/design-lagann` (and the Codex/Cursor copies),
-`~/.design-lagann/runtime` and the plugin entry, so only one orchestrator is active. Note that
-`npx design-lagann` on npm still installs 1.0.1.
+## Usage
 
-### Requirements
+Just ask:
 
-- Nothing, to work: Lagann is Markdown plus three small, dependency-free scripts.
-- Node 22+ and a local Chrome/Edge/Chromium for the inspector scripts.
-- Specialist skills are optional. Lagann carries its own craft core and direction method, so it works
-  with none installed; each specialist adds depth. What each contributes, and what replaces it when
-  missing: [`modules/specialists.md`](skills/lagann/modules/specialists.md).
+- "Build a landing page for my bike repair co-op"
+- "Make the dashboard for our clinic's front desk"
+- "This page feels generic, why?"
+- "Fix the dropdown, it has no focus state"
 
-## Layout
+## Modes
+
+| You ask | Lagann does |
+|---|---|
+| Something new | **Create**: all four stages |
+| A small change | **Modify**: the change, plus the checks that matter |
+| "Improve this page" | **Redesign**: audit first, keep what's distinctive |
+| "Does this look good?" | **Audit**: diagnose only, no edits |
+| Feature work touching UI | **Continuous QA**: regression checks |
+
+## Works better with
+
+Lagann works on its own and goes deeper when these skills are installed, using only the parts it needs:
+impeccable, taste-skill, frontend-design, ui-ux-pro-max, emil-design-eng, animate, apple-design,
+designing-user-experiences, web-design-guidelines.
+
+## Structure
 
 ```
 skills/lagann/
-  SKILL.md                    always loaded: context first, mode router, surface, precedence, stages, truth rules
-  stages/                     1-discover · 2-imagine · 3-construct · 4-verify
-  modules/
-    modes.md                  modes, other names for the same work, effort levels, escalation
-    anti-slop.md              the anti-generic-design module
-    specialists.md            registry of design skills: best at, what to read, where Lagann overrules
-    conflicts.md              hard vs soft rules and standing rulings between specialists
-    project-context.md        the .design-lagann/context.md mechanism and template
-  references/
-    craft.md                  mechanics defaults with reasons: type, space, colour, depth, components,
-                              Operate / Read / Persuade specifics, motion tokens, copy
-    examples.md               worked outputs: direction record, audits, dashboard hierarchy, Modify report
-  standards/professional.md   accessibility, responsive, performance, production, SEO, security, i18n
-  checklists/                 change-check (small edits), report formats
-  scripts/
-    context-scan.mjs          derives tokens, fonts, radii and motion facts from a project
-    inspect.mjs               real-browser measurement, findings sorted into defect / quality / signal
-    browser-checks.js         objective sweep to paste into a browser devtools / agent browser
+  SKILL.md        entry point
+  stages/         discover, imagine, construct, verify
+  modules/        modes, anti-slop, specialists, conflicts, project context
+  references/     craft defaults, worked examples
+  standards/      accessibility, performance, SEO, security
+  checklists/     small-change checks, report formats
+  scripts/        context scan, browser inspector, browser checks
 ```
-
-Progressive disclosure keeps context small: a small edit loads `SKILL.md` and one checklist (about 3k
-tokens); full creation loads the stage files and the specialist excerpts they name, never whole skills.
-
-## Personal rules stay personal
-
-Cross-project taste and rules for named projects (a motion language, a pinned palette, a local server)
-belong in `~/.design-lagann/profile.md`, outside every repository. Lagann reads it at the start of each
-task. Project-specific identity lives in each project's `.design-lagann/context.md`.
-
-## Develop
-
-```bash
-node scripts/validate.mjs                 # frontmatter, links, script syntax, size budget, no personal paths
-node scripts/validate.mjs --specialists   # also checks specialist file references against ~/.claude/skills
-```
-
-Evals live in `evals/` (skill-creator's schema): nine behaviour evals with checkable expectations,
-twenty trigger queries, and fixture pages. How Lagann compares with the skills it orchestrates:
-[docs/comparison.md](docs/comparison.md). What was tested and how: [docs/validation.md](docs/validation.md).
-Contributions: [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-Apache-2.0. Lagann references other skills by name and path; it does not bundle their content.
+Apache-2.0
