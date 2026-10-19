@@ -5,6 +5,22 @@ overrules it. Paths are relative to the host's skills folder (`~/.claude/skills/
 against the versions noted below; re-check a skill's files if it has been updated since. A skill that is
 not installed is skipped: use the fallback named in its entry.
 
+## When a specialist is missing
+
+Lagann works with none of them installed; each adds depth. Say which ones were unavailable.
+
+| Missing | Use instead |
+|---|---|
+| taste-skill | Imagine's own direction method; [../references/craft.md](../references/craft.md) §8; `scripts/browser-checks.js` and the browser pane instead of its inspector |
+| impeccable | the stage files; craft.md; Verify's severity tiers and [../standards/professional.md](../standards/professional.md) |
+| frontend-design | Imagine (idea sentence, alternatives, anti-slop direction check) |
+| ui-ux-pro-max | craft.md §5–6; professional.md |
+| animate, emil-design-eng | craft.md §9; Construct §Motion (frequency gate, purpose, properties, reduced motion) |
+| apple-design | Construct §Motion; springs and velocity for gestures as in craft.md §9 |
+| designing-user-experiences | Discover (brief, capability classes, proposal before substantial IA changes) |
+| web-design-guidelines | professional.md |
+| redesign-skill, soft-skill, minimalist-skill | nothing needed: checklist and lanes only |
+
 ## Core specialists
 
 ### impeccable (v4.6)

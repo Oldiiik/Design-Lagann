@@ -1,0 +1,22 @@
+[
+  {"query": "the pricing page on our next.js site looks kinda cheap compared to linear's, can you make it feel more premium without changing the plans or copy", "should_trigger": true},
+  {"query": "build me a landing page for my grandmother's dumpling shop in almaty, she has photos of the kitchen and a menu with 14 items", "should_trigger": true},
+  {"query": "why does my portfolio (src/app/page.tsx) look like every other AI-generated site? be honest", "should_trigger": true},
+  {"query": "the settings modal in apps/web/components/SettingsDialog.tsx has no focus states and the close animation feels janky, fix it", "should_trigger": true},
+  {"query": "we need an admin dashboard for the warehouse team: stock levels, late shipments, pick lists. react + tailwind already set up", "should_trigger": true},
+  {"query": "spacing between the cards on mobile is off and the CTA wraps weirdly at 375px, can u fix", "should_trigger": true},
+  {"query": "Does this onboarding flow look professional enough to show investors on Friday? localhost:3000/onboarding", "should_trigger": true},
+  {"query": "redesign our blog index so it reads better but keep the brand colors and the logo exactly as they are", "should_trigger": true},
+  {"query": "add a dark mode to the docs site, the current palette is in styles/tokens.css", "should_trigger": true},
+  {"query": "make the hero on index.html more striking, right now it's just centered text and a button", "should_trigger": true},
+  {"query": "make a bar chart of monthly revenue from sales.csv for my report, matplotlib is fine", "should_trigger": false},
+  {"query": "create a 10-slide pitch deck for our seed round from this notes doc", "should_trigger": false},
+  {"query": "draw an architecture diagram of our microservices: api gateway, auth, billing, postgres, redis", "should_trigger": false},
+  {"query": "our css bundle went from 80kb to 400kb after the vite upgrade, figure out why the build is pulling in all of tailwind", "should_trigger": false},
+  {"query": "what's that animation called where the menu bounces a little when it opens? I want to describe it to my designer", "should_trigger": false},
+  {"query": "which toast library should I use in react, sonner or react-hot-toast?", "should_trigger": false},
+  {"query": "write the copy for our product hunt launch post, no code needed", "should_trigger": false},
+  {"query": "the useEffect in Dashboard.tsx causes an infinite re-render loop when filters change, can you debug it", "should_trigger": false},
+  {"query": "render a 15 second promo video of our app with remotion for instagram", "should_trigger": false},
+  {"query": "convert this word document resume into a nicely formatted pdf", "should_trigger": false}
+]

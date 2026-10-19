@@ -14,9 +14,15 @@ restarts at 0.1 because this is a new design, not an update of 1.x.
   emil-design-eng, animate, apple-design, designing-user-experiences, web-design-guidelines,
   redesign-skill, soft-skill, minimalist-skill and the motion-review skills.
 - Per-project `.design-lagann/context.md` and a personal `~/.design-lagann/profile.md`.
+- Craft core (`references/craft.md`): mechanics defaults with reasons, mode-aware, so Lagann works with
+  no specialist installed. A direction method of its own (rut first, three candidates from different
+  subject facts, differing on at least three axes) and a fallback table for every specialist.
+- Worked examples (`references/examples.md`).
 - Scripts: `context-scan.mjs`, `inspect.mjs` (tiered wrapper around taste-skill's inspector),
   `browser-checks.js`.
-- `scripts/validate.mjs` and CI.
+- Evals: 9 behaviour evals, 20 trigger queries and fixtures in `evals/`; `scripts/validate.mjs` and CI
+  check the skill and the evals.
+- `docs/comparison.md`: rubric comparison with the orchestrated skills and the 1.x plugin.
 
 ### Carried over from 1.x
 - Operations extend / repair / transform (now mapped onto modes), plan-before-build in proportion to scope,

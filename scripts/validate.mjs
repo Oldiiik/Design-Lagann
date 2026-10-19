@@ -57,6 +57,22 @@ for (const f of files.filter((p) => /\.(mjs|js)$/.test(p))) {
   }
 }
 
+// evals: skill-creator schema, unique ids, fixtures exist; trigger set balanced
+try {
+  const ev = JSON.parse(readFileSync(join(root, 'evals', 'evals.json'), 'utf8'));
+  if (ev.skill_name !== 'lagann') errors.push('evals.json: skill_name must be "lagann"');
+  const ids = new Set();
+  for (const e of ev.evals) {
+    if (ids.has(e.id)) errors.push(`evals.json: duplicate id ${e.id}`); ids.add(e.id);
+    if (!e.prompt || !e.expected_output || !e.expectations?.length) errors.push(`evals.json: eval ${e.id} needs prompt, expected_output and expectations`);
+    for (const f of e.files || []) if (!existsSync(join(root, f))) errors.push(`evals.json: eval ${e.id} fixture missing: ${f}`);
+  }
+  const tr = JSON.parse(readFileSync(join(root, 'evals', 'trigger-evals.json'), 'utf8'));
+  const pos = tr.filter((q) => q.should_trigger).length;
+  if (tr.length < 16 || pos < 6 || tr.length - pos < 6) warnings.push(`trigger-evals.json: ${tr.length} queries (${pos} positive); aim for ~20, balanced`);
+  console.log(`evals: ${ev.evals.length} behaviour · ${tr.length} trigger (${pos} should, ${tr.length - pos} should not)`);
+} catch (e) { errors.push('evals: ' + e.message); }
+
 // optional: specialist references resolve against the local skills folder
 if (checkSpecialists) {
   const base = process.env.LAGANN_SKILLS_DIR || join(homedir(), '.claude', 'skills');

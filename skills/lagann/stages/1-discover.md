@@ -39,7 +39,7 @@ runs. Note what users can do today before proposing to simplify anything; invent
 |---|---|
 | Scope and capability classification; when a change needs approval first | `designing-user-experiences/SKILL.md` (Route by Scope; the classification table) |
 | Task discovery, mode, questions worth asking | `impeccable/reference/shape.md`; mode files `mode-operate.md`, `mode-read.md`, `mode-persuade.md` |
-| Operate surfaces (dashboards, tools) | `impeccable/reference/operate.md` |
+| Operate surfaces (dashboards, tools) | [../references/craft.md](../references/craft.md) §6; `impeccable/reference/operate.md`; worked example in [../references/examples.md](../references/examples.md) §4 |
 | UX rules by priority (accessibility, touch, nav, forms) | `ui-ux-pro-max/SKILL.md` priority table; details on demand from `references/quick-reference.md` or `python3 ~/.claude/skills/ui-ux-pro-max/scripts/search.py "<outcome>" --domain ux` |
 | Landing argument: claims and their proof, section order | `taste-skill/references/copy.md` §1 |
 | First-run, onboarding, empty states | `impeccable/reference/onboard.md` |

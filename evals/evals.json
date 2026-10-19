@@ -1,0 +1,148 @@
+{
+  "skill_name": "lagann",
+  "notes": "Behaviour evals in skill-creator's schema. File paths are relative to the repository root. Expectations are checked against the transcript and the produced files; visual quality itself needs a human or blind-comparison review.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "landing-from-scratch",
+      "prompt": "Build a landing page for Spoke & Lantern, a volunteer bicycle repair co-op in Tbilisi. It only opens 18:00 to 23:00, has four repair stands, and prices are pay-what-you-can. Plain HTML/CSS is fine, put it in ./spoke-lantern/.",
+      "expected_output": "A complete, responsive landing page whose concept comes from the co-op's own facts (evening hours, four stands, pay-what-you-can), not from a startup template, verified in a browser.",
+      "files": [],
+      "expectations": [
+        "States the mode as Create and the surface as Persuade (or equivalent wording)",
+        "Writes down the category rut (and its opposite) before choosing a direction",
+        "Considers at least three directions that differ on at least three axes, each tied to a different fact about the co-op",
+        "The chosen idea uses a subject-specific fact (hours, stands, or pay-what-you-can) as a visible device",
+        "Contains no invented testimonials, logos, ratings, member counts or press",
+        "Uses no remote placeholder image services (picsum, unsplash-source, placehold)",
+        "Every h1/h2 renders in two lines or fewer at 390px wide",
+        "Includes visible focus styles and a prefers-reduced-motion rule if anything moves",
+        "Rendered the page at phone and desktop widths and looked at the screenshots before reporting",
+        "The final report lists sample content that must be replaced and says which checks ran"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "operate-dashboard",
+      "prompt": "Make the main dashboard for the front desk of a small veterinary clinic: today's appointments, who is waiting, overdue vaccinations, and quick check-in. Static HTML with fake but realistic sample data in ./vet-desk/.",
+      "expected_output": "A dense, scannable Operate screen whose hierarchy follows the receptionist's decisions, with complete states.",
+      "files": [],
+      "expectations": [
+        "Identifies the surface as Operate and does not apply a marketing/landing-page lane",
+        "The top of the screen answers what needs attention now (waiting patients or the next appointment)",
+        "Check-in is reachable in one action from each appointment",
+        "Numbers in tables are right-aligned with tabular figures",
+        "Any KPI shown has a unit and a comparison or an action it informs; no decorative KPI tiles",
+        "Includes empty, loading or error states for at least the appointment list",
+        "Sample data is labelled as sample in the report",
+        "No staggered or scroll-reveal entrance animation on the working screen"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "redesign-keep-identity",
+      "prompt": "This is our studio's homepage: evals/files/studio-landing.html. It feels weak and a bit broken on phones. Improve it, but it still has to feel like Tidewater.",
+      "expected_output": "An audit first, then a refined page that keeps the harbour blue, signal orange, circular stamp motif and Alegreya Sans, while fixing real defects.",
+      "files": ["evals/files/studio-landing.html"],
+      "expectations": [
+        "Renders and audits the page before editing it",
+        "Writes an explicit preserve list naming the stamp/circle motif and the harbour blue + signal orange colours",
+        "Keeps Alegreya Sans and the two brand colours",
+        "Fixes the 112px no-wrap headline that overflows on phones",
+        "Raises the muted grey text (#9aa6ad on paper) to at least 4.5:1",
+        "Restores visible keyboard focus on links and the button (the original removes outlines)",
+        "Compares before and after screenshots at the same widths",
+        "Does not introduce a new typeface, palette or radius language"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "modify-dropdown",
+      "prompt": "In evals/files/app-settings.html the Language dropdown has no hover or focus state and just pops open. Make it feel nicer.",
+      "expected_output": "A bounded change to the dropdown only, using the file's existing tokens, made keyboard-accessible with calm, short motion.",
+      "files": ["evals/files/app-settings.html"],
+      "expectations": [
+        "Treats the task as Modify and does not restyle other parts of the form",
+        "Reuses existing tokens (--accent, --line, --r, --t, --ease-out) rather than adding new colour or timing values",
+        "Makes the trigger a real button with aria-expanded and a visible focus-visible style",
+        "Menu supports keyboard use (arrow keys or tab to options, Escape closes, focus returns to the trigger)",
+        "Open/close motion is 250ms or less, uses transform/opacity, and has a reduced-motion path",
+        "Reports what changed and how it was checked in one or two lines"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "audit-generic-ai-page",
+      "prompt": "Why does evals/files/generic-landing.html feel so AI-generated? Don't change anything, just tell me.",
+      "expected_output": "A read-only audit with a decision trace, a root-cause cluster and verdicts whose replacements are not new clichés.",
+      "files": ["evals/files/generic-landing.html"],
+      "expectations": [
+        "Does not modify the file",
+        "Includes a decision trace: visible elements and whether each has a reason to exist",
+        "Flags 'trusted by 10,000+ teams' as an unsupported claim (truth), separate from taste",
+        "Groups the gradient/glow/glass/shadow effects into one root-cause finding instead of listing them as unrelated tweaks",
+        "Does not recommend replacing the look with a cream background, serif display and terracotta accent",
+        "Notes at least one item to keep or question rather than condemning every pattern",
+        "Says whether the page was rendered or only read"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "experimental-experience",
+      "prompt": "Make an experimental one-page portfolio for Aru Sadyk, a sound artist who records ice cracking on Lake Baikal in winter. Go wild, I want it to feel like nothing else. ./aru/",
+      "expected_output": "An Experience surface whose concept comes from the artist's material, ambitious but still usable.",
+      "files": [],
+      "expectations": [
+        "Identifies the surface as Experience",
+        "The concept is derived from the subject (ice, cracking, sound, Baikal), not from a generic dark portfolio template",
+        "The artist's name, a list of works and a contact method are visible and keyboard-reachable",
+        "Any canvas/WebGL/audio interaction has a reduced-motion or no-script fallback",
+        "Audio never autoplays without a user action",
+        "Rendered and looked at the result before reporting"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "responsive-verification",
+      "prompt": "Check evals/files/generic-landing.html on mobile and desktop and tell me what breaks.",
+      "expected_output": "A rendered check at real widths with evidence, honest about what was not tested.",
+      "files": ["evals/files/generic-landing.html"],
+      "expectations": [
+        "Renders at a phone width (≈390px) and a desktop width (≈1440px)",
+        "Reports the hero headline wrapping to many lines at phone width",
+        "Reports the low-contrast muted text",
+        "Labels each finding as verified (rendered) or code-read",
+        "Does not claim Safari or other browsers were tested if they were not",
+        "Does not edit the file"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "continuous-qa-new-field",
+      "prompt": "Add a phone number field to the settings form in evals/files/app-settings.html.",
+      "expected_output": "A new field that matches the existing field pattern exactly, with correct semantics, and nothing else changed.",
+      "files": ["evals/files/app-settings.html"],
+      "expectations": [
+        "The new field reuses the existing .field / label / input / .help pattern",
+        "Uses type=\"tel\" and autocomplete=\"tel\" with a visible label",
+        "No new colours, sizes or radius values are introduced",
+        "Does not redesign or restyle unrelated parts of the form"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "user-pins-a-cliche",
+      "prompt": "Landing page for Ledgerly, our invoicing tool for freelancers. I want Inter everywhere and a purple-to-blue gradient hero, that's our brand. ./ledgerly/",
+      "expected_output": "The user's pinned font and gradient are honoured and executed well; Lagann does not overrule tier-1 requirements with its anti-slop signals.",
+      "files": [],
+      "expectations": [
+        "Uses Inter as the typeface",
+        "Uses a purple-to-blue gradient in the hero",
+        "Does not lecture the user or replace the requested gradient with a flat colour",
+        "Text on the gradient passes contrast (4.5:1 for body, 3:1 for large text)",
+        "Brings specificity elsewhere (copy, proof, the product's own invoice UI) rather than generic feature cards",
+        "Contains no invented customer logos, testimonials or usage numbers"
+      ]
+    }
+  ]
+}

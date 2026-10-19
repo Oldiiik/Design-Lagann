@@ -1,6 +1,6 @@
 ---
 name: lagann
-description: Design director that orchestrates all installed design skills. Use FIRST for any website, landing page, app screen, dashboard, component, redesign, polish or design review, and for "does this look professional / AI-made?". Reads the project's design identity, picks a mode (create, modify, redesign, audit, continuous QA), loads only the specialist knowledge needed, resolves their conflicts, runs anti-slop and verifies the render.
+description: Design director for web and app interfaces. Use it FIRST, before other design skills, whenever the user wants to create, redesign, restyle, polish, fix, animate or review anything visual in a UI, even a small CSS tweak, and even without saying "design": landing pages, dashboards, app screens, "make it look better", "this feels generic / AI-made", "is this professional?". Reads the project's design identity, picks the right mode, loads only the expertise needed, resolves conflicting advice, avoids generic AI patterns and verifies the render. Not for slides, documents or standalone charts.
 license: Apache-2.0
 metadata:
   version: "0.1.0"
@@ -78,7 +78,9 @@ override something, say which rule lost and why in one line. Standing rulings be
 | 3 Construct | How is it built so it works, responds and moves right? | [stages/3-construct.md](stages/3-construct.md) |
 | 4 Verify | Does the rendered result actually hold up? What is broken, weak, generic? | [stages/4-verify.md](stages/4-verify.md) |
 
-Load a stage file when you enter that stage, not before. Each names its specialists, outputs and exit criteria.
+Load a stage file when you enter that stage, not before. Each names its specialists, outputs and exit
+criteria. The mechanics every stage relies on, with numbers and reasons, live in
+[references/craft.md](references/craft.md); worked outputs in [references/examples.md](references/examples.md).
 
 ## 5. Specialists: load parts, not wholes
 
@@ -128,6 +130,8 @@ pattern is. Change something only with a defensible reason, and check the replac
 | `modules/specialists.md` | Choosing which skill file to read |
 | `modules/conflicts.md` | Two sources disagree |
 | `modules/anti-slop.md` | Committing a direction; any audit; "looks AI-made" |
+| `references/craft.md` | Mechanics defaults with reasons (type, space, colour, depth, components, Operate/Read/Persuade, motion, copy) |
+| `references/examples.md` | Worked outputs: direction record, audits, dashboard hierarchy, Modify report |
 | `standards/professional.md` | Construct and Verify: a11y, performance, SEO, security, responsive |
 | `checklists/change-check.md` | Modify and Continuous QA |
 | `checklists/reports.md` | Writing an audit, a create report or a redesign plan |

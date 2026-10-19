@@ -7,8 +7,11 @@ A page that needs animation to look finished is not finished: build it still fir
 
 - Read the project's stack and conventions (framework, styling method, Tailwind version, component
   library, icon set). Work in them; never migrate frameworks or styling systems as a side effect.
-- Read `impeccable/reference/craft-floor.md` (the Verify list in it is the build floor). Its "Refuse"
-  list is a set of signals: see [../modules/conflicts.md](../modules/conflicts.md) for how Lagann rules them.
+- Where the project has no system of its own, take the mechanics (type scale, spacing, colour roles and
+  ramps, radius, elevation, component behaviour, Operate/Read/Persuade specifics, motion tokens) from
+  [../references/craft.md](../references/craft.md).
+- If installed, read `impeccable/reference/craft-floor.md` (the Verify list in it is the build floor). Its
+  "Refuse" list is a set of signals: see [../modules/conflicts.md](../modules/conflicts.md) for how Lagann rules them.
 - Check every import exists in the project's dependencies before using it. Cheapest tool that works.
 
 ## Order of work

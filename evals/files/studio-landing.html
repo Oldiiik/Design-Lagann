@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tidewater Letterpress</title>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+/* Brand: deep harbour blue, signal orange (from the studio's 1962 Heidelberg press), stamped circular marks. */
+:root { --harbour: #12324a; --signal: #e8642c; --paper: #f2efe6; --ink: #12324a; --muted: #9aa6ad; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Alegreya Sans", sans-serif; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 20px 32px; }
+.mark { width: 56px; height: 56px; border-radius: 50%; border: 3px solid var(--signal); display: grid; place-items: center; font-weight: 900; color: var(--signal); }
+nav a { color: var(--ink); margin-left: 24px; text-decoration: none; outline: none; }
+.hero { padding: 80px 32px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: center; }
+.hero h1 { font-size: 112px; line-height: .9; margin: 0; letter-spacing: -.03em; white-space: nowrap; }
+.hero p { color: var(--muted); font-size: 20px; max-width: 34ch; }
+.stamp { width: 320px; height: 320px; border-radius: 50%; background: var(--signal); color: var(--paper); display: grid; place-items: center; font-size: 28px; font-weight: 900; transform: rotate(-8deg); }
+.btn { display: inline-block; background: var(--harbour); color: var(--paper); padding: 14px 24px; text-decoration: none; font-weight: 700; outline: none; }
+section.work { padding: 64px 32px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.card { background: #fff; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.08); border-radius: 16px; }
+.card h3 { margin-top: 0; }
+footer { padding: 48px 32px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header><div class="mark">TW</div><nav><a href="#work">Work</a><a href="#visit">Visit</a><a href="#order">Order</a></nav></header>
+<section class="hero">
+  <div><h1>Pressed by hand<br>since 1962.</h1><p>Wedding suites, business cards and posters, set in metal type and printed on our Heidelberg windmill press in Tidewater harbour.</p><a class="btn" href="#order">Order a quote</a></div>
+  <div class="stamp">EST. 1962</div>
+</section>
+<section class="work" id="work"><h2>What we print</h2><div class="grid">
+  <div class="card"><h3>Wedding suites</h3><p>Invitations, RSVP cards and menus.</p></div>
+  <div class="card"><h3>Business cards</h3><p>Deep impression on 600gsm cotton.</p></div>
+  <div class="card"><h3>Posters</h3><p>Wood type, up to A1.</p></div>
+</div></section>
+<footer id="visit">14 Quay Street, Tidewater · Open Tue–Sat 10:00–17:00</footer>
+</body>
+</html>

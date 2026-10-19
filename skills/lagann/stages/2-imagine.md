@@ -23,7 +23,17 @@ them at full strength even when a specialist calls them a cliché.
    Competitor test: put the nearest competitor in the sentence. If it still works, the idea belongs to
    the category; find another. (Method: `taste-skill/SKILL.md` §4.)
 2. **Generate real alternatives.** At least three directions that differ in kind, not in accent colour.
-   Sources, use one or more:
+   Lagann's own method works with nothing else installed:
+   - Write the rut first: the page this category always ships, and its predictable opposite. Neither may
+     be a candidate.
+   - Build each candidate from a *different* inventory item, and make the candidates differ on at least
+     three of these axes: composition topology (poster, asymmetric split, full-bleed media, index/grid,
+     scroll narrative, tool-as-page), colour strategy, type voice, material (flat, tactile, line-built,
+     photographic, illustrated, generative), density, imagery mode, motion character.
+   - Give each one a "live thing" (taste-skill's term): the one interaction made from the subject.
+   - Compare on subject fit, competitor swap, feasibility with the real assets, and risk.
+   A full worked example: [../references/examples.md](../references/examples.md) §1.
+   Other sources, when installed:
    - `node ~/.claude/skills/taste-skill/scripts/draw.mjs --sector <s> --brief "<one line>" --sections <roles> --options 3`
      for Persuade/Experience pages. It deals researched directions locally, no network. Treat the sheet
      as a strong proposal, not a contract: Lagann's precedence still applies.
@@ -57,7 +67,8 @@ exact source only they control.
 
 ## Deciding the parts
 
-Each axis is open. Choose by reason; "it looks premium" is not a reason.
+Each axis is open. Choose by reason; "it looks premium" is not a reason. The mechanical defaults behind
+every axis (scales, ratios, ramps, contrast, radius logic) are in [../references/craft.md](../references/craft.md).
 
 - **Colour strategy** first, colours second: Restrained (tinted neutrals + one accent), Committed (one
   saturated colour carries 30–60% of the surface), Full palette (3–4 named roles), Drenched (the surface

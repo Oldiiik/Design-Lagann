@@ -59,9 +59,9 @@ Other hosts: link `skills/lagann` into that host's skills folder (for example `~
 
 - Nothing, to work: Lagann is Markdown plus three small, dependency-free scripts.
 - Node 22+ and a local Chrome/Edge/Chromium for the inspector scripts.
-- Specialist skills are optional. Each one Lagann knows about is listed with what it contributes and
-  what replaces it when missing in [`modules/specialists.md`](skills/lagann/modules/specialists.md).
-  The more you have, the deeper each stage goes.
+- Specialist skills are optional. Lagann carries its own craft core and direction method, so it works
+  with none installed; each specialist adds depth. What each contributes, and what replaces it when
+  missing: [`modules/specialists.md`](skills/lagann/modules/specialists.md).
 
 ## Layout
 
@@ -75,6 +75,10 @@ skills/lagann/
     specialists.md            registry of design skills: best at, what to read, where Lagann overrules
     conflicts.md              hard vs soft rules and standing rulings between specialists
     project-context.md        the .design-lagann/context.md mechanism and template
+  references/
+    craft.md                  mechanics defaults with reasons: type, space, colour, depth, components,
+                              Operate / Read / Persuade specifics, motion tokens, copy
+    examples.md               worked outputs: direction record, audits, dashboard hierarchy, Modify report
   standards/professional.md   accessibility, responsive, performance, production, SEO, security, i18n
   checklists/                 change-check (small edits), report formats
   scripts/
@@ -99,7 +103,10 @@ node scripts/validate.mjs                 # frontmatter, links, script syntax, s
 node scripts/validate.mjs --specialists   # also checks specialist file references against ~/.claude/skills
 ```
 
-What was tested and how: [docs/validation.md](docs/validation.md). Contributions: [CONTRIBUTING.md](CONTRIBUTING.md).
+Evals live in `evals/` (skill-creator's schema): nine behaviour evals with checkable expectations,
+twenty trigger queries, and fixture pages. How Lagann compares with the skills it orchestrates:
+[docs/comparison.md](docs/comparison.md). What was tested and how: [docs/validation.md](docs/validation.md).
+Contributions: [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
