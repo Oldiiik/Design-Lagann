@@ -1,12 +1,8 @@
-# Security policy
+# Security
 
-## Supported version
+Lagann is Markdown plus three local scripts. The scripts read files and drive a local browser; they do
+not install packages, download binaries or send data anywhere. Specialist skills that Lagann routes to may
+have their own requirements (impeccable's launcher downloads an engine, so Lagann asks before running it).
 
-Security fixes are applied to the latest 1.x release.
-
-## Reporting a vulnerability
-
-Please use GitHub's private security advisory flow for the repository instead of opening a public issue. Include the affected version, reproduction steps, impact, and any suggested mitigation.
-
-Do not include secrets, private references, licensed source assets, or user project contents in a public report. Design Lagann is local-first; generated state under `.design-lagann/` may contain paths and hashes that should be reviewed before sharing.
-
+Report a vulnerability through GitHub's private security advisory flow rather than a public issue. Do not
+include private project files; `.design-lagann/` folders may contain a project's design decisions.

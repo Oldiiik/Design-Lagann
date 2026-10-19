@@ -1,27 +1,19 @@
-# Contributing to Design Lagann
+# Contributing
 
-Thank you for helping improve Design Lagann.
+Lagann is judgment written down, so changes are mostly prose. Good contributions:
 
-## Before opening a change
+- **A miss from real use**: the mode, stage or ruling that led somewhere wrong, the task, and what should
+  have happened. These usually become a row in `modules/conflicts.md` or an entry in `modules/specialists.md`.
+- **A new specialist**: read the skill's files, then add an entry in the same shape as the others (best at,
+  what to read for which need, dependencies, lane or not, where Lagann overrules it). Point at its files;
+  never copy its instructions into Lagann.
+- **A script fix** with the command that reproduces the bug.
 
-1. Open an issue for behavior changes or new public capabilities.
-2. Keep the single Design Lagann workflow intact; internal adapters must not become separate user-facing products.
-3. Do not add SVG files, inline SVG, SVG data URLs, or dependencies that render SVG.
-4. Preserve the plan, direction approval, production asset, responsive proof, and accessibility gates.
+Rules: keep `SKILL.md` small (it loads every time), say each thing once, no personal paths or project
+names in the skill, no new style bans (only signals with the conditions under which they are legitimate).
 
-## Local verification
-
-Use Node.js 20 or newer and pnpm 11.
+Before opening a pull request:
 
 ```bash
-pnpm install --frozen-lockfile
-pnpm check
-pnpm benchmark
+node scripts/validate.mjs
 ```
-
-Changes to user-facing behavior should include tests. Changes to the plugin surface should keep the manifest, package, CLI, MCP server, README, and changelog versions aligned.
-
-## Pull requests
-
-Keep pull requests focused. Explain the user problem, the chosen behavior, the evidence you collected, and any remaining limitation. Screenshots must include desktop, tablet, and mobile when visual output changes.
-

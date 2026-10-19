@@ -1,5 +1,0 @@
-Upstream: https://github.com/pbakaus/impeccable
-Copyright 2025 Paul Bakaus
-License: Apache-2.0
-
-Impeccable acknowledges Anthropic's original frontend-design skill in its upstream NOTICE. Design Lagann does not vendor Impeccable source; it provides an original bounded anti-slop adapter and optional external installation detection.

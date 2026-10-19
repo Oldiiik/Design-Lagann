@@ -1,45 +1,33 @@
 # Changelog
 
-All notable changes to Design Lagann are documented here. This project follows Semantic Versioning.
+## 0.1.0 (2026-10-19)
 
-## 1.0.1 - 2026-07-27
-
-### Changed
-
-- Removed all personal demo sites, generated showcase imagery, and obsolete brand iterations from the repository.
-- Personal installation now persists a clean runtime at `~/.design-lagann/runtime` instead of leaving the engine in a temporary npm or download directory.
-- Codex, Claude Code, and Cursor installs now write verified automatic-invocation metadata beside their user-level skill.
-- Added `node install.mjs --target codex|claude|cursor|all` for downloaded release archives.
-
-### Fixed
-
-- Preserved the CLI and MCP engine after an `npx` installation finishes.
-- Made the skill trigger explicitly on natural frontend design requests without requiring the user to name Design Lagann.
-
-## 1.0.0 - 2026-07-27
-
-The first public, release-ready version of Design Lagann.
+A rewrite. Design Lagann is now a pure Agent Skill (`skills/lagann/`) instead of a plugin. The version
+restarts at 0.1 because this is a new design, not an update of 1.x.
 
 ### Added
+- Mode router: Create, Modify, Redesign, Audit, Continuous QA, with effort levels (Fast, Balanced, Deep).
+- Four stage modules: Discover, Imagine, Construct, Verify.
+- Anti-slop module: three orders of slop, five questions, evidence tests, symptom catalogue with the
+  conditions under which each pattern is legitimate, verdicts, a preserve-first rule.
+- Specialist registry and conflict rulings for impeccable, taste-skill, frontend-design, ui-ux-pro-max,
+  emil-design-eng, animate, apple-design, designing-user-experiences, web-design-guidelines,
+  redesign-skill, soft-skill, minimalist-skill and the motion-review skills.
+- Per-project `.design-lagann/context.md` and a personal `~/.design-lagann/profile.md`.
+- Scripts: `context-scan.mjs`, `inspect.mjs` (tiered wrapper around taste-skill's inspector),
+  `browser-checks.js`.
+- `scripts/validate.mjs` and CI.
 
-- Cross-host support for Codex, Claude Code, and Cursor.
-- Plan-first creation with persistent content, responsive, reference, asset, and output contracts.
-- Create, redesign, edit, extend, repair, and transform request classification.
-- Autonomous, rights-aware reference search with generated-direction and host fallbacks.
-- Watermelon UI, Variant, and GrayBlocks reference sources.
-- Complete state coverage, preservation boundaries, responsive verification, and bounded stop control.
-- Motion choreography generation with calibrated interaction, editorial, stagger, and reduced-motion rules.
-- An optional Remotion stage for rendered video animation requests.
-- A Claude Code workflow that never requires image generation and records missing raster assets explicitly.
-- `npx design-lagann install --target codex|claude|cursor|all` with dry-run and backup-first updates.
-- Clean npm and GitHub release payloads without personal demo imagery or development-only material.
-- Twenty focused workflow and regression scenarios.
+### Carried over from 1.x
+- Operations extend / repair / transform (now mapped onto modes), plan-before-build in proportion to scope,
+  autonomous reference acquisition (search, generate, hybrid, browser-compose) with one role per source,
+  intentional assets with truthful provenance, complete product states, bounded repair passes that stop
+  when nothing changes, not reopening approved decisions, the effects-off and pattern-cluster checks.
+- `.design-lagann/project-context.json` from 1.x is still read as legacy context.
 
-### Changed
+### Removed
+- The CLI, MCP server, installer, workspace packages, rubrics JSON, templates, benchmarks and plugin
+  manifests for Codex and Claude. The npm package `design-lagann@1.0.1` is unchanged and still installs 1.x.
 
-- Reframed user-facing language around outcomes and next actions instead of internal pipeline terminology.
-- Renamed the product to Design Lagann and introduced the final raster brand system.
-
-### Security
-
-- Added global source and runtime protection against SVG.
+## 1.0.1 and earlier
+The plugin releases remain available under the `v1.0.0` and `v1.0.1` tags.

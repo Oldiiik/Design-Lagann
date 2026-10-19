@@ -1,76 +1,77 @@
-import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import { exists, walk } from "../packages/shared/src/index.mjs";
+#!/usr/bin/env node
+// Validates the Lagann skill: frontmatter, internal links, script syntax, size budget, no personal paths.
+//
+//   node scripts/validate.mjs [--specialists]
+//
+// --specialists also checks that every referenced specialist file exists in the local skills folder
+// (~/.claude/skills or LAGANN_SKILLS_DIR). CI runs without it, since specialists are optional installs.
+import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
+import { join, dirname, relative, resolve, extname } from 'node:path';
+import { homedir } from 'node:os';
+import { fileURLToPath } from 'node:url';
+import { spawnSync } from 'node:child_process';
+import vm from 'node:vm';
 
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const required = [
-  ".codex-plugin/plugin.json",
-  ".claude-plugin/plugin.json",
-  ".mcp.json",
-  "skills/design-lagann/SKILL.md",
-  "skills/design-lagann/references/claude-host.md",
-  "packages/workflow-engine/src/index.mjs",
-  "packages/installer/src/index.mjs",
-  "install.mjs",
-  "assets/brand/design-lagann-logo.png",
-  "assets/brand/design-lagann-github-banner.png",
-  "assets/brand/design-lagann-social-preview.png",
-  "apps/cli/src/cli.mjs",
-  "packages/mcp-server/src/server.mjs",
-  "scripts/package-release.mjs",
-  ".github/workflows/ci.yml",
-  ".github/ISSUE_TEMPLATE/bug_report.yml",
-  ".github/ISSUE_TEMPLATE/feature_request.yml",
-  ".github/PULL_REQUEST_TEMPLATE.md",
-  ".github/README.md",
-  ".github/FUNDING.yml",
-  "CHANGELOG.md",
-  "CONTRIBUTING.md",
-  "SECURITY.md",
-  "NOTICE.md",
-  "SPONSORS.md",
-  "docs/GITHUB-LAUNCH.md",
-  "third_party/impeccable/LICENSE",
-  "third_party/design-dna/LICENSE"
-];
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const skill = join(root, 'skills', 'lagann');
+const checkSpecialists = process.argv.includes('--specialists');
+const errors = [], warnings = [];
+const walk = (d) => readdirSync(d).flatMap((n) => { const p = join(d, n); return statSync(p).isDirectory() ? walk(p) : [p]; });
+const files = walk(skill);
+const rel = (p) => relative(root, p);
 
-for (const relative of required) assert.equal(await exists(path.join(root, relative)), true, `Missing ${relative}`);
-const manifest = JSON.parse(await readFile(path.join(root, ".codex-plugin", "plugin.json"), "utf8"));
-const claudeManifest = JSON.parse(await readFile(path.join(root, ".claude-plugin", "plugin.json"), "utf8"));
-const packageJson = JSON.parse(await readFile(path.join(root, "package.json"), "utf8"));
-assert.equal(manifest.name, packageJson.name);
-assert.equal(claudeManifest.name, packageJson.name);
-assert.match(manifest.version, /^\d+\.\d+\.\d+$/);
-assert.equal(manifest.version, packageJson.version, "Plugin manifest and root package versions must match");
-assert.equal(claudeManifest.version, packageJson.version, "Claude manifest and root package versions must match");
-assert.equal(manifest.skills, "./skills/");
-assert.equal(manifest.mcpServers, "./.mcp.json");
-const mcp = JSON.parse(await readFile(path.join(root, ".mcp.json"), "utf8"));
-assert.ok(mcp.mcpServers?.["design-lagann"]);
-const skill = await readFile(path.join(root, "skills", "design-lagann", "SKILL.md"), "utf8");
-assert.match(skill, /^---\r?\nname: design-lagann\r?\ndescription: .+\r?\n---/);
-assert.match(skill, /Use automatically/i);
-assert.equal(await exists(path.join(root, "examples")), false, "Personal demo projects must not ship in the repository");
-const files = await walk(root);
-const canonicalBrandAssets = new Set([
-  "design-lagann-logo.png",
-  "design-lagann-github-banner.png",
-  "design-lagann-social-preview.png"
-]);
-const brandFiles = files
-  .filter((file) => path.dirname(file) === path.join(root, "assets", "brand"))
-  .map((file) => path.basename(file));
-assert.deepEqual(new Set(brandFiles), canonicalBrandAssets, "Only canonical Design Lagann brand assets may remain");
-assert.deepEqual(
-  files.filter((file) => path.extname(file).toLowerCase() === ".svg"),
-  [],
-  "The plugin source must contain zero SVG files"
-);
-const todoMarker = `[${"TODO"}:`;
-for (const file of files.filter((item) => /\.(md|json|ya?ml|mjs)$/.test(item))) {
-  const source = await readFile(file, "utf8");
-  assert.equal(source.includes(todoMarker), false, `TODO placeholder in ${file}`);
+// frontmatter
+const main = readFileSync(join(skill, 'SKILL.md'), 'utf8');
+const fm = main.match(/^---\n([\s\S]*?)\n---\n/);
+if (!fm) errors.push('SKILL.md: missing frontmatter');
+else {
+  const get = (k) => fm[1].match(new RegExp(`^${k}:\\s*(.+)$`, 'm'))?.[1]?.trim();
+  const name = get('name'), desc = get('description');
+  if (name !== 'lagann') errors.push(`SKILL.md: name must be "lagann" (the folder name), got "${name}"`);
+  if (!desc) errors.push('SKILL.md: description missing');
+  else if (desc.length > 1024) errors.push(`SKILL.md: description is ${desc.length} chars (max 1024)`);
+  else if (desc.length > 600) warnings.push(`SKILL.md: description is ${desc.length} chars; it is loaded in every session, keep it tight`);
+  if (!/version:\s*"?\d+\.\d+\.\d+/.test(fm[1])) errors.push('SKILL.md: metadata.version missing');
 }
-process.stdout.write(`Validated ${required.length} required artifacts and ${files.length} files.\n`);
+if (Buffer.byteLength(main) > 12000) warnings.push(`SKILL.md is ${Buffer.byteLength(main)} bytes; keep the always-loaded file under 12 KB`);
+
+// internal links and personal paths
+let links = 0;
+for (const f of files.filter((p) => p.endsWith('.md'))) {
+  const src = readFileSync(f, 'utf8');
+  for (const m of src.matchAll(/\]\(([^)#\s]+)(#[^)]*)?\)/g)) {
+    if (/^https?:/.test(m[1])) continue;
+    links++;
+    if (!existsSync(resolve(dirname(f), m[1]))) errors.push(`${rel(f)}: broken link ${m[1]}`);
+  }
+  if (/\/Users\/|\/home\/[a-z]/.test(src)) errors.push(`${rel(f)}: contains an absolute personal path`);
+}
+
+// script syntax
+for (const f of files.filter((p) => /\.(mjs|js)$/.test(p))) {
+  if (f.endsWith('browser-checks.js')) {
+    try { new vm.Script(`(async () => {\n${readFileSync(f, 'utf8')}\n})`); } catch (e) { errors.push(`${rel(f)}: ${e.message}`); }
+  } else {
+    const r = spawnSync(process.execPath, ['--check', f], { encoding: 'utf8' });
+    if (r.status) errors.push(`${rel(f)}: ${r.stderr.trim().split('\n')[0]}`);
+  }
+}
+
+// optional: specialist references resolve against the local skills folder
+if (checkSpecialists) {
+  const base = process.env.LAGANN_SKILLS_DIR || join(homedir(), '.claude', 'skills');
+  let n = 0;
+  for (const f of files.filter((p) => p.endsWith('.md'))) {
+    for (const m of readFileSync(f, 'utf8').matchAll(/`(?:~\/\.claude\/skills\/)?((?:impeccable|taste-skill|ui-ux-pro-max|frontend-design|emil-design-eng|animate|apple-design|designing-user-experiences|web-design-guidelines|redesign-skill|soft-skill|minimalist-skill|review-animations)\/[\w./-]+\.(?:md|mjs|py|json))/g)) {
+      n++;
+      if (!existsSync(join(base, m[1]))) warnings.push(`${rel(f)}: specialist file not installed locally: ${m[1]}`);
+    }
+  }
+  console.log(`specialist references checked: ${n}`);
+}
+
+console.log(`files: ${files.length} · internal links: ${links}`);
+for (const w of warnings) console.log('WARN  ' + w);
+for (const e of errors) console.log('ERROR ' + e);
+console.log(errors.length ? `FAILED (${errors.length} error(s))` : 'OK');
+process.exit(errors.length ? 1 : 0);
