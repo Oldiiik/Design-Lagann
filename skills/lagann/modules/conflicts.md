@@ -37,7 +37,7 @@ specialist is a signal for the anti-slop questions, never an automatic edit.
 | Stagger, blur-in, rise | taste/soft/minimalist/animate encourage | Not by default. Only when order carries meaning or the project's motion language uses it. |
 | Scroll handling | | No scroll event listeners for animation; IntersectionObserver or CSS scroll-driven animation. |
 | Dark mode | taste: both modes; impeccable: from the use scene | Use scene decides; a user-pinned theme ("white only") ships alone and is said so. |
-| Em dash | design-studio v1 and taste: banned in copy | Avoid as decorative separator in UI labels (a tell). In prose, follow the project's voice (the context file records it). |
+| Em dash | taste-skill: banned in copy | Avoid as decorative separator in UI labels (a tell). In prose, follow the project's voice (the context file records it). |
 | Asking questions | impeccable: 2–3 structured questions before new work; designing-ux: proposal before substantial change | Ask only what blocks. Substantial IA/flow changes still need a proposal and a yes. |
 | Font swap first | redesign-skill fix priority | Rejected for refinement. Type changes are direction decisions (Stage 2), made only in Create or re-direct Redesign. |
 | "Organic" fake data | redesign-skill: randomise dates, messy numbers to look real | Rejected (deceptive). Sample data is labelled as sample. |
